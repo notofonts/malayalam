@@ -5,18 +5,18 @@ Fontbakery version: 0.8.9
 <details><summary><b>[4] Family checks</b></summary><div><details><summary>🔥 <b>FAIL:</b> Checking all files are in the same directory. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/single_directory">com.google.fonts/check/family/single_directory</a>)</summary><div>
 
 
-* 🔥 **FAIL** Not all fonts passed in the command line are in the same directory. This may lead to bad results as the tool will interpret all font files as belonging to a single font family. The detected directories are: ['fonts/NotoSansMalayalam/googlefonts/slim-variable-ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf', 'fonts/NotoSansMalayalam/googlefonts/variable-ttf'] [code: single-directory]
+* 🔥 **FAIL** Not all fonts passed in the command line are in the same directory. This may lead to bad results as the tool will interpret all font files as belonging to a single font family. The detected directories are: ['fonts/NotoSansMalayalam/googlefonts/ttf', 'fonts/NotoSansMalayalam/googlefonts/variable-ttf'] [code: single-directory]
 </div></details><details><summary>🔥 <b>FAIL:</b> Each font in a family must have the same set of vertical metrics values. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/vertical_metrics">com.google.fonts/check/family/vertical_metrics</a>)</summary><div>
 
 
 * 🔥 **FAIL** sTypoAscender is not the same across the family:
-Noto Sans Malayalam Regular: 864
 Noto Sans Malayalam Black: 864
 Noto Sans Malayalam Bold: 864
 Noto Sans Malayalam ExtraBold: 864
 Noto Sans Malayalam ExtraLight: 864
 Noto Sans Malayalam Light: 864
 Noto Sans Malayalam Medium: 864
+Noto Sans Malayalam Regular: 864
 Noto Sans Malayalam SemiBold: 864
 Noto Sans Malayalam Thin: 864
 Noto Sans Malayalam UI Black: 1069
@@ -29,13 +29,13 @@ Noto Sans Malayalam UI Regular: 1069
 Noto Sans Malayalam UI SemiBold: 1069
 Noto Sans Malayalam UI Thin: 1069 [code: sTypoAscender-mismatch]
 * 🔥 **FAIL** sTypoDescender is not the same across the family:
-Noto Sans Malayalam Regular: -383
 Noto Sans Malayalam Black: -383
 Noto Sans Malayalam Bold: -383
 Noto Sans Malayalam ExtraBold: -383
 Noto Sans Malayalam ExtraLight: -383
 Noto Sans Malayalam Light: -383
 Noto Sans Malayalam Medium: -383
+Noto Sans Malayalam Regular: -383
 Noto Sans Malayalam SemiBold: -383
 Noto Sans Malayalam Thin: -383
 Noto Sans Malayalam UI Black: -293
@@ -48,13 +48,13 @@ Noto Sans Malayalam UI Regular: -293
 Noto Sans Malayalam UI SemiBold: -293
 Noto Sans Malayalam UI Thin: -293 [code: sTypoDescender-mismatch]
 * 🔥 **FAIL** usWinAscent is not the same across the family:
-Noto Sans Malayalam Regular: 864
 Noto Sans Malayalam Black: 864
 Noto Sans Malayalam Bold: 864
 Noto Sans Malayalam ExtraBold: 864
 Noto Sans Malayalam ExtraLight: 864
 Noto Sans Malayalam Light: 864
 Noto Sans Malayalam Medium: 864
+Noto Sans Malayalam Regular: 864
 Noto Sans Malayalam SemiBold: 864
 Noto Sans Malayalam Thin: 864
 Noto Sans Malayalam UI Black: 1069
@@ -67,13 +67,13 @@ Noto Sans Malayalam UI Regular: 1069
 Noto Sans Malayalam UI SemiBold: 1069
 Noto Sans Malayalam UI Thin: 1069 [code: usWinAscent-mismatch]
 * 🔥 **FAIL** usWinDescent is not the same across the family:
-Noto Sans Malayalam Regular: 383
 Noto Sans Malayalam Black: 383
 Noto Sans Malayalam Bold: 383
 Noto Sans Malayalam ExtraBold: 383
 Noto Sans Malayalam ExtraLight: 383
 Noto Sans Malayalam Light: 383
 Noto Sans Malayalam Medium: 383
+Noto Sans Malayalam Regular: 383
 Noto Sans Malayalam SemiBold: 383
 Noto Sans Malayalam Thin: 383
 Noto Sans Malayalam UI Black: 293
@@ -86,13 +86,13 @@ Noto Sans Malayalam UI Regular: 293
 Noto Sans Malayalam UI SemiBold: 293
 Noto Sans Malayalam UI Thin: 293 [code: usWinDescent-mismatch]
 * 🔥 **FAIL** ascent is not the same across the family:
-Noto Sans Malayalam Regular: 864
 Noto Sans Malayalam Black: 864
 Noto Sans Malayalam Bold: 864
 Noto Sans Malayalam ExtraBold: 864
 Noto Sans Malayalam ExtraLight: 864
 Noto Sans Malayalam Light: 864
 Noto Sans Malayalam Medium: 864
+Noto Sans Malayalam Regular: 864
 Noto Sans Malayalam SemiBold: 864
 Noto Sans Malayalam Thin: 864
 Noto Sans Malayalam UI Black: 1069
@@ -105,13 +105,13 @@ Noto Sans Malayalam UI Regular: 1069
 Noto Sans Malayalam UI SemiBold: 1069
 Noto Sans Malayalam UI Thin: 1069 [code: ascent-mismatch]
 * 🔥 **FAIL** descent is not the same across the family:
-Noto Sans Malayalam Regular: -383
 Noto Sans Malayalam Black: -383
 Noto Sans Malayalam Bold: -383
 Noto Sans Malayalam ExtraBold: -383
 Noto Sans Malayalam ExtraLight: -383
 Noto Sans Malayalam Light: -383
 Noto Sans Malayalam Medium: -383
+Noto Sans Malayalam Regular: -383
 Noto Sans Malayalam SemiBold: -383
 Noto Sans Malayalam Thin: -383
 Noto Sans Malayalam UI Black: -293
@@ -131,52 +131,10 @@ Noto Sans Malayalam UI Thin: -293 [code: descent-mismatch]
 
 
 * 🔥 **FAIL** PANOSE family type is not the same across this family. In order to fix this, please make sure that the panose.bFamilyType value is the same in the OS/2 table of all of this family font files. [code: inconsistency]
-</div></details><br></div></details><details><summary><b>[17] NotoSansMalayalam-MM[wght].ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Checking file is named canonically. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/canonical_filename">com.google.fonts/check/canonical_filename</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[14] NotoSansMalayalam-Black.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
 
 
-* 🔥 **FAIL** The file 'NotoSansMalayalam-MM[wght].ttf' must be renamed to 'NotoSansMalayalam[wdth,wght].ttf' according to the Google Fonts naming policy for variable fonts. [code: bad-varfont-filename]
-</div></details><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
-
-
-* 🔥 **FAIL** Missing required codepoints:
-
-	- 0x00AF (MACRON)
- [code: missing-codepoints]
-</div></details><details><summary>🔥 <b>FAIL:</b> Check copyright namerecords match license file. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/license">com.google.fonts/check/name/license</a>)</summary><div>
-
-
-* 🔥 **FAIL** License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 3 (WINDOWS) is not specified for that. Value was: "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software." Must be changed to "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL" [code: wrong]
-</div></details><details><summary>🔥 <b>FAIL:</b> Is the Grid-fitting and Scan-conversion Procedure ('gasp') table set to optimize rendering? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/gasp">com.google.fonts/check/gasp</a>)</summary><div>
-
-
-* 🔥 **FAIL** Font is missing the 'gasp' table. Try exporting the font with autohinting enabled.
-If you are dealing with an unhinted font, it can be fixed by running the fonts through the command 'gftools fix-nonhinting'
-GFTools is available at https://pypi.org/project/gftools/ [code: lacks-gasp]
-</div></details><details><summary>🔥 <b>FAIL:</b> Copyright notices match canonical pattern in fonts (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/font_copyright">com.google.fonts/check/font_copyright</a>)</summary><div>
-
-
-* 🔥 **FAIL** Name Table entry: Copyright notices should match a pattern similar to: "Copyright 2019 The Familyname Project Authors (git url)"
-But instead we have got:
-"Copyright 2018 Google Inc. All Rights Reserved." [code: bad-notice-format]
-</div></details><details><summary>🔥 <b>FAIL:</b> Font enables smart dropout control in "prep" table instructions? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/smart_dropout">com.google.fonts/check/smart_dropout</a>)</summary><div>
-
-
-* 🔥 **FAIL** The 'prep' table does not contain TrueType instructions enabling smart dropout control. To fix, export the font with autohinting enabled, or run ttfautohint on the font, or run the `gftools fix-nonhinting` script. [code: lacks-smart-dropout]
-</div></details><details><summary>🔥 <b>FAIL:</b> Check variable font instances don't have duplicate names (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/varfont_duplicate_instance_names">com.google.fonts/check/varfont_duplicate_instance_names</a>)</summary><div>
-
-
-* 🔥 **FAIL** Following instances names are duplicate: 
-	- ExtraLight
-	- Light
-	- Regular
-	- Medium
-	- SemiBold
-	- Bold
- [code: duplicate-instance-names]
-</div></details><details><summary>🔥 <b>FAIL:</b> OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/os2/use_typo_metrics">com.google.fonts/check/os2/use_typo_metrics</a>)</summary><div>
-
-
-* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSansMalayalam/googlefonts/slim-variable-ttf/NotoSansMalayalam-MM[wght].ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Black.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Bold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-ExtraBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-ExtraLight.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Light.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Medium.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Regular.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-SemiBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Thin.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Black.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Bold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-ExtraBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-ExtraLight.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Light.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Medium.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Regular.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-SemiBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Thin.ttf', 'fonts/NotoSansMalayalam/googlefonts/variable-ttf/NotoSansMalayalam-MM[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
+* 💔 **ERROR** Failed with IndexError: list index out of range
 </div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
@@ -190,135 +148,31 @@ But instead we have got:
 
 * 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
 
-	- uni0951
+	- rephmlym
 
 	- uni0D00
 
-	- rephmlym
-
 	- viramamlym
 
-	- uni0952 
+	- candrabindumlym
 
-	- And candrabindumlym [code: unattached-dotted-circle-marks]
-</div></details><details><summary>🔥 <b>FAIL:</b> Validates that when an instance record is included for the default instance, its subfamilyNameID value is set to either 2 or 17, and its postScriptNameID value is set to 6. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/fvar.html#com.adobe.fonts/check/varfont/valid_default_instance_nameids">com.adobe.fonts/check/varfont/valid_default_instance_nameids</a>)</summary><div>
+	- uni0951 
 
-
-* 🔥 **FAIL** 'Regular' instance has the same coordinates as the default instance; its subfamilyNameID should be either 2 or 17, instead of 261. [code: invalid-default-instance-subfamily-nameid:261]
-* 🔥 **FAIL** 'Regular' instance has the same coordinates as the default instance; its postScriptNameID should be 6, instead of 270. [code: invalid-default-instance-postscript-nameid:270]
-* 🔥 **FAIL** 'Regular' instance has the same coordinates as the default instance; its subfamilyNameID should be either 2 or 17, instead of 261. [code: invalid-default-instance-subfamily-nameid:261]
-* 🔥 **FAIL** 'Regular' instance has the same coordinates as the default instance; its postScriptNameID should be 6, instead of 279. [code: invalid-default-instance-postscript-nameid:279]
-</div></details><details><summary>⚠ <b>WARN:</b> Ensure fonts have ScriptLangTags declared on the 'meta' table. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/meta/script_lang_tags">com.google.fonts/check/meta/script_lang_tags</a>)</summary><div>
-
-
-* ⚠ **WARN** This font file does not have a 'meta' table. [code: lacks-meta-table]
-</div></details><details><summary>⚠ <b>WARN:</b> Check font contains no unreachable glyphs (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/unreachable_glyphs">com.google.fonts/check/unreachable_glyphs</a>)</summary><div>
-
-
-* ⚠ **WARN** The following glyphs could not be reached by codepoint or substitution rules:
-
-	- braceright
-
-	- emdash
-
-	- one
-
-	- llvocalicvowelsignUImlym
-
-	- equal
-
-	- plus
-
-	- bracketright
-
-	- two
-
-	- tthallvocalicUImlym
-
-	- asciicircum 
-
-	- And 44 more.
-
-Use -F or --full-lists to disable shortening of long lists.
- [code: unreachable-glyphs]
-</div></details><details><summary>⚠ <b>WARN:</b> Check glyphs in mark glyph class are non-spacing. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_spacing_marks">com.google.fonts/check/gdef_spacing_marks</a>)</summary><div>
-
-
-* ⚠ **WARN** The following spacing glyphs may be in the GDEF mark glyph class by mistake:
-	 aavowelsignmlym (U+0D3E), aivowelsignmlym (U+0D48), anusvaramlym (U+0D02), auvowelsignmlym (U+0D4C), eevowelsignmlym (U+0D47), evowelsignmlym (U+0D46), iivowelsignmlym (U+0D40), ivowelsignmlym (U+0D3F), oovowelsignmlym (U+0D4B), ovowelsignmlym (U+0D4A) and 5 more.
-
-Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-glyphs]
-</div></details><details><summary>⚠ <b>WARN:</b> Check mark characters are in GDEF mark glyph class. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_mark_chars">com.google.fonts/check/gdef_mark_chars</a>)</summary><div>
-
-
-* ⚠ **WARN** The following mark characters could be in the GDEF mark glyph class:
-	 acutecomb (U+0301), gravecomb (U+0300), tildecomb (U+0303), uni0302 (U+0302), uni0304 (U+0304), uni0306 (U+0306), uni0308 (U+0308), uni030A (U+030A), uni030B (U+030B), uni030C (U+030C) and 6 more.
-
-Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]
-</div></details><details><summary>⚠ <b>WARN:</b> Check GDEF mark glyph class doesn't have characters that are not marks. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_non_mark_chars">com.google.fonts/check/gdef_non_mark_chars</a>)</summary><div>
-
-
-* ⚠ **WARN** The following non-mark characters should not be in the GDEF mark glyph class:
-	 U+0D02, U+0D03, U+0D3E, U+0D3F, U+0D40, U+0D46, U+0D47, U+0D48, U+0D4A, U+0D4B, U+0D4C and U+0D4E [code: non-mark-chars]
-</div></details><br></div></details><details><summary><b>[17] NotoSansMalayalam-Black.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
-
-
-* 🔥 **FAIL** Missing required codepoints:
-
-	- 0x00AF (MACRON)
- [code: missing-codepoints]
-</div></details><details><summary>🔥 <b>FAIL:</b> Check copyright namerecords match license file. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/license">com.google.fonts/check/name/license</a>)</summary><div>
-
-
-* 🔥 **FAIL** License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 3 (WINDOWS) is not specified for that. Value was: "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software." Must be changed to "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL" [code: wrong]
-</div></details><details><summary>🔥 <b>FAIL:</b> Copyright notices match canonical pattern in fonts (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/font_copyright">com.google.fonts/check/font_copyright</a>)</summary><div>
-
-
-* 🔥 **FAIL** Name Table entry: Copyright notices should match a pattern similar to: "Copyright 2019 The Familyname Project Authors (git url)"
-But instead we have got:
-"Copyright 2018 Google Inc. All Rights Reserved." [code: bad-notice-format]
-</div></details><details><summary>🔥 <b>FAIL:</b> OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/os2/use_typo_metrics">com.google.fonts/check/os2/use_typo_metrics</a>)</summary><div>
-
-
-* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSansMalayalam/googlefonts/slim-variable-ttf/NotoSansMalayalam-MM[wght].ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Black.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Bold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-ExtraBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-ExtraLight.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Light.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Medium.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Regular.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-SemiBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Thin.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Black.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Bold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-ExtraBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-ExtraLight.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Light.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Medium.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Regular.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-SemiBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Thin.ttf', 'fonts/NotoSansMalayalam/googlefonts/variable-ttf/NotoSansMalayalam-MM[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
-</div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
-
-
-* 🔥 **FAIL** OS/2.usWinAscent value should be equal or greater than 1078, but got 864 instead [code: ascent]
-</div></details><details><summary>🔥 <b>FAIL:</b> Font has **proper** whitespace glyph names? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/whitespace_glyphnames">com.google.fonts/check/whitespace_glyphnames</a>)</summary><div>
-
-
-* 🔥 **FAIL** Glyph 0x00A0 is called "uni00A0.mlym": Change to "uni00A0" [code: non-compliant-00a0]
-</div></details><details><summary>🔥 <b>FAIL:</b> Ensure dotted circle glyph is present and can attach marks. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/dotted_circle">com.google.fonts/check/dotted_circle</a>)</summary><div>
-
-
-* 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
-
-	- uni0951
-
-	- uni0D00
-
-	- rephmlym
-
-	- viramamlym
-
-	- uni0952 
-
-	- And candrabindumlym [code: unattached-dotted-circle-marks]
+	- And uni0952 [code: unattached-dotted-circle-marks]
 </div></details><details><summary>⚠ <b>WARN:</b> Glyphs are similiar to Google Fonts version? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/production_glyphs_similarity">com.google.fonts/check/production_glyphs_similarity</a>)</summary><div>
 
 
 * ⚠ **WARN** Following glyphs differ greatly from Google Fonts version:
-	* onehalfmlym
-	* jajamlym
-	* sevenmlym
-	* nnannamlym
-	* nnaddhamlym
-	* ddhaprehalfmlym
-	* ralvocalicmlym
-	* ngakamlym
-	* gamamlym
-	* badhamlym and 178 more.
+	* eightmlym
+	* nyachamlym
+	* jhamlym
+	* halamlym
+	* nnamamlym
+	* nnnamlym
+	* aumlym
+	* narramlym
+	* nnaprehalfmlym
+	* tthallvocalicmlym and 178 more.
 
 Use -F or --full-lists to disable shortening of long lists.
 </div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 27 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
@@ -337,25 +191,25 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 * ⚠ **WARN** The following glyphs could not be reached by codepoint or substitution rules:
 
-	- braceright
+	- quotesingle
 
-	- emdash
+	- endash
 
-	- one
+	- nbspace
 
-	- llvocalicvowelsignUImlym
+	- lllallvocalicUImlym
 
-	- equal
+	- asterisk
 
-	- plus
+	- seven
 
-	- bracketright
+	- rrallvocalicUImlym
 
-	- two
+	- semicolon
 
-	- tthallvocalicUImlym
+	- divide
 
-	- asciicircum 
+	- underscore 
 
 	- And 44 more.
 
@@ -458,27 +312,10 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 	* And 7 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-jaggy-segments]
-</div></details><br></div></details><details><summary><b>[16] NotoSansMalayalam-Bold.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[13] NotoSansMalayalam-Bold.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
 
 
-* 🔥 **FAIL** Missing required codepoints:
-
-	- 0x00AF (MACRON)
- [code: missing-codepoints]
-</div></details><details><summary>🔥 <b>FAIL:</b> Check copyright namerecords match license file. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/license">com.google.fonts/check/name/license</a>)</summary><div>
-
-
-* 🔥 **FAIL** License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 3 (WINDOWS) is not specified for that. Value was: "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software." Must be changed to "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL" [code: wrong]
-</div></details><details><summary>🔥 <b>FAIL:</b> Copyright notices match canonical pattern in fonts (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/font_copyright">com.google.fonts/check/font_copyright</a>)</summary><div>
-
-
-* 🔥 **FAIL** Name Table entry: Copyright notices should match a pattern similar to: "Copyright 2019 The Familyname Project Authors (git url)"
-But instead we have got:
-"Copyright 2018 Google Inc. All Rights Reserved." [code: bad-notice-format]
-</div></details><details><summary>🔥 <b>FAIL:</b> OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/os2/use_typo_metrics">com.google.fonts/check/os2/use_typo_metrics</a>)</summary><div>
-
-
-* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSansMalayalam/googlefonts/slim-variable-ttf/NotoSansMalayalam-MM[wght].ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Black.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Bold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-ExtraBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-ExtraLight.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Light.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Medium.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Regular.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-SemiBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Thin.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Black.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Bold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-ExtraBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-ExtraLight.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Light.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Medium.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Regular.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-SemiBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Thin.ttf', 'fonts/NotoSansMalayalam/googlefonts/variable-ttf/NotoSansMalayalam-MM[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
+* 💔 **ERROR** Failed with IndexError: list index out of range
 </div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
@@ -492,31 +329,31 @@ But instead we have got:
 
 * 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
 
-	- uni0951
+	- rephmlym
 
 	- uni0D00
 
-	- rephmlym
-
 	- viramamlym
 
-	- uni0952 
+	- candrabindumlym
 
-	- And candrabindumlym [code: unattached-dotted-circle-marks]
+	- uni0951 
+
+	- And uni0952 [code: unattached-dotted-circle-marks]
 </div></details><details><summary>⚠ <b>WARN:</b> Glyphs are similiar to Google Fonts version? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/production_glyphs_similarity">com.google.fonts/check/production_glyphs_similarity</a>)</summary><div>
 
 
 * ⚠ **WARN** Following glyphs differ greatly from Google Fonts version:
-	* onehalfmlym
-	* jajamlym
-	* nnannamlym
-	* nnaddhamlym
-	* ddhaprehalfmlym
-	* ralvocalicmlym
-	* ngakamlym
-	* gamamlym
-	* badhamlym
-	* shacamlym and 159 more.
+	* eightmlym
+	* nyachamlym
+	* jhamlym
+	* halamlym
+	* nnamamlym
+	* narramlym
+	* tthallvocalicmlym
+	* galamlym
+	* jhaprehalfmlym
+	* nyajamlym and 159 more.
 
 Use -F or --full-lists to disable shortening of long lists.
 </div></details><details><summary>⚠ <b>WARN:</b> Ensure fonts have ScriptLangTags declared on the 'meta' table. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/meta/script_lang_tags">com.google.fonts/check/meta/script_lang_tags</a>)</summary><div>
@@ -528,25 +365,25 @@ Use -F or --full-lists to disable shortening of long lists.
 
 * ⚠ **WARN** The following glyphs could not be reached by codepoint or substitution rules:
 
-	- braceright
+	- quotesingle
 
-	- emdash
+	- endash
 
-	- one
+	- nbspace
 
-	- llvocalicvowelsignUImlym
+	- lllallvocalicUImlym
 
-	- equal
+	- asterisk
 
-	- plus
+	- seven
 
-	- bracketright
+	- rrallvocalicUImlym
 
-	- two
+	- semicolon
 
-	- tthallvocalicUImlym
+	- divide
 
-	- asciicircum 
+	- underscore 
 
 	- And 44 more.
 
@@ -649,27 +486,10 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 	* And 7 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-jaggy-segments]
-</div></details><br></div></details><details><summary><b>[16] NotoSansMalayalam-ExtraBold.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[13] NotoSansMalayalam-ExtraBold.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
 
 
-* 🔥 **FAIL** Missing required codepoints:
-
-	- 0x00AF (MACRON)
- [code: missing-codepoints]
-</div></details><details><summary>🔥 <b>FAIL:</b> Check copyright namerecords match license file. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/license">com.google.fonts/check/name/license</a>)</summary><div>
-
-
-* 🔥 **FAIL** License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 3 (WINDOWS) is not specified for that. Value was: "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software." Must be changed to "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL" [code: wrong]
-</div></details><details><summary>🔥 <b>FAIL:</b> Copyright notices match canonical pattern in fonts (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/font_copyright">com.google.fonts/check/font_copyright</a>)</summary><div>
-
-
-* 🔥 **FAIL** Name Table entry: Copyright notices should match a pattern similar to: "Copyright 2019 The Familyname Project Authors (git url)"
-But instead we have got:
-"Copyright 2018 Google Inc. All Rights Reserved." [code: bad-notice-format]
-</div></details><details><summary>🔥 <b>FAIL:</b> OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/os2/use_typo_metrics">com.google.fonts/check/os2/use_typo_metrics</a>)</summary><div>
-
-
-* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSansMalayalam/googlefonts/slim-variable-ttf/NotoSansMalayalam-MM[wght].ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Black.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Bold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-ExtraBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-ExtraLight.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Light.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Medium.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Regular.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-SemiBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Thin.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Black.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Bold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-ExtraBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-ExtraLight.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Light.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Medium.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Regular.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-SemiBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Thin.ttf', 'fonts/NotoSansMalayalam/googlefonts/variable-ttf/NotoSansMalayalam-MM[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
+* 💔 **ERROR** Failed with IndexError: list index out of range
 </div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
@@ -683,31 +503,31 @@ But instead we have got:
 
 * 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
 
-	- uni0951
+	- rephmlym
 
 	- uni0D00
 
-	- rephmlym
-
 	- viramamlym
 
-	- uni0952 
+	- candrabindumlym
 
-	- And candrabindumlym [code: unattached-dotted-circle-marks]
+	- uni0951 
+
+	- And uni0952 [code: unattached-dotted-circle-marks]
 </div></details><details><summary>⚠ <b>WARN:</b> Glyphs are similiar to Google Fonts version? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/production_glyphs_similarity">com.google.fonts/check/production_glyphs_similarity</a>)</summary><div>
 
 
 * ⚠ **WARN** Following glyphs differ greatly from Google Fonts version:
-	* onehalfmlym
-	* jajamlym
-	* sevenmlym
-	* nnannamlym
-	* nnaddhamlym
-	* ddhaprehalfmlym
-	* ralvocalicmlym
-	* ngakamlym
-	* gamamlym
-	* badhamlym and 177 more.
+	* eightmlym
+	* nyachamlym
+	* jhamlym
+	* halamlym
+	* nnamamlym
+	* nnnamlym
+	* aumlym
+	* narramlym
+	* nnaprehalfmlym
+	* tthallvocalicmlym and 177 more.
 
 Use -F or --full-lists to disable shortening of long lists.
 </div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 27 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
@@ -726,25 +546,25 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 * ⚠ **WARN** The following glyphs could not be reached by codepoint or substitution rules:
 
-	- braceright
+	- quotesingle
 
-	- emdash
+	- endash
 
-	- one
+	- nbspace
 
-	- llvocalicvowelsignUImlym
+	- lllallvocalicUImlym
 
-	- equal
+	- asterisk
 
-	- plus
+	- seven
 
-	- bracketright
+	- rrallvocalicUImlym
 
-	- two
+	- semicolon
 
-	- tthallvocalicUImlym
+	- divide
 
-	- asciicircum 
+	- underscore 
 
 	- And 44 more.
 
@@ -819,27 +639,10 @@ Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]
 	* And 3 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-jaggy-segments]
-</div></details><br></div></details><details><summary><b>[15] NotoSansMalayalam-ExtraLight.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[12] NotoSansMalayalam-ExtraLight.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
 
 
-* 🔥 **FAIL** Missing required codepoints:
-
-	- 0x00AF (MACRON)
- [code: missing-codepoints]
-</div></details><details><summary>🔥 <b>FAIL:</b> Check copyright namerecords match license file. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/license">com.google.fonts/check/name/license</a>)</summary><div>
-
-
-* 🔥 **FAIL** License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 3 (WINDOWS) is not specified for that. Value was: "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software." Must be changed to "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL" [code: wrong]
-</div></details><details><summary>🔥 <b>FAIL:</b> Copyright notices match canonical pattern in fonts (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/font_copyright">com.google.fonts/check/font_copyright</a>)</summary><div>
-
-
-* 🔥 **FAIL** Name Table entry: Copyright notices should match a pattern similar to: "Copyright 2019 The Familyname Project Authors (git url)"
-But instead we have got:
-"Copyright 2018 Google Inc. All Rights Reserved." [code: bad-notice-format]
-</div></details><details><summary>🔥 <b>FAIL:</b> OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/os2/use_typo_metrics">com.google.fonts/check/os2/use_typo_metrics</a>)</summary><div>
-
-
-* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSansMalayalam/googlefonts/slim-variable-ttf/NotoSansMalayalam-MM[wght].ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Black.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Bold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-ExtraBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-ExtraLight.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Light.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Medium.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Regular.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-SemiBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Thin.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Black.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Bold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-ExtraBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-ExtraLight.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Light.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Medium.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Regular.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-SemiBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Thin.ttf', 'fonts/NotoSansMalayalam/googlefonts/variable-ttf/NotoSansMalayalam-MM[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
+* 💔 **ERROR** Failed with IndexError: list index out of range
 </div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
@@ -853,31 +656,31 @@ But instead we have got:
 
 * 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
 
-	- uni0951
+	- rephmlym
 
 	- uni0D00
 
-	- rephmlym
-
 	- viramamlym
 
-	- uni0952 
+	- candrabindumlym
 
-	- And candrabindumlym [code: unattached-dotted-circle-marks]
+	- uni0951 
+
+	- And uni0952 [code: unattached-dotted-circle-marks]
 </div></details><details><summary>⚠ <b>WARN:</b> Glyphs are similiar to Google Fonts version? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/production_glyphs_similarity">com.google.fonts/check/production_glyphs_similarity</a>)</summary><div>
 
 
 * ⚠ **WARN** Following glyphs differ greatly from Google Fonts version:
-	* nnaddhamlym
-	* ddhaprehalfmlym
-	* badhamlym
-	* nyajamlym
-	* nnaddamlym
-	* sixmlym
-	* ngakalamlym
-	* baprehalfmlym
+	* nyachamlym
 	* nnamamlym
-	* nachillumlym and 31 more.
+	* narramlym
+	* nyajamlym
+	* mamamlym
+	* nyanyamlym
+	* kattamlym
+	* thousandmlym
+	* nnaddamlym
+	* kalamlym and 31 more.
 
 Use -F or --full-lists to disable shortening of long lists.
 </div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 27 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
@@ -896,25 +699,25 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 * ⚠ **WARN** The following glyphs could not be reached by codepoint or substitution rules:
 
-	- braceright
+	- quotesingle
 
-	- emdash
+	- endash
 
-	- one
+	- nbspace
 
-	- llvocalicvowelsignUImlym
+	- lllallvocalicUImlym
 
-	- equal
+	- asterisk
 
-	- plus
+	- seven
 
-	- bracketright
+	- rrallvocalicUImlym
 
-	- two
+	- semicolon
 
-	- tthallvocalicUImlym
+	- divide
 
-	- asciicircum 
+	- underscore 
 
 	- And 44 more.
 
@@ -961,27 +764,10 @@ Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]
 
 * ⚠ **WARN** The following non-mark characters should not be in the GDEF mark glyph class:
 	 U+0D02, U+0D03, U+0D3E, U+0D3F, U+0D40, U+0D46, U+0D47, U+0D48, U+0D4A, U+0D4B, U+0D4C and U+0D4E [code: non-mark-chars]
-</div></details><br></div></details><details><summary><b>[17] NotoSansMalayalam-Light.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[14] NotoSansMalayalam-Light.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
 
 
-* 🔥 **FAIL** Missing required codepoints:
-
-	- 0x00AF (MACRON)
- [code: missing-codepoints]
-</div></details><details><summary>🔥 <b>FAIL:</b> Check copyright namerecords match license file. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/license">com.google.fonts/check/name/license</a>)</summary><div>
-
-
-* 🔥 **FAIL** License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 3 (WINDOWS) is not specified for that. Value was: "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software." Must be changed to "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL" [code: wrong]
-</div></details><details><summary>🔥 <b>FAIL:</b> Copyright notices match canonical pattern in fonts (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/font_copyright">com.google.fonts/check/font_copyright</a>)</summary><div>
-
-
-* 🔥 **FAIL** Name Table entry: Copyright notices should match a pattern similar to: "Copyright 2019 The Familyname Project Authors (git url)"
-But instead we have got:
-"Copyright 2018 Google Inc. All Rights Reserved." [code: bad-notice-format]
-</div></details><details><summary>🔥 <b>FAIL:</b> OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/os2/use_typo_metrics">com.google.fonts/check/os2/use_typo_metrics</a>)</summary><div>
-
-
-* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSansMalayalam/googlefonts/slim-variable-ttf/NotoSansMalayalam-MM[wght].ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Black.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Bold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-ExtraBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-ExtraLight.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Light.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Medium.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Regular.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-SemiBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Thin.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Black.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Bold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-ExtraBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-ExtraLight.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Light.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Medium.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Regular.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-SemiBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Thin.ttf', 'fonts/NotoSansMalayalam/googlefonts/variable-ttf/NotoSansMalayalam-MM[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
+* 💔 **ERROR** Failed with IndexError: list index out of range
 </div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
@@ -995,31 +781,31 @@ But instead we have got:
 
 * 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
 
-	- uni0951
+	- rephmlym
 
 	- uni0D00
 
-	- rephmlym
-
 	- viramamlym
 
-	- uni0952 
+	- candrabindumlym
 
-	- And candrabindumlym [code: unattached-dotted-circle-marks]
+	- uni0951 
+
+	- And uni0952 [code: unattached-dotted-circle-marks]
 </div></details><details><summary>⚠ <b>WARN:</b> Glyphs are similiar to Google Fonts version? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/production_glyphs_similarity">com.google.fonts/check/production_glyphs_similarity</a>)</summary><div>
 
 
 * ⚠ **WARN** Following glyphs differ greatly from Google Fonts version:
-	* jajamlym
-	* nnannamlym
-	* nnaddhamlym
-	* ddhaprehalfmlym
-	* ngakamlym
-	* gamamlym
-	* badhamlym
+	* nyachamlym
+	* halamlym
+	* nnamamlym
+	* narramlym
+	* galamlym
 	* nyajamlym
-	* nnaddamlym
-	* sixmlym and 70 more.
+	* mamamlym
+	* uni0D77
+	* nyanyamlym
+	* kattamlym and 70 more.
 
 Use -F or --full-lists to disable shortening of long lists.
 </div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 27 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
@@ -1038,25 +824,25 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 * ⚠ **WARN** The following glyphs could not be reached by codepoint or substitution rules:
 
-	- braceright
+	- quotesingle
 
-	- emdash
+	- endash
 
-	- one
+	- nbspace
 
-	- llvocalicvowelsignUImlym
+	- lllallvocalicUImlym
 
-	- equal
+	- asterisk
 
-	- plus
+	- seven
 
-	- bracketright
+	- rrallvocalicUImlym
 
-	- two
+	- semicolon
 
-	- tthallvocalicUImlym
+	- divide
 
-	- asciicircum 
+	- underscore 
 
 	- And 44 more.
 
@@ -1115,27 +901,10 @@ Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]
 * ⚠ **WARN** The following glyphs have jaggy segments:
 
 	* jamlym (U+0D1C): B<<517.5,154.5>-<552.0,172.0>-<581.0,183.0>>/B<<581.0,183.0>-<559.0,180.0>-<532.0,178.5>> = 13.007088663620442 [code: found-jaggy-segments]
-</div></details><br></div></details><details><summary><b>[16] NotoSansMalayalam-Medium.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[13] NotoSansMalayalam-Medium.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
 
 
-* 🔥 **FAIL** Missing required codepoints:
-
-	- 0x00AF (MACRON)
- [code: missing-codepoints]
-</div></details><details><summary>🔥 <b>FAIL:</b> Check copyright namerecords match license file. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/license">com.google.fonts/check/name/license</a>)</summary><div>
-
-
-* 🔥 **FAIL** License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 3 (WINDOWS) is not specified for that. Value was: "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software." Must be changed to "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL" [code: wrong]
-</div></details><details><summary>🔥 <b>FAIL:</b> Copyright notices match canonical pattern in fonts (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/font_copyright">com.google.fonts/check/font_copyright</a>)</summary><div>
-
-
-* 🔥 **FAIL** Name Table entry: Copyright notices should match a pattern similar to: "Copyright 2019 The Familyname Project Authors (git url)"
-But instead we have got:
-"Copyright 2018 Google Inc. All Rights Reserved." [code: bad-notice-format]
-</div></details><details><summary>🔥 <b>FAIL:</b> OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/os2/use_typo_metrics">com.google.fonts/check/os2/use_typo_metrics</a>)</summary><div>
-
-
-* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSansMalayalam/googlefonts/slim-variable-ttf/NotoSansMalayalam-MM[wght].ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Black.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Bold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-ExtraBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-ExtraLight.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Light.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Medium.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Regular.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-SemiBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Thin.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Black.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Bold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-ExtraBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-ExtraLight.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Light.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Medium.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Regular.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-SemiBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Thin.ttf', 'fonts/NotoSansMalayalam/googlefonts/variable-ttf/NotoSansMalayalam-MM[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
+* 💔 **ERROR** Failed with IndexError: list index out of range
 </div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
@@ -1149,31 +918,31 @@ But instead we have got:
 
 * 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
 
-	- uni0951
+	- rephmlym
 
 	- uni0D00
 
-	- rephmlym
-
 	- viramamlym
 
-	- uni0952 
+	- candrabindumlym
 
-	- And candrabindumlym [code: unattached-dotted-circle-marks]
+	- uni0951 
+
+	- And uni0952 [code: unattached-dotted-circle-marks]
 </div></details><details><summary>⚠ <b>WARN:</b> Glyphs are similiar to Google Fonts version? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/production_glyphs_similarity">com.google.fonts/check/production_glyphs_similarity</a>)</summary><div>
 
 
 * ⚠ **WARN** Following glyphs differ greatly from Google Fonts version:
-	* onehalfmlym
-	* jajamlym
-	* nnannamlym
-	* nnaddhamlym
-	* ddhaprehalfmlym
-	* ralvocalicmlym
-	* ngakamlym
-	* gamamlym
-	* badhamlym
-	* shacamlym and 136 more.
+	* eightmlym
+	* nyachamlym
+	* jhamlym
+	* halamlym
+	* nnamamlym
+	* narramlym
+	* tthallvocalicmlym
+	* galamlym
+	* nyajamlym
+	* lllamlym and 136 more.
 
 Use -F or --full-lists to disable shortening of long lists.
 </div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 27 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
@@ -1192,25 +961,25 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 * ⚠ **WARN** The following glyphs could not be reached by codepoint or substitution rules:
 
-	- braceright
+	- quotesingle
 
-	- emdash
+	- endash
 
-	- one
+	- nbspace
 
-	- llvocalicvowelsignUImlym
+	- lllallvocalicUImlym
 
-	- equal
+	- asterisk
 
-	- plus
+	- seven
 
-	- bracketright
+	- rrallvocalicUImlym
 
-	- two
+	- semicolon
 
-	- tthallvocalicUImlym
+	- divide
 
-	- asciicircum 
+	- underscore 
 
 	- And 44 more.
 
@@ -1263,27 +1032,10 @@ Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]
 * ⚠ **WARN** The following glyphs have jaggy segments:
 
 	* jamlym (U+0D1C): B<<231.0,490.0>-<200.0,486.0>-<175.0,474.0>>/B<<175.0,474.0>-<198.0,479.0>-<220.0,479.0>> = 13.376232096412883 [code: found-jaggy-segments]
-</div></details><br></div></details><details><summary><b>[15] NotoSansMalayalam-Regular.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[12] NotoSansMalayalam-Regular.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
 
 
-* 🔥 **FAIL** Missing required codepoints:
-
-	- 0x00AF (MACRON)
- [code: missing-codepoints]
-</div></details><details><summary>🔥 <b>FAIL:</b> Check copyright namerecords match license file. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/license">com.google.fonts/check/name/license</a>)</summary><div>
-
-
-* 🔥 **FAIL** License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 3 (WINDOWS) is not specified for that. Value was: "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software." Must be changed to "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL" [code: wrong]
-</div></details><details><summary>🔥 <b>FAIL:</b> Copyright notices match canonical pattern in fonts (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/font_copyright">com.google.fonts/check/font_copyright</a>)</summary><div>
-
-
-* 🔥 **FAIL** Name Table entry: Copyright notices should match a pattern similar to: "Copyright 2019 The Familyname Project Authors (git url)"
-But instead we have got:
-"Copyright 2018 Google Inc. All Rights Reserved." [code: bad-notice-format]
-</div></details><details><summary>🔥 <b>FAIL:</b> OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/os2/use_typo_metrics">com.google.fonts/check/os2/use_typo_metrics</a>)</summary><div>
-
-
-* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSansMalayalam/googlefonts/slim-variable-ttf/NotoSansMalayalam-MM[wght].ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Black.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Bold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-ExtraBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-ExtraLight.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Light.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Medium.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Regular.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-SemiBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Thin.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Black.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Bold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-ExtraBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-ExtraLight.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Light.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Medium.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Regular.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-SemiBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Thin.ttf', 'fonts/NotoSansMalayalam/googlefonts/variable-ttf/NotoSansMalayalam-MM[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
+* 💔 **ERROR** Failed with IndexError: list index out of range
 </div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
@@ -1297,31 +1049,31 @@ But instead we have got:
 
 * 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
 
-	- uni0951
+	- rephmlym
 
 	- uni0D00
 
-	- rephmlym
-
 	- viramamlym
 
-	- uni0952 
+	- candrabindumlym
 
-	- And candrabindumlym [code: unattached-dotted-circle-marks]
+	- uni0951 
+
+	- And uni0952 [code: unattached-dotted-circle-marks]
 </div></details><details><summary>⚠ <b>WARN:</b> Glyphs are similiar to Google Fonts version? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/production_glyphs_similarity">com.google.fonts/check/production_glyphs_similarity</a>)</summary><div>
 
 
 * ⚠ **WARN** Following glyphs differ greatly from Google Fonts version:
-	* onehalfmlym
-	* jajamlym
-	* nnannamlym
-	* nnaddhamlym
-	* ddhaprehalfmlym
-	* ralvocalicmlym
-	* ngakamlym
-	* gamamlym
-	* badhamlym
-	* shacamlym and 120 more.
+	* nyachamlym
+	* halamlym
+	* nnamamlym
+	* narramlym
+	* tthallvocalicmlym
+	* galamlym
+	* nyajamlym
+	* ssamlym
+	* mamamlym
+	* uni0D77 and 120 more.
 
 Use -F or --full-lists to disable shortening of long lists.
 </div></details><details><summary>⚠ <b>WARN:</b> Ensure fonts have ScriptLangTags declared on the 'meta' table. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/meta/script_lang_tags">com.google.fonts/check/meta/script_lang_tags</a>)</summary><div>
@@ -1333,25 +1085,25 @@ Use -F or --full-lists to disable shortening of long lists.
 
 * ⚠ **WARN** The following glyphs could not be reached by codepoint or substitution rules:
 
-	- braceright
+	- quotesingle
 
-	- emdash
+	- endash
 
-	- one
+	- nbspace
 
-	- llvocalicvowelsignUImlym
+	- lllallvocalicUImlym
 
-	- equal
+	- asterisk
 
-	- plus
+	- seven
 
-	- bracketright
+	- rrallvocalicUImlym
 
-	- two
+	- semicolon
 
-	- tthallvocalicUImlym
+	- divide
 
-	- asciicircum 
+	- underscore 
 
 	- And 44 more.
 
@@ -1404,27 +1156,10 @@ Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]
 * ⚠ **WARN** The following glyphs have jaggy segments:
 
 	* jamlym (U+0D1C): B<<506.5,148.0>-<537.0,161.0>-<569.0,172.0>>/B<<569.0,172.0>-<541.0,169.0>-<503.5,167.5>> = 12.854904242201115 [code: found-jaggy-segments]
-</div></details><br></div></details><details><summary><b>[16] NotoSansMalayalam-SemiBold.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[13] NotoSansMalayalam-SemiBold.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
 
 
-* 🔥 **FAIL** Missing required codepoints:
-
-	- 0x00AF (MACRON)
- [code: missing-codepoints]
-</div></details><details><summary>🔥 <b>FAIL:</b> Check copyright namerecords match license file. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/license">com.google.fonts/check/name/license</a>)</summary><div>
-
-
-* 🔥 **FAIL** License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 3 (WINDOWS) is not specified for that. Value was: "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software." Must be changed to "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL" [code: wrong]
-</div></details><details><summary>🔥 <b>FAIL:</b> Copyright notices match canonical pattern in fonts (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/font_copyright">com.google.fonts/check/font_copyright</a>)</summary><div>
-
-
-* 🔥 **FAIL** Name Table entry: Copyright notices should match a pattern similar to: "Copyright 2019 The Familyname Project Authors (git url)"
-But instead we have got:
-"Copyright 2018 Google Inc. All Rights Reserved." [code: bad-notice-format]
-</div></details><details><summary>🔥 <b>FAIL:</b> OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/os2/use_typo_metrics">com.google.fonts/check/os2/use_typo_metrics</a>)</summary><div>
-
-
-* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSansMalayalam/googlefonts/slim-variable-ttf/NotoSansMalayalam-MM[wght].ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Black.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Bold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-ExtraBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-ExtraLight.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Light.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Medium.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Regular.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-SemiBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Thin.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Black.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Bold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-ExtraBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-ExtraLight.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Light.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Medium.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Regular.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-SemiBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Thin.ttf', 'fonts/NotoSansMalayalam/googlefonts/variable-ttf/NotoSansMalayalam-MM[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
+* 💔 **ERROR** Failed with IndexError: list index out of range
 </div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
@@ -1438,31 +1173,31 @@ But instead we have got:
 
 * 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
 
-	- uni0951
+	- rephmlym
 
 	- uni0D00
 
-	- rephmlym
-
 	- viramamlym
 
-	- uni0952 
+	- candrabindumlym
 
-	- And candrabindumlym [code: unattached-dotted-circle-marks]
+	- uni0951 
+
+	- And uni0952 [code: unattached-dotted-circle-marks]
 </div></details><details><summary>⚠ <b>WARN:</b> Glyphs are similiar to Google Fonts version? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/production_glyphs_similarity">com.google.fonts/check/production_glyphs_similarity</a>)</summary><div>
 
 
 * ⚠ **WARN** Following glyphs differ greatly from Google Fonts version:
-	* onehalfmlym
-	* jajamlym
-	* nnannamlym
-	* nnaddhamlym
-	* ddhaprehalfmlym
-	* ralvocalicmlym
-	* ngakamlym
-	* gamamlym
-	* badhamlym
-	* shacamlym and 151 more.
+	* eightmlym
+	* nyachamlym
+	* jhamlym
+	* halamlym
+	* nnamamlym
+	* narramlym
+	* tthallvocalicmlym
+	* galamlym
+	* jhaprehalfmlym
+	* nyajamlym and 151 more.
 
 Use -F or --full-lists to disable shortening of long lists.
 </div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 27 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
@@ -1481,25 +1216,25 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 * ⚠ **WARN** The following glyphs could not be reached by codepoint or substitution rules:
 
-	- braceright
+	- quotesingle
 
-	- emdash
+	- endash
 
-	- one
+	- nbspace
 
-	- llvocalicvowelsignUImlym
+	- lllallvocalicUImlym
 
-	- equal
+	- asterisk
 
-	- plus
+	- seven
 
-	- bracketright
+	- rrallvocalicUImlym
 
-	- two
+	- semicolon
 
-	- tthallvocalicUImlym
+	- divide
 
-	- asciicircum 
+	- underscore 
 
 	- And 44 more.
 
@@ -1574,27 +1309,10 @@ Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]
 	* jamlym (U+0D1C): B<<255.0,487.0>-<230.0,485.0>-<208.0,478.0>>/B<<208.0,478.0>-<218.0,479.0>-<229.0,479.0>> = 11.939531082430465 
 
 	* And jamlym (U+0D1C): B<<491.5,141.0>-<522.0,151.0>-<550.0,160.0>>/L<<550.0,160.0>--<546.0,159.0>> = 3.782645446596307 [code: found-jaggy-segments]
-</div></details><br></div></details><details><summary><b>[18] NotoSansMalayalam-Thin.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[15] NotoSansMalayalam-Thin.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
 
 
-* 🔥 **FAIL** Missing required codepoints:
-
-	- 0x00AF (MACRON)
- [code: missing-codepoints]
-</div></details><details><summary>🔥 <b>FAIL:</b> Check copyright namerecords match license file. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/license">com.google.fonts/check/name/license</a>)</summary><div>
-
-
-* 🔥 **FAIL** License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 3 (WINDOWS) is not specified for that. Value was: "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software." Must be changed to "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL" [code: wrong]
-</div></details><details><summary>🔥 <b>FAIL:</b> Copyright notices match canonical pattern in fonts (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/font_copyright">com.google.fonts/check/font_copyright</a>)</summary><div>
-
-
-* 🔥 **FAIL** Name Table entry: Copyright notices should match a pattern similar to: "Copyright 2019 The Familyname Project Authors (git url)"
-But instead we have got:
-"Copyright 2018 Google Inc. All Rights Reserved." [code: bad-notice-format]
-</div></details><details><summary>🔥 <b>FAIL:</b> OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/os2/use_typo_metrics">com.google.fonts/check/os2/use_typo_metrics</a>)</summary><div>
-
-
-* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSansMalayalam/googlefonts/slim-variable-ttf/NotoSansMalayalam-MM[wght].ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Black.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Bold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-ExtraBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-ExtraLight.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Light.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Medium.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Regular.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-SemiBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Thin.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Black.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Bold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-ExtraBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-ExtraLight.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Light.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Medium.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Regular.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-SemiBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Thin.ttf', 'fonts/NotoSansMalayalam/googlefonts/variable-ttf/NotoSansMalayalam-MM[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
+* 💔 **ERROR** Failed with IndexError: list index out of range
 </div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
@@ -1608,31 +1326,31 @@ But instead we have got:
 
 * 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
 
-	- uni0951
+	- rephmlym
 
 	- uni0D00
 
-	- rephmlym
-
 	- viramamlym
 
-	- uni0952 
+	- candrabindumlym
 
-	- And candrabindumlym [code: unattached-dotted-circle-marks]
+	- uni0951 
+
+	- And uni0952 [code: unattached-dotted-circle-marks]
 </div></details><details><summary>⚠ <b>WARN:</b> Glyphs are similiar to Google Fonts version? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/production_glyphs_similarity">com.google.fonts/check/production_glyphs_similarity</a>)</summary><div>
 
 
 * ⚠ **WARN** Following glyphs differ greatly from Google Fonts version:
-	* nnaddhamlym
-	* ddhaprehalfmlym
-	* badhamlym
-	* nyajamlym
-	* nnaddamlym
-	* baprehalfmlym
 	* nnamamlym
+	* nyajamlym
+	* nyanyamlym
+	* thousandmlym
+	* nnaddamlym
+	* ddhamlym
+	* ddhaprehalfmlym
+	* badamlym
 	* uni200C
-	* babamlym
-	* balamlym and 5 more.
+	* badhamlym and 5 more.
 
 Use -F or --full-lists to disable shortening of long lists.
 </div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 27 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
@@ -1651,25 +1369,25 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 * ⚠ **WARN** The following glyphs could not be reached by codepoint or substitution rules:
 
-	- braceright
+	- quotesingle
 
-	- emdash
+	- endash
 
-	- one
+	- nbspace
 
-	- llvocalicvowelsignUImlym
+	- lllallvocalicUImlym
 
-	- equal
+	- asterisk
 
-	- plus
+	- seven
 
-	- bracketright
+	- rrallvocalicUImlym
 
-	- two
+	- semicolon
 
-	- tthallvocalicUImlym
+	- divide
 
-	- asciicircum 
+	- underscore 
 
 	- And 44 more.
 
@@ -1750,27 +1468,10 @@ Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]
 	* exclamdown (U+00A1): L<<122.0,354.0>--<124.0,-186.0>> 
 
 	* And exclamdown (U+00A1): L<<96.0,-186.0>--<98.0,354.0>> [code: found-semi-vertical]
-</div></details><br></div></details><details><summary><b>[16] NotoSansMalayalamUI-Black.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[13] NotoSansMalayalamUI-Black.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
 
 
-* 🔥 **FAIL** Missing required codepoints:
-
-	- 0x00AF (MACRON)
- [code: missing-codepoints]
-</div></details><details><summary>🔥 <b>FAIL:</b> Check copyright namerecords match license file. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/license">com.google.fonts/check/name/license</a>)</summary><div>
-
-
-* 🔥 **FAIL** License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 3 (WINDOWS) is not specified for that. Value was: "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software." Must be changed to "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL" [code: wrong]
-</div></details><details><summary>🔥 <b>FAIL:</b> Copyright notices match canonical pattern in fonts (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/font_copyright">com.google.fonts/check/font_copyright</a>)</summary><div>
-
-
-* 🔥 **FAIL** Name Table entry: Copyright notices should match a pattern similar to: "Copyright 2019 The Familyname Project Authors (git url)"
-But instead we have got:
-"Copyright 2018 Google Inc. All Rights Reserved." [code: bad-notice-format]
-</div></details><details><summary>🔥 <b>FAIL:</b> OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/os2/use_typo_metrics">com.google.fonts/check/os2/use_typo_metrics</a>)</summary><div>
-
-
-* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSansMalayalam/googlefonts/slim-variable-ttf/NotoSansMalayalam-MM[wght].ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Black.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Bold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-ExtraBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-ExtraLight.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Light.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Medium.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Regular.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-SemiBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Thin.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Black.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Bold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-ExtraBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-ExtraLight.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Light.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Medium.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Regular.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-SemiBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Thin.ttf', 'fonts/NotoSansMalayalam/googlefonts/variable-ttf/NotoSansMalayalam-MM[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
+* 💔 **ERROR** Failed with IndexError: list index out of range
 </div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
@@ -1785,17 +1486,17 @@ But instead we have got:
 
 * 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
 
-	- uni0951
+	- rephmlym
 
 	- uni0D00
 
-	- rephmlym
-
 	- viramamlym
 
-	- uni0952 
+	- candrabindumlym
 
-	- And candrabindumlym [code: unattached-dotted-circle-marks]
+	- uni0951 
+
+	- And uni0952 [code: unattached-dotted-circle-marks]
 </div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 27 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
 
 
@@ -1812,25 +1513,25 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 * ⚠ **WARN** The following glyphs could not be reached by codepoint or substitution rules:
 
-	- braceright
+	- quotesingle
 
-	- emdash
+	- endash
 
-	- one
+	- nbspace
 
-	- equal
+	- lllallvocalicUImlym
 
-	- plus
+	- asterisk
 
-	- bracketright
+	- seven
 
-	- two
+	- rrallvocalicUImlym
 
-	- tthallvocalicUImlym
+	- semicolon
 
-	- asciicircum
+	- divide
 
-	- ellipsis 
+	- underscore 
 
 	- And 44 more.
 
@@ -1933,27 +1634,10 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 	* And 7 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-jaggy-segments]
-</div></details><br></div></details><details><summary><b>[15] NotoSansMalayalamUI-Bold.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[12] NotoSansMalayalamUI-Bold.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
 
 
-* 🔥 **FAIL** Missing required codepoints:
-
-	- 0x00AF (MACRON)
- [code: missing-codepoints]
-</div></details><details><summary>🔥 <b>FAIL:</b> Check copyright namerecords match license file. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/license">com.google.fonts/check/name/license</a>)</summary><div>
-
-
-* 🔥 **FAIL** License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 3 (WINDOWS) is not specified for that. Value was: "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software." Must be changed to "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL" [code: wrong]
-</div></details><details><summary>🔥 <b>FAIL:</b> Copyright notices match canonical pattern in fonts (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/font_copyright">com.google.fonts/check/font_copyright</a>)</summary><div>
-
-
-* 🔥 **FAIL** Name Table entry: Copyright notices should match a pattern similar to: "Copyright 2019 The Familyname Project Authors (git url)"
-But instead we have got:
-"Copyright 2018 Google Inc. All Rights Reserved." [code: bad-notice-format]
-</div></details><details><summary>🔥 <b>FAIL:</b> OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/os2/use_typo_metrics">com.google.fonts/check/os2/use_typo_metrics</a>)</summary><div>
-
-
-* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSansMalayalam/googlefonts/slim-variable-ttf/NotoSansMalayalam-MM[wght].ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Black.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Bold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-ExtraBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-ExtraLight.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Light.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Medium.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Regular.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-SemiBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Thin.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Black.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Bold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-ExtraBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-ExtraLight.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Light.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Medium.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Regular.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-SemiBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Thin.ttf', 'fonts/NotoSansMalayalam/googlefonts/variable-ttf/NotoSansMalayalam-MM[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
+* 💔 **ERROR** Failed with IndexError: list index out of range
 </div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
@@ -1968,17 +1652,17 @@ But instead we have got:
 
 * 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
 
-	- uni0951
+	- rephmlym
 
 	- uni0D00
 
-	- rephmlym
-
 	- viramamlym
 
-	- uni0952 
+	- candrabindumlym
 
-	- And candrabindumlym [code: unattached-dotted-circle-marks]
+	- uni0951 
+
+	- And uni0952 [code: unattached-dotted-circle-marks]
 </div></details><details><summary>⚠ <b>WARN:</b> Ensure fonts have ScriptLangTags declared on the 'meta' table. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/meta/script_lang_tags">com.google.fonts/check/meta/script_lang_tags</a>)</summary><div>
 
 
@@ -1988,25 +1672,25 @@ But instead we have got:
 
 * ⚠ **WARN** The following glyphs could not be reached by codepoint or substitution rules:
 
-	- braceright
+	- quotesingle
 
-	- emdash
+	- endash
 
-	- one
+	- nbspace
 
-	- equal
+	- lllallvocalicUImlym
 
-	- plus
+	- asterisk
 
-	- bracketright
+	- seven
 
-	- two
+	- rrallvocalicUImlym
 
-	- tthallvocalicUImlym
+	- semicolon
 
-	- asciicircum
+	- divide
 
-	- ellipsis 
+	- underscore 
 
 	- And 44 more.
 
@@ -2109,27 +1793,10 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 	* And 7 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-jaggy-segments]
-</div></details><br></div></details><details><summary><b>[16] NotoSansMalayalamUI-ExtraBold.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[13] NotoSansMalayalamUI-ExtraBold.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
 
 
-* 🔥 **FAIL** Missing required codepoints:
-
-	- 0x00AF (MACRON)
- [code: missing-codepoints]
-</div></details><details><summary>🔥 <b>FAIL:</b> Check copyright namerecords match license file. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/license">com.google.fonts/check/name/license</a>)</summary><div>
-
-
-* 🔥 **FAIL** License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 3 (WINDOWS) is not specified for that. Value was: "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software." Must be changed to "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL" [code: wrong]
-</div></details><details><summary>🔥 <b>FAIL:</b> Copyright notices match canonical pattern in fonts (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/font_copyright">com.google.fonts/check/font_copyright</a>)</summary><div>
-
-
-* 🔥 **FAIL** Name Table entry: Copyright notices should match a pattern similar to: "Copyright 2019 The Familyname Project Authors (git url)"
-But instead we have got:
-"Copyright 2018 Google Inc. All Rights Reserved." [code: bad-notice-format]
-</div></details><details><summary>🔥 <b>FAIL:</b> OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/os2/use_typo_metrics">com.google.fonts/check/os2/use_typo_metrics</a>)</summary><div>
-
-
-* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSansMalayalam/googlefonts/slim-variable-ttf/NotoSansMalayalam-MM[wght].ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Black.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Bold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-ExtraBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-ExtraLight.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Light.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Medium.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Regular.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-SemiBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Thin.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Black.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Bold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-ExtraBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-ExtraLight.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Light.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Medium.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Regular.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-SemiBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Thin.ttf', 'fonts/NotoSansMalayalam/googlefonts/variable-ttf/NotoSansMalayalam-MM[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
+* 💔 **ERROR** Failed with IndexError: list index out of range
 </div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
@@ -2144,17 +1811,17 @@ But instead we have got:
 
 * 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
 
-	- uni0951
+	- rephmlym
 
 	- uni0D00
 
-	- rephmlym
-
 	- viramamlym
 
-	- uni0952 
+	- candrabindumlym
 
-	- And candrabindumlym [code: unattached-dotted-circle-marks]
+	- uni0951 
+
+	- And uni0952 [code: unattached-dotted-circle-marks]
 </div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 27 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
 
 
@@ -2171,25 +1838,25 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 * ⚠ **WARN** The following glyphs could not be reached by codepoint or substitution rules:
 
-	- braceright
+	- quotesingle
 
-	- emdash
+	- endash
 
-	- one
+	- nbspace
 
-	- equal
+	- lllallvocalicUImlym
 
-	- plus
+	- asterisk
 
-	- bracketright
+	- seven
 
-	- two
+	- rrallvocalicUImlym
 
-	- tthallvocalicUImlym
+	- semicolon
 
-	- asciicircum
+	- divide
 
-	- ellipsis 
+	- underscore 
 
 	- And 44 more.
 
@@ -2292,27 +1959,10 @@ Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]
 	* And 3 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-jaggy-segments]
-</div></details><br></div></details><details><summary><b>[15] NotoSansMalayalamUI-ExtraLight.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[12] NotoSansMalayalamUI-ExtraLight.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
 
 
-* 🔥 **FAIL** Missing required codepoints:
-
-	- 0x00AF (MACRON)
- [code: missing-codepoints]
-</div></details><details><summary>🔥 <b>FAIL:</b> Check copyright namerecords match license file. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/license">com.google.fonts/check/name/license</a>)</summary><div>
-
-
-* 🔥 **FAIL** License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 3 (WINDOWS) is not specified for that. Value was: "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software." Must be changed to "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL" [code: wrong]
-</div></details><details><summary>🔥 <b>FAIL:</b> Copyright notices match canonical pattern in fonts (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/font_copyright">com.google.fonts/check/font_copyright</a>)</summary><div>
-
-
-* 🔥 **FAIL** Name Table entry: Copyright notices should match a pattern similar to: "Copyright 2019 The Familyname Project Authors (git url)"
-But instead we have got:
-"Copyright 2018 Google Inc. All Rights Reserved." [code: bad-notice-format]
-</div></details><details><summary>🔥 <b>FAIL:</b> OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/os2/use_typo_metrics">com.google.fonts/check/os2/use_typo_metrics</a>)</summary><div>
-
-
-* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSansMalayalam/googlefonts/slim-variable-ttf/NotoSansMalayalam-MM[wght].ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Black.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Bold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-ExtraBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-ExtraLight.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Light.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Medium.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Regular.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-SemiBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Thin.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Black.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Bold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-ExtraBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-ExtraLight.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Light.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Medium.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Regular.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-SemiBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Thin.ttf', 'fonts/NotoSansMalayalam/googlefonts/variable-ttf/NotoSansMalayalam-MM[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
+* 💔 **ERROR** Failed with IndexError: list index out of range
 </div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
@@ -2327,17 +1977,17 @@ But instead we have got:
 
 * 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
 
-	- uni0951
+	- rephmlym
 
 	- uni0D00
 
-	- rephmlym
-
 	- viramamlym
 
-	- uni0952 
+	- candrabindumlym
 
-	- And candrabindumlym [code: unattached-dotted-circle-marks]
+	- uni0951 
+
+	- And uni0952 [code: unattached-dotted-circle-marks]
 </div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 27 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
 
 
@@ -2354,25 +2004,25 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 * ⚠ **WARN** The following glyphs could not be reached by codepoint or substitution rules:
 
-	- braceright
+	- quotesingle
 
-	- emdash
+	- endash
 
-	- one
+	- nbspace
 
-	- equal
+	- lllallvocalicUImlym
 
-	- plus
+	- asterisk
 
-	- bracketright
+	- seven
 
-	- two
+	- rrallvocalicUImlym
 
-	- tthallvocalicUImlym
+	- semicolon
 
-	- asciicircum
+	- divide
 
-	- ellipsis 
+	- underscore 
 
 	- And 44 more.
 
@@ -2447,27 +2097,10 @@ Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]
 	* And 52 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-misalignments]
-</div></details><br></div></details><details><summary><b>[17] NotoSansMalayalamUI-Light.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[14] NotoSansMalayalamUI-Light.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
 
 
-* 🔥 **FAIL** Missing required codepoints:
-
-	- 0x00AF (MACRON)
- [code: missing-codepoints]
-</div></details><details><summary>🔥 <b>FAIL:</b> Check copyright namerecords match license file. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/license">com.google.fonts/check/name/license</a>)</summary><div>
-
-
-* 🔥 **FAIL** License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 3 (WINDOWS) is not specified for that. Value was: "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software." Must be changed to "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL" [code: wrong]
-</div></details><details><summary>🔥 <b>FAIL:</b> Copyright notices match canonical pattern in fonts (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/font_copyright">com.google.fonts/check/font_copyright</a>)</summary><div>
-
-
-* 🔥 **FAIL** Name Table entry: Copyright notices should match a pattern similar to: "Copyright 2019 The Familyname Project Authors (git url)"
-But instead we have got:
-"Copyright 2018 Google Inc. All Rights Reserved." [code: bad-notice-format]
-</div></details><details><summary>🔥 <b>FAIL:</b> OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/os2/use_typo_metrics">com.google.fonts/check/os2/use_typo_metrics</a>)</summary><div>
-
-
-* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSansMalayalam/googlefonts/slim-variable-ttf/NotoSansMalayalam-MM[wght].ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Black.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Bold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-ExtraBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-ExtraLight.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Light.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Medium.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Regular.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-SemiBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Thin.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Black.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Bold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-ExtraBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-ExtraLight.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Light.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Medium.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Regular.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-SemiBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Thin.ttf', 'fonts/NotoSansMalayalam/googlefonts/variable-ttf/NotoSansMalayalam-MM[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
+* 💔 **ERROR** Failed with IndexError: list index out of range
 </div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
@@ -2482,17 +2115,17 @@ But instead we have got:
 
 * 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
 
-	- uni0951
+	- rephmlym
 
 	- uni0D00
 
-	- rephmlym
-
 	- viramamlym
 
-	- uni0952 
+	- candrabindumlym
 
-	- And candrabindumlym [code: unattached-dotted-circle-marks]
+	- uni0951 
+
+	- And uni0952 [code: unattached-dotted-circle-marks]
 </div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 27 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
 
 
@@ -2509,25 +2142,25 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 * ⚠ **WARN** The following glyphs could not be reached by codepoint or substitution rules:
 
-	- braceright
+	- quotesingle
 
-	- emdash
+	- endash
 
-	- one
+	- nbspace
 
-	- equal
+	- lllallvocalicUImlym
 
-	- plus
+	- asterisk
 
-	- bracketright
+	- seven
 
-	- two
+	- rrallvocalicUImlym
 
-	- tthallvocalicUImlym
+	- semicolon
 
-	- asciicircum
+	- divide
 
-	- ellipsis 
+	- underscore 
 
 	- And 44 more.
 
@@ -2614,27 +2247,10 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 * ⚠ **WARN** The following glyphs have jaggy segments:
 
 	* jamlym (U+0D1C): B<<517.5,220.5>-<552.0,238.0>-<581.0,249.0>>/B<<581.0,249.0>-<559.0,246.0>-<532.0,244.5>> = 13.007088663620442 [code: found-jaggy-segments]
-</div></details><br></div></details><details><summary><b>[16] NotoSansMalayalamUI-Medium.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[13] NotoSansMalayalamUI-Medium.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
 
 
-* 🔥 **FAIL** Missing required codepoints:
-
-	- 0x00AF (MACRON)
- [code: missing-codepoints]
-</div></details><details><summary>🔥 <b>FAIL:</b> Check copyright namerecords match license file. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/license">com.google.fonts/check/name/license</a>)</summary><div>
-
-
-* 🔥 **FAIL** License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 3 (WINDOWS) is not specified for that. Value was: "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software." Must be changed to "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL" [code: wrong]
-</div></details><details><summary>🔥 <b>FAIL:</b> Copyright notices match canonical pattern in fonts (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/font_copyright">com.google.fonts/check/font_copyright</a>)</summary><div>
-
-
-* 🔥 **FAIL** Name Table entry: Copyright notices should match a pattern similar to: "Copyright 2019 The Familyname Project Authors (git url)"
-But instead we have got:
-"Copyright 2018 Google Inc. All Rights Reserved." [code: bad-notice-format]
-</div></details><details><summary>🔥 <b>FAIL:</b> OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/os2/use_typo_metrics">com.google.fonts/check/os2/use_typo_metrics</a>)</summary><div>
-
-
-* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSansMalayalam/googlefonts/slim-variable-ttf/NotoSansMalayalam-MM[wght].ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Black.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Bold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-ExtraBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-ExtraLight.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Light.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Medium.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Regular.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-SemiBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Thin.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Black.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Bold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-ExtraBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-ExtraLight.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Light.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Medium.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Regular.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-SemiBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Thin.ttf', 'fonts/NotoSansMalayalam/googlefonts/variable-ttf/NotoSansMalayalam-MM[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
+* 💔 **ERROR** Failed with IndexError: list index out of range
 </div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
@@ -2649,17 +2265,17 @@ But instead we have got:
 
 * 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
 
-	- uni0951
+	- rephmlym
 
 	- uni0D00
 
-	- rephmlym
-
 	- viramamlym
 
-	- uni0952 
+	- candrabindumlym
 
-	- And candrabindumlym [code: unattached-dotted-circle-marks]
+	- uni0951 
+
+	- And uni0952 [code: unattached-dotted-circle-marks]
 </div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 27 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
 
 
@@ -2676,25 +2292,25 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 * ⚠ **WARN** The following glyphs could not be reached by codepoint or substitution rules:
 
-	- braceright
+	- quotesingle
 
-	- emdash
+	- endash
 
-	- one
+	- nbspace
 
-	- equal
+	- lllallvocalicUImlym
 
-	- plus
+	- asterisk
 
-	- bracketright
+	- seven
 
-	- two
+	- rrallvocalicUImlym
 
-	- tthallvocalicUImlym
+	- semicolon
 
-	- asciicircum
+	- divide
 
-	- ellipsis 
+	- underscore 
 
 	- And 44 more.
 
@@ -2775,27 +2391,10 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 * ⚠ **WARN** The following glyphs have jaggy segments:
 
 	* jamlym (U+0D1C): B<<231.0,556.0>-<200.0,552.0>-<175.0,540.0>>/B<<175.0,540.0>-<198.0,545.0>-<220.0,545.0>> = 13.376232096412883 [code: found-jaggy-segments]
-</div></details><br></div></details><details><summary><b>[16] NotoSansMalayalamUI-Regular.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[13] NotoSansMalayalamUI-Regular.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
 
 
-* 🔥 **FAIL** Missing required codepoints:
-
-	- 0x00AF (MACRON)
- [code: missing-codepoints]
-</div></details><details><summary>🔥 <b>FAIL:</b> Check copyright namerecords match license file. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/license">com.google.fonts/check/name/license</a>)</summary><div>
-
-
-* 🔥 **FAIL** License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 3 (WINDOWS) is not specified for that. Value was: "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software." Must be changed to "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL" [code: wrong]
-</div></details><details><summary>🔥 <b>FAIL:</b> Copyright notices match canonical pattern in fonts (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/font_copyright">com.google.fonts/check/font_copyright</a>)</summary><div>
-
-
-* 🔥 **FAIL** Name Table entry: Copyright notices should match a pattern similar to: "Copyright 2019 The Familyname Project Authors (git url)"
-But instead we have got:
-"Copyright 2018 Google Inc. All Rights Reserved." [code: bad-notice-format]
-</div></details><details><summary>🔥 <b>FAIL:</b> OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/os2/use_typo_metrics">com.google.fonts/check/os2/use_typo_metrics</a>)</summary><div>
-
-
-* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSansMalayalam/googlefonts/slim-variable-ttf/NotoSansMalayalam-MM[wght].ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Black.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Bold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-ExtraBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-ExtraLight.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Light.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Medium.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Regular.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-SemiBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Thin.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Black.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Bold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-ExtraBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-ExtraLight.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Light.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Medium.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Regular.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-SemiBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Thin.ttf', 'fonts/NotoSansMalayalam/googlefonts/variable-ttf/NotoSansMalayalam-MM[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
+* 💔 **ERROR** Failed with IndexError: list index out of range
 </div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
@@ -2810,17 +2409,17 @@ But instead we have got:
 
 * 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
 
-	- uni0951
+	- rephmlym
 
 	- uni0D00
 
-	- rephmlym
-
 	- viramamlym
 
-	- uni0952 
+	- candrabindumlym
 
-	- And candrabindumlym [code: unattached-dotted-circle-marks]
+	- uni0951 
+
+	- And uni0952 [code: unattached-dotted-circle-marks]
 </div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 27 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
 
 
@@ -2837,25 +2436,25 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 * ⚠ **WARN** The following glyphs could not be reached by codepoint or substitution rules:
 
-	- braceright
+	- quotesingle
 
-	- emdash
+	- endash
 
-	- one
+	- nbspace
 
-	- equal
+	- lllallvocalicUImlym
 
-	- plus
+	- asterisk
 
-	- bracketright
+	- seven
 
-	- two
+	- rrallvocalicUImlym
 
-	- tthallvocalicUImlym
+	- semicolon
 
-	- asciicircum
+	- divide
 
-	- ellipsis 
+	- underscore 
 
 	- And 44 more.
 
@@ -2936,27 +2535,10 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 * ⚠ **WARN** The following glyphs have jaggy segments:
 
 	* jamlym (U+0D1C): B<<506.5,214.0>-<537.0,227.0>-<569.0,238.0>>/B<<569.0,238.0>-<541.0,235.0>-<503.5,233.5>> = 12.854904242201115 [code: found-jaggy-segments]
-</div></details><br></div></details><details><summary><b>[16] NotoSansMalayalamUI-SemiBold.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[13] NotoSansMalayalamUI-SemiBold.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
 
 
-* 🔥 **FAIL** Missing required codepoints:
-
-	- 0x00AF (MACRON)
- [code: missing-codepoints]
-</div></details><details><summary>🔥 <b>FAIL:</b> Check copyright namerecords match license file. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/license">com.google.fonts/check/name/license</a>)</summary><div>
-
-
-* 🔥 **FAIL** License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 3 (WINDOWS) is not specified for that. Value was: "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software." Must be changed to "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL" [code: wrong]
-</div></details><details><summary>🔥 <b>FAIL:</b> Copyright notices match canonical pattern in fonts (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/font_copyright">com.google.fonts/check/font_copyright</a>)</summary><div>
-
-
-* 🔥 **FAIL** Name Table entry: Copyright notices should match a pattern similar to: "Copyright 2019 The Familyname Project Authors (git url)"
-But instead we have got:
-"Copyright 2018 Google Inc. All Rights Reserved." [code: bad-notice-format]
-</div></details><details><summary>🔥 <b>FAIL:</b> OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/os2/use_typo_metrics">com.google.fonts/check/os2/use_typo_metrics</a>)</summary><div>
-
-
-* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSansMalayalam/googlefonts/slim-variable-ttf/NotoSansMalayalam-MM[wght].ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Black.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Bold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-ExtraBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-ExtraLight.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Light.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Medium.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Regular.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-SemiBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Thin.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Black.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Bold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-ExtraBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-ExtraLight.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Light.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Medium.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Regular.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-SemiBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Thin.ttf', 'fonts/NotoSansMalayalam/googlefonts/variable-ttf/NotoSansMalayalam-MM[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
+* 💔 **ERROR** Failed with IndexError: list index out of range
 </div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
@@ -2971,17 +2553,17 @@ But instead we have got:
 
 * 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
 
-	- uni0951
+	- rephmlym
 
 	- uni0D00
 
-	- rephmlym
-
 	- viramamlym
 
-	- uni0952 
+	- candrabindumlym
 
-	- And candrabindumlym [code: unattached-dotted-circle-marks]
+	- uni0951 
+
+	- And uni0952 [code: unattached-dotted-circle-marks]
 </div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 27 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
 
 
@@ -2998,25 +2580,25 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 * ⚠ **WARN** The following glyphs could not be reached by codepoint or substitution rules:
 
-	- braceright
+	- quotesingle
 
-	- emdash
+	- endash
 
-	- one
+	- nbspace
 
-	- equal
+	- lllallvocalicUImlym
 
-	- plus
+	- asterisk
 
-	- bracketright
+	- seven
 
-	- two
+	- rrallvocalicUImlym
 
-	- tthallvocalicUImlym
+	- semicolon
 
-	- asciicircum
+	- divide
 
-	- ellipsis 
+	- underscore 
 
 	- And 44 more.
 
@@ -3119,27 +2701,10 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 	* jamlym (U+0D1C): B<<255.0,553.0>-<230.0,551.0>-<208.0,544.0>>/B<<208.0,544.0>-<218.0,545.0>-<229.0,545.0>> = 11.939531082430465 
 
 	* And jamlym (U+0D1C): B<<491.5,207.0>-<522.0,217.0>-<550.0,226.0>>/L<<550.0,226.0>--<546.0,225.0>> = 3.782645446596307 [code: found-jaggy-segments]
-</div></details><br></div></details><details><summary><b>[18] NotoSansMalayalamUI-Thin.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[15] NotoSansMalayalamUI-Thin.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
 
 
-* 🔥 **FAIL** Missing required codepoints:
-
-	- 0x00AF (MACRON)
- [code: missing-codepoints]
-</div></details><details><summary>🔥 <b>FAIL:</b> Check copyright namerecords match license file. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/license">com.google.fonts/check/name/license</a>)</summary><div>
-
-
-* 🔥 **FAIL** License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 3 (WINDOWS) is not specified for that. Value was: "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software." Must be changed to "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL" [code: wrong]
-</div></details><details><summary>🔥 <b>FAIL:</b> Copyright notices match canonical pattern in fonts (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/font_copyright">com.google.fonts/check/font_copyright</a>)</summary><div>
-
-
-* 🔥 **FAIL** Name Table entry: Copyright notices should match a pattern similar to: "Copyright 2019 The Familyname Project Authors (git url)"
-But instead we have got:
-"Copyright 2018 Google Inc. All Rights Reserved." [code: bad-notice-format]
-</div></details><details><summary>🔥 <b>FAIL:</b> OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/os2/use_typo_metrics">com.google.fonts/check/os2/use_typo_metrics</a>)</summary><div>
-
-
-* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSansMalayalam/googlefonts/slim-variable-ttf/NotoSansMalayalam-MM[wght].ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Black.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Bold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-ExtraBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-ExtraLight.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Light.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Medium.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Regular.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-SemiBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Thin.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Black.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Bold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-ExtraBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-ExtraLight.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Light.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Medium.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Regular.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-SemiBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Thin.ttf', 'fonts/NotoSansMalayalam/googlefonts/variable-ttf/NotoSansMalayalam-MM[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
+* 💔 **ERROR** Failed with IndexError: list index out of range
 </div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
@@ -3154,17 +2719,17 @@ But instead we have got:
 
 * 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
 
-	- uni0951
+	- rephmlym
 
 	- uni0D00
 
-	- rephmlym
-
 	- viramamlym
 
-	- uni0952 
+	- candrabindumlym
 
-	- And candrabindumlym [code: unattached-dotted-circle-marks]
+	- uni0951 
+
+	- And uni0952 [code: unattached-dotted-circle-marks]
 </div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 27 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
 
 
@@ -3181,25 +2746,25 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 * ⚠ **WARN** The following glyphs could not be reached by codepoint or substitution rules:
 
-	- braceright
+	- quotesingle
 
-	- emdash
+	- endash
 
-	- one
+	- nbspace
 
-	- equal
+	- lllallvocalicUImlym
 
-	- plus
+	- asterisk
 
-	- bracketright
+	- seven
 
-	- two
+	- rrallvocalicUImlym
 
-	- tthallvocalicUImlym
+	- semicolon
 
-	- asciicircum
+	- divide
 
-	- ellipsis 
+	- underscore 
 
 	- And 44 more.
 
@@ -3308,31 +2873,10 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 	* exclamdown (U+00A1): L<<122.0,420.0>--<124.0,-120.0>> 
 
 	* And exclamdown (U+00A1): L<<96.0,-120.0>--<98.0,420.0>> [code: found-semi-vertical]
-</div></details><br></div></details><details><summary><b>[14] NotoSansMalayalam-MM[wdth,wght].ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Checking file is named canonically. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/canonical_filename">com.google.fonts/check/canonical_filename</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[10] NotoSansMalayalam[wdth,wght].ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
 
 
-* 🔥 **FAIL** The file 'NotoSansMalayalam-MM[wdth,wght].ttf' must be renamed to 'NotoSansMalayalam[wdth,wght].ttf' according to the Google Fonts naming policy for variable fonts. [code: bad-varfont-filename]
-</div></details><details><summary>🔥 <b>FAIL:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
-
-
-* 🔥 **FAIL** Missing required codepoints:
-
-	- 0x00AF (MACRON)
- [code: missing-codepoints]
-</div></details><details><summary>🔥 <b>FAIL:</b> Check copyright namerecords match license file. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/license">com.google.fonts/check/name/license</a>)</summary><div>
-
-
-* 🔥 **FAIL** License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 3 (WINDOWS) is not specified for that. Value was: "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software." Must be changed to "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL" [code: wrong]
-</div></details><details><summary>🔥 <b>FAIL:</b> Copyright notices match canonical pattern in fonts (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/font_copyright">com.google.fonts/check/font_copyright</a>)</summary><div>
-
-
-* 🔥 **FAIL** Name Table entry: Copyright notices should match a pattern similar to: "Copyright 2019 The Familyname Project Authors (git url)"
-But instead we have got:
-"Copyright 2018 Google Inc. All Rights Reserved." [code: bad-notice-format]
-</div></details><details><summary>🔥 <b>FAIL:</b> OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/os2/use_typo_metrics">com.google.fonts/check/os2/use_typo_metrics</a>)</summary><div>
-
-
-* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSansMalayalam/googlefonts/slim-variable-ttf/NotoSansMalayalam-MM[wght].ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Black.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Bold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-ExtraBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-ExtraLight.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Light.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Medium.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Regular.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-SemiBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalam-Thin.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Black.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Bold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-ExtraBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-ExtraLight.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Light.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Medium.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Regular.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-SemiBold.ttf', 'fonts/NotoSansMalayalam/googlefonts/ttf/NotoSansMalayalamUI-Thin.ttf', 'fonts/NotoSansMalayalam/googlefonts/variable-ttf/NotoSansMalayalam-MM[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
+* 💔 **ERROR** Failed with IndexError: list index out of range
 </div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
@@ -3346,21 +2890,21 @@ But instead we have got:
 
 * 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
 
-	- uni0951
+	- rephmlym
 
 	- uni0D00
 
-	- rephmlym
-
 	- viramamlym
 
-	- uni0952 
+	- candrabindumlym
 
-	- And candrabindumlym [code: unattached-dotted-circle-marks]
+	- uni0951 
+
+	- And uni0952 [code: unattached-dotted-circle-marks]
 </div></details><details><summary>🔥 <b>FAIL:</b> Validates that when an instance record is included for the default instance, its subfamilyNameID value is set to either 2 or 17, and its postScriptNameID value is set to 6. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/fvar.html#com.adobe.fonts/check/varfont/valid_default_instance_nameids">com.adobe.fonts/check/varfont/valid_default_instance_nameids</a>)</summary><div>
 
 
-* 🔥 **FAIL** 'Regular' instance has the same coordinates as the default instance; its subfamilyNameID should be either 2 or 17, instead of 292. [code: invalid-default-instance-subfamily-nameid:292]
+* 🔥 **FAIL** 'Regular' instance has the same coordinates as the default instance; its subfamilyNameID should be either 2 or 17, instead of 311. [code: invalid-default-instance-subfamily-nameid:311]
 </div></details><details><summary>⚠ <b>WARN:</b> Ensure fonts have ScriptLangTags declared on the 'meta' table. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/meta/script_lang_tags">com.google.fonts/check/meta/script_lang_tags</a>)</summary><div>
 
 
@@ -3370,25 +2914,25 @@ But instead we have got:
 
 * ⚠ **WARN** The following glyphs could not be reached by codepoint or substitution rules:
 
-	- braceright
+	- quotesingle
 
-	- emdash
+	- endash
 
-	- one
+	- lllallvocalicUImlym
 
-	- llvocalicvowelsignUImlym
+	- asterisk
 
-	- equal
+	- seven
 
-	- plus
+	- rrallvocalicUImlym
 
-	- bracketright
+	- semicolon
 
-	- two
+	- divide
 
-	- tthallvocalicUImlym
+	- underscore
 
-	- asciicircum 
+	- colon 
 
 	- And 44 more.
 
@@ -3418,8 +2962,8 @@ Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]
 
 | 💔 ERROR | 🔥 FAIL | ⚠ WARN | 💤 SKIP | ℹ INFO | 🍞 PASS | 🔎 DEBUG |
 |:-----:|:----:|:----:|:----:|:----:|:----:|:----:|
-| 0 | 151 | 175 | 2266 | 142 | 1681 | 0 |
-| 0% | 3% | 4% | 51% | 3% | 38% | 0% |
+| 19 | 62 | 170 | 2127 | 118 | 1699 | 0 |
+| 0% | 1% | 4% | 51% | 3% | 41% | 0% |
 
 **Note:** The following loglevels were omitted in this report:
 * **SKIP**
