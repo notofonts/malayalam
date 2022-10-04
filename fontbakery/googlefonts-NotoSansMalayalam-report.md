@@ -1,6 +1,6 @@
 ## Fontbakery report
 
-Fontbakery version: 0.8.9
+Fontbakery version: 0.8.10
 
 <details><summary><b>[4] Family checks</b></summary><div><details><summary>🔥 <b>FAIL:</b> Checking all files are in the same directory. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/single_directory">com.google.fonts/check/family/single_directory</a>)</summary><div>
 
@@ -131,11 +131,7 @@ Noto Sans Malayalam UI Thin: -293 [code: descent-mismatch]
 
 
 * 🔥 **FAIL** PANOSE family type is not the same across this family. In order to fix this, please make sure that the panose.bFamilyType value is the same in the OS/2 table of all of this family font files. [code: inconsistency]
-</div></details><br></div></details><details><summary><b>[14] NotoSansMalayalam-Black.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
-
-
-* 💔 **ERROR** Failed with IndexError: list index out of range
-</div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[13] NotoSansMalayalam-Black.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
 * 🔥 **FAIL** OS/2.usWinAscent value should be equal or greater than 1078, but got 864 instead [code: ascent]
@@ -148,31 +144,43 @@ Noto Sans Malayalam UI Thin: -293 [code: descent-mismatch]
 
 * 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
 
-	- rephmlym
+	- acutecomb
 
-	- uni0D00
-
-	- viramamlym
+	- brevecomb
 
 	- candrabindumlym
 
-	- uni0951 
+	- caroncomb
 
-	- And uni0952 [code: unattached-dotted-circle-marks]
+	- cedillacomb
+
+	- circumflexcomb
+
+	- commaaccentcomb
+
+	- commaturnedabovecomb
+
+	- dieresiscomb
+
+	- gravecomb 
+
+	- And 10 more.
+
+Use -F or --full-lists to disable shortening of long lists. [code: unattached-dotted-circle-marks]
 </div></details><details><summary>⚠ <b>WARN:</b> Glyphs are similiar to Google Fonts version? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/production_glyphs_similarity">com.google.fonts/check/production_glyphs_similarity</a>)</summary><div>
 
 
 * ⚠ **WARN** Following glyphs differ greatly from Google Fonts version:
-	* eightmlym
-	* nyachamlym
-	* jhamlym
-	* halamlym
-	* nnamamlym
-	* nnnamlym
+	* aamlym
+	* aimlym
+	* aivowelsignmlym
+	* amlym
 	* aumlym
-	* narramlym
-	* nnaprehalfmlym
-	* tthallvocalicmlym and 178 more.
+	* auvowelsignmlym
+	* babamlym
+	* badamlym
+	* badhamlym
+	* balamlym and 177 more.
 
 Use -F or --full-lists to disable shortening of long lists.
 </div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 27 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
@@ -191,25 +199,25 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 * ⚠ **WARN** The following glyphs could not be reached by codepoint or substitution rules:
 
-	- quotesingle
+	- asciicircum
 
-	- endash
-
-	- nbspace
-
-	- lllallvocalicUImlym
+	- asciitilde
 
 	- asterisk
 
-	- seven
+	- backslash
 
-	- rrallvocalicUImlym
+	- bar
 
-	- semicolon
+	- bhallvocalicUImlym
 
-	- divide
+	- braceleft
 
-	- underscore 
+	- braceright
+
+	- bracketleft
+
+	- bracketright 
 
 	- And 44 more.
 
@@ -248,9 +256,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-
 
 
 * ⚠ **WARN** The following mark characters could be in the GDEF mark glyph class:
-	 acutecomb (U+0301), brevecomb (U+0306), caroncomb (U+030C), cedillacomb (U+0327), circumflexcomb (U+0302), commaaccentcomb (U+0326), commaturnedabovecomb (U+0312), dieresiscomb (U+0308), gravecomb (U+0300), hungarumlautcomb (U+030B) and 6 more.
-
-Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]
+	 uni0D3B (U+0D3B) and uni1CDA (U+1CDA) [code: mark-chars]
 </div></details><details><summary>⚠ <b>WARN:</b> Check GDEF mark glyph class doesn't have characters that are not marks. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_non_mark_chars">com.google.fonts/check/gdef_non_mark_chars</a>)</summary><div>
 
 
@@ -312,11 +318,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 	* And 7 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-jaggy-segments]
-</div></details><br></div></details><details><summary><b>[13] NotoSansMalayalam-Bold.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
-
-
-* 💔 **ERROR** Failed with IndexError: list index out of range
-</div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[12] NotoSansMalayalam-Bold.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
 * 🔥 **FAIL** OS/2.usWinAscent value should be equal or greater than 1078, but got 864 instead [code: ascent]
@@ -329,31 +331,43 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-jaggy-s
 
 * 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
 
-	- rephmlym
+	- acutecomb
 
-	- uni0D00
-
-	- viramamlym
+	- brevecomb
 
 	- candrabindumlym
 
-	- uni0951 
+	- caroncomb
 
-	- And uni0952 [code: unattached-dotted-circle-marks]
+	- cedillacomb
+
+	- circumflexcomb
+
+	- commaaccentcomb
+
+	- commaturnedabovecomb
+
+	- dieresiscomb
+
+	- gravecomb 
+
+	- And 10 more.
+
+Use -F or --full-lists to disable shortening of long lists. [code: unattached-dotted-circle-marks]
 </div></details><details><summary>⚠ <b>WARN:</b> Glyphs are similiar to Google Fonts version? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/production_glyphs_similarity">com.google.fonts/check/production_glyphs_similarity</a>)</summary><div>
 
 
 * ⚠ **WARN** Following glyphs differ greatly from Google Fonts version:
-	* eightmlym
-	* nyachamlym
-	* jhamlym
-	* halamlym
-	* nnamamlym
-	* narramlym
-	* tthallvocalicmlym
-	* galamlym
-	* jhaprehalfmlym
-	* nyajamlym and 159 more.
+	* aamlym
+	* aimlym
+	* aivowelsignmlym
+	* amlym
+	* babamlym
+	* badamlym
+	* badhamlym
+	* balamlym
+	* bamlym
+	* baprehalfmlym and 158 more.
 
 Use -F or --full-lists to disable shortening of long lists.
 </div></details><details><summary>⚠ <b>WARN:</b> Ensure fonts have ScriptLangTags declared on the 'meta' table. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/meta/script_lang_tags">com.google.fonts/check/meta/script_lang_tags</a>)</summary><div>
@@ -365,25 +379,25 @@ Use -F or --full-lists to disable shortening of long lists.
 
 * ⚠ **WARN** The following glyphs could not be reached by codepoint or substitution rules:
 
-	- quotesingle
+	- asciicircum
 
-	- endash
-
-	- nbspace
-
-	- lllallvocalicUImlym
+	- asciitilde
 
 	- asterisk
 
-	- seven
+	- backslash
 
-	- rrallvocalicUImlym
+	- bar
 
-	- semicolon
+	- bhallvocalicUImlym
 
-	- divide
+	- braceleft
 
-	- underscore 
+	- braceright
+
+	- bracketleft
+
+	- bracketright 
 
 	- And 44 more.
 
@@ -422,9 +436,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-
 
 
 * ⚠ **WARN** The following mark characters could be in the GDEF mark glyph class:
-	 acutecomb (U+0301), brevecomb (U+0306), caroncomb (U+030C), cedillacomb (U+0327), circumflexcomb (U+0302), commaaccentcomb (U+0326), commaturnedabovecomb (U+0312), dieresiscomb (U+0308), gravecomb (U+0300), hungarumlautcomb (U+030B) and 6 more.
-
-Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]
+	 uni0D3B (U+0D3B) and uni1CDA (U+1CDA) [code: mark-chars]
 </div></details><details><summary>⚠ <b>WARN:</b> Check GDEF mark glyph class doesn't have characters that are not marks. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_non_mark_chars">com.google.fonts/check/gdef_non_mark_chars</a>)</summary><div>
 
 
@@ -486,11 +498,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 	* And 7 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-jaggy-segments]
-</div></details><br></div></details><details><summary><b>[13] NotoSansMalayalam-ExtraBold.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
-
-
-* 💔 **ERROR** Failed with IndexError: list index out of range
-</div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[12] NotoSansMalayalam-ExtraBold.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
 * 🔥 **FAIL** OS/2.usWinAscent value should be equal or greater than 1078, but got 864 instead [code: ascent]
@@ -503,31 +511,43 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-jaggy-s
 
 * 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
 
-	- rephmlym
+	- acutecomb
 
-	- uni0D00
-
-	- viramamlym
+	- brevecomb
 
 	- candrabindumlym
 
-	- uni0951 
+	- caroncomb
 
-	- And uni0952 [code: unattached-dotted-circle-marks]
+	- cedillacomb
+
+	- circumflexcomb
+
+	- commaaccentcomb
+
+	- commaturnedabovecomb
+
+	- dieresiscomb
+
+	- gravecomb 
+
+	- And 10 more.
+
+Use -F or --full-lists to disable shortening of long lists. [code: unattached-dotted-circle-marks]
 </div></details><details><summary>⚠ <b>WARN:</b> Glyphs are similiar to Google Fonts version? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/production_glyphs_similarity">com.google.fonts/check/production_glyphs_similarity</a>)</summary><div>
 
 
 * ⚠ **WARN** Following glyphs differ greatly from Google Fonts version:
-	* eightmlym
-	* nyachamlym
-	* jhamlym
-	* halamlym
-	* nnamamlym
-	* nnnamlym
+	* aamlym
+	* aimlym
+	* aivowelsignmlym
+	* amlym
 	* aumlym
-	* narramlym
-	* nnaprehalfmlym
-	* tthallvocalicmlym and 177 more.
+	* auvowelsignmlym
+	* babamlym
+	* badamlym
+	* badhamlym
+	* balamlym and 176 more.
 
 Use -F or --full-lists to disable shortening of long lists.
 </div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 27 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
@@ -546,25 +566,25 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 * ⚠ **WARN** The following glyphs could not be reached by codepoint or substitution rules:
 
-	- quotesingle
+	- asciicircum
 
-	- endash
-
-	- nbspace
-
-	- lllallvocalicUImlym
+	- asciitilde
 
 	- asterisk
 
-	- seven
+	- backslash
 
-	- rrallvocalicUImlym
+	- bar
 
-	- semicolon
+	- bhallvocalicUImlym
 
-	- divide
+	- braceleft
 
-	- underscore 
+	- braceright
+
+	- bracketleft
+
+	- bracketright 
 
 	- And 44 more.
 
@@ -603,9 +623,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-
 
 
 * ⚠ **WARN** The following mark characters could be in the GDEF mark glyph class:
-	 acutecomb (U+0301), brevecomb (U+0306), caroncomb (U+030C), cedillacomb (U+0327), circumflexcomb (U+0302), commaaccentcomb (U+0326), commaturnedabovecomb (U+0312), dieresiscomb (U+0308), gravecomb (U+0300), hungarumlautcomb (U+030B) and 6 more.
-
-Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]
+	 uni0D3B (U+0D3B) and uni1CDA (U+1CDA) [code: mark-chars]
 </div></details><details><summary>⚠ <b>WARN:</b> Check GDEF mark glyph class doesn't have characters that are not marks. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_non_mark_chars">com.google.fonts/check/gdef_non_mark_chars</a>)</summary><div>
 
 
@@ -639,11 +657,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]
 	* And 3 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-jaggy-segments]
-</div></details><br></div></details><details><summary><b>[12] NotoSansMalayalam-ExtraLight.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
-
-
-* 💔 **ERROR** Failed with IndexError: list index out of range
-</div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[11] NotoSansMalayalam-ExtraLight.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
 * 🔥 **FAIL** OS/2.usWinAscent value should be equal or greater than 1078, but got 864 instead [code: ascent]
@@ -656,31 +670,43 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-jaggy-s
 
 * 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
 
-	- rephmlym
+	- acutecomb
 
-	- uni0D00
-
-	- viramamlym
+	- brevecomb
 
 	- candrabindumlym
 
-	- uni0951 
+	- caroncomb
 
-	- And uni0952 [code: unattached-dotted-circle-marks]
+	- cedillacomb
+
+	- circumflexcomb
+
+	- commaaccentcomb
+
+	- commaturnedabovecomb
+
+	- dieresiscomb
+
+	- gravecomb 
+
+	- And 10 more.
+
+Use -F or --full-lists to disable shortening of long lists. [code: unattached-dotted-circle-marks]
 </div></details><details><summary>⚠ <b>WARN:</b> Glyphs are similiar to Google Fonts version? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/production_glyphs_similarity">com.google.fonts/check/production_glyphs_similarity</a>)</summary><div>
 
 
 * ⚠ **WARN** Following glyphs differ greatly from Google Fonts version:
-	* nyachamlym
-	* nnamamlym
-	* narramlym
-	* nyajamlym
-	* mamamlym
-	* nyanyamlym
-	* kattamlym
-	* thousandmlym
-	* nnaddamlym
-	* kalamlym and 31 more.
+	* babamlym
+	* badamlym
+	* badhamlym
+	* balamlym
+	* bamlym
+	* baprehalfmlym
+	* dadhamlym
+	* ddhamlym
+	* ddhaprehalfmlym
+	* hundredmlym and 30 more.
 
 Use -F or --full-lists to disable shortening of long lists.
 </div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 27 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
@@ -699,25 +725,25 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 * ⚠ **WARN** The following glyphs could not be reached by codepoint or substitution rules:
 
-	- quotesingle
+	- asciicircum
 
-	- endash
-
-	- nbspace
-
-	- lllallvocalicUImlym
+	- asciitilde
 
 	- asterisk
 
-	- seven
+	- backslash
 
-	- rrallvocalicUImlym
+	- bar
 
-	- semicolon
+	- bhallvocalicUImlym
 
-	- divide
+	- braceleft
 
-	- underscore 
+	- braceright
+
+	- bracketleft
+
+	- bracketright 
 
 	- And 44 more.
 
@@ -756,19 +782,13 @@ Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-
 
 
 * ⚠ **WARN** The following mark characters could be in the GDEF mark glyph class:
-	 acutecomb (U+0301), brevecomb (U+0306), caroncomb (U+030C), cedillacomb (U+0327), circumflexcomb (U+0302), commaaccentcomb (U+0326), commaturnedabovecomb (U+0312), dieresiscomb (U+0308), gravecomb (U+0300), hungarumlautcomb (U+030B) and 6 more.
-
-Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]
+	 uni0D3B (U+0D3B) and uni1CDA (U+1CDA) [code: mark-chars]
 </div></details><details><summary>⚠ <b>WARN:</b> Check GDEF mark glyph class doesn't have characters that are not marks. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_non_mark_chars">com.google.fonts/check/gdef_non_mark_chars</a>)</summary><div>
 
 
 * ⚠ **WARN** The following non-mark characters should not be in the GDEF mark glyph class:
 	 U+0D02, U+0D03, U+0D3E, U+0D3F, U+0D40, U+0D46, U+0D47, U+0D48, U+0D4A, U+0D4B, U+0D4C and U+0D4E [code: non-mark-chars]
-</div></details><br></div></details><details><summary><b>[14] NotoSansMalayalam-Light.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
-
-
-* 💔 **ERROR** Failed with IndexError: list index out of range
-</div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[13] NotoSansMalayalam-Light.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
 * 🔥 **FAIL** OS/2.usWinAscent value should be equal or greater than 1078, but got 864 instead [code: ascent]
@@ -781,31 +801,43 @@ Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]
 
 * 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
 
-	- rephmlym
+	- acutecomb
 
-	- uni0D00
-
-	- viramamlym
+	- brevecomb
 
 	- candrabindumlym
 
-	- uni0951 
+	- caroncomb
 
-	- And uni0952 [code: unattached-dotted-circle-marks]
+	- cedillacomb
+
+	- circumflexcomb
+
+	- commaaccentcomb
+
+	- commaturnedabovecomb
+
+	- dieresiscomb
+
+	- gravecomb 
+
+	- And 10 more.
+
+Use -F or --full-lists to disable shortening of long lists. [code: unattached-dotted-circle-marks]
 </div></details><details><summary>⚠ <b>WARN:</b> Glyphs are similiar to Google Fonts version? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/production_glyphs_similarity">com.google.fonts/check/production_glyphs_similarity</a>)</summary><div>
 
 
 * ⚠ **WARN** Following glyphs differ greatly from Google Fonts version:
-	* nyachamlym
-	* halamlym
-	* nnamamlym
-	* narramlym
-	* galamlym
-	* nyajamlym
-	* mamamlym
-	* uni0D77
-	* nyanyamlym
-	* kattamlym and 70 more.
+	* aamlym
+	* babamlym
+	* badamlym
+	* badhamlym
+	* balamlym
+	* bamlym
+	* baprehalfmlym
+	* cachamlym
+	* dadhamlym
+	* datemarkmlym and 67 more.
 
 Use -F or --full-lists to disable shortening of long lists.
 </div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 27 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
@@ -824,25 +856,25 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 * ⚠ **WARN** The following glyphs could not be reached by codepoint or substitution rules:
 
-	- quotesingle
+	- asciicircum
 
-	- endash
-
-	- nbspace
-
-	- lllallvocalicUImlym
+	- asciitilde
 
 	- asterisk
 
-	- seven
+	- backslash
 
-	- rrallvocalicUImlym
+	- bar
 
-	- semicolon
+	- bhallvocalicUImlym
 
-	- divide
+	- braceleft
 
-	- underscore 
+	- braceright
+
+	- bracketleft
+
+	- bracketright 
 
 	- And 44 more.
 
@@ -881,9 +913,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-
 
 
 * ⚠ **WARN** The following mark characters could be in the GDEF mark glyph class:
-	 acutecomb (U+0301), brevecomb (U+0306), caroncomb (U+030C), cedillacomb (U+0327), circumflexcomb (U+0302), commaaccentcomb (U+0326), commaturnedabovecomb (U+0312), dieresiscomb (U+0308), gravecomb (U+0300), hungarumlautcomb (U+030B) and 6 more.
-
-Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]
+	 uni0D3B (U+0D3B) and uni1CDA (U+1CDA) [code: mark-chars]
 </div></details><details><summary>⚠ <b>WARN:</b> Check GDEF mark glyph class doesn't have characters that are not marks. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_non_mark_chars">com.google.fonts/check/gdef_non_mark_chars</a>)</summary><div>
 
 
@@ -901,11 +931,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]
 * ⚠ **WARN** The following glyphs have jaggy segments:
 
 	* jamlym (U+0D1C): B<<517.5,154.5>-<552.0,172.0>-<581.0,183.0>>/B<<581.0,183.0>-<559.0,180.0>-<532.0,178.5>> = 13.007088663620442 [code: found-jaggy-segments]
-</div></details><br></div></details><details><summary><b>[13] NotoSansMalayalam-Medium.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
-
-
-* 💔 **ERROR** Failed with IndexError: list index out of range
-</div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[12] NotoSansMalayalam-Medium.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
 * 🔥 **FAIL** OS/2.usWinAscent value should be equal or greater than 1078, but got 864 instead [code: ascent]
@@ -918,31 +944,43 @@ Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]
 
 * 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
 
-	- rephmlym
+	- acutecomb
 
-	- uni0D00
-
-	- viramamlym
+	- brevecomb
 
 	- candrabindumlym
 
-	- uni0951 
+	- caroncomb
 
-	- And uni0952 [code: unattached-dotted-circle-marks]
+	- cedillacomb
+
+	- circumflexcomb
+
+	- commaaccentcomb
+
+	- commaturnedabovecomb
+
+	- dieresiscomb
+
+	- gravecomb 
+
+	- And 10 more.
+
+Use -F or --full-lists to disable shortening of long lists. [code: unattached-dotted-circle-marks]
 </div></details><details><summary>⚠ <b>WARN:</b> Glyphs are similiar to Google Fonts version? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/production_glyphs_similarity">com.google.fonts/check/production_glyphs_similarity</a>)</summary><div>
 
 
 * ⚠ **WARN** Following glyphs differ greatly from Google Fonts version:
-	* eightmlym
-	* nyachamlym
-	* jhamlym
-	* halamlym
-	* nnamamlym
-	* narramlym
-	* tthallvocalicmlym
-	* galamlym
-	* nyajamlym
-	* lllamlym and 136 more.
+	* aamlym
+	* aimlym
+	* aivowelsignmlym
+	* amlym
+	* babamlym
+	* badamlym
+	* badhamlym
+	* balamlym
+	* bamlym
+	* baprehalfmlym and 135 more.
 
 Use -F or --full-lists to disable shortening of long lists.
 </div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 27 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
@@ -961,25 +999,25 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 * ⚠ **WARN** The following glyphs could not be reached by codepoint or substitution rules:
 
-	- quotesingle
+	- asciicircum
 
-	- endash
-
-	- nbspace
-
-	- lllallvocalicUImlym
+	- asciitilde
 
 	- asterisk
 
-	- seven
+	- backslash
 
-	- rrallvocalicUImlym
+	- bar
 
-	- semicolon
+	- bhallvocalicUImlym
 
-	- divide
+	- braceleft
 
-	- underscore 
+	- braceright
+
+	- bracketleft
+
+	- bracketright 
 
 	- And 44 more.
 
@@ -1018,9 +1056,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-
 
 
 * ⚠ **WARN** The following mark characters could be in the GDEF mark glyph class:
-	 acutecomb (U+0301), brevecomb (U+0306), caroncomb (U+030C), cedillacomb (U+0327), circumflexcomb (U+0302), commaaccentcomb (U+0326), commaturnedabovecomb (U+0312), dieresiscomb (U+0308), gravecomb (U+0300), hungarumlautcomb (U+030B) and 6 more.
-
-Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]
+	 uni0D3B (U+0D3B) and uni1CDA (U+1CDA) [code: mark-chars]
 </div></details><details><summary>⚠ <b>WARN:</b> Check GDEF mark glyph class doesn't have characters that are not marks. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_non_mark_chars">com.google.fonts/check/gdef_non_mark_chars</a>)</summary><div>
 
 
@@ -1032,11 +1068,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]
 * ⚠ **WARN** The following glyphs have jaggy segments:
 
 	* jamlym (U+0D1C): B<<231.0,490.0>-<200.0,486.0>-<175.0,474.0>>/B<<175.0,474.0>-<198.0,479.0>-<220.0,479.0>> = 13.376232096412883 [code: found-jaggy-segments]
-</div></details><br></div></details><details><summary><b>[12] NotoSansMalayalam-Regular.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
-
-
-* 💔 **ERROR** Failed with IndexError: list index out of range
-</div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[11] NotoSansMalayalam-Regular.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
 * 🔥 **FAIL** OS/2.usWinAscent value should be equal or greater than 1078, but got 864 instead [code: ascent]
@@ -1049,31 +1081,43 @@ Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]
 
 * 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
 
-	- rephmlym
+	- acutecomb
 
-	- uni0D00
-
-	- viramamlym
+	- brevecomb
 
 	- candrabindumlym
 
-	- uni0951 
+	- caroncomb
 
-	- And uni0952 [code: unattached-dotted-circle-marks]
+	- cedillacomb
+
+	- circumflexcomb
+
+	- commaaccentcomb
+
+	- commaturnedabovecomb
+
+	- dieresiscomb
+
+	- gravecomb 
+
+	- And 10 more.
+
+Use -F or --full-lists to disable shortening of long lists. [code: unattached-dotted-circle-marks]
 </div></details><details><summary>⚠ <b>WARN:</b> Glyphs are similiar to Google Fonts version? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/production_glyphs_similarity">com.google.fonts/check/production_glyphs_similarity</a>)</summary><div>
 
 
 * ⚠ **WARN** Following glyphs differ greatly from Google Fonts version:
-	* nyachamlym
-	* halamlym
-	* nnamamlym
-	* narramlym
-	* tthallvocalicmlym
-	* galamlym
-	* nyajamlym
-	* ssamlym
-	* mamamlym
-	* uni0D77 and 120 more.
+	* aamlym
+	* aimlym
+	* amlym
+	* babamlym
+	* badamlym
+	* badhamlym
+	* balamlym
+	* bamlym
+	* baprehalfmlym
+	* bhallvocalicmlym and 119 more.
 
 Use -F or --full-lists to disable shortening of long lists.
 </div></details><details><summary>⚠ <b>WARN:</b> Ensure fonts have ScriptLangTags declared on the 'meta' table. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/meta/script_lang_tags">com.google.fonts/check/meta/script_lang_tags</a>)</summary><div>
@@ -1085,25 +1129,25 @@ Use -F or --full-lists to disable shortening of long lists.
 
 * ⚠ **WARN** The following glyphs could not be reached by codepoint or substitution rules:
 
-	- quotesingle
+	- asciicircum
 
-	- endash
-
-	- nbspace
-
-	- lllallvocalicUImlym
+	- asciitilde
 
 	- asterisk
 
-	- seven
+	- backslash
 
-	- rrallvocalicUImlym
+	- bar
 
-	- semicolon
+	- bhallvocalicUImlym
 
-	- divide
+	- braceleft
 
-	- underscore 
+	- braceright
+
+	- bracketleft
+
+	- bracketright 
 
 	- And 44 more.
 
@@ -1142,9 +1186,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-
 
 
 * ⚠ **WARN** The following mark characters could be in the GDEF mark glyph class:
-	 acutecomb (U+0301), brevecomb (U+0306), caroncomb (U+030C), cedillacomb (U+0327), circumflexcomb (U+0302), commaaccentcomb (U+0326), commaturnedabovecomb (U+0312), dieresiscomb (U+0308), gravecomb (U+0300), hungarumlautcomb (U+030B) and 6 more.
-
-Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]
+	 uni0D3B (U+0D3B) and uni1CDA (U+1CDA) [code: mark-chars]
 </div></details><details><summary>⚠ <b>WARN:</b> Check GDEF mark glyph class doesn't have characters that are not marks. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_non_mark_chars">com.google.fonts/check/gdef_non_mark_chars</a>)</summary><div>
 
 
@@ -1156,11 +1198,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]
 * ⚠ **WARN** The following glyphs have jaggy segments:
 
 	* jamlym (U+0D1C): B<<506.5,148.0>-<537.0,161.0>-<569.0,172.0>>/B<<569.0,172.0>-<541.0,169.0>-<503.5,167.5>> = 12.854904242201115 [code: found-jaggy-segments]
-</div></details><br></div></details><details><summary><b>[13] NotoSansMalayalam-SemiBold.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
-
-
-* 💔 **ERROR** Failed with IndexError: list index out of range
-</div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[12] NotoSansMalayalam-SemiBold.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
 * 🔥 **FAIL** OS/2.usWinAscent value should be equal or greater than 1078, but got 864 instead [code: ascent]
@@ -1173,31 +1211,43 @@ Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]
 
 * 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
 
-	- rephmlym
+	- acutecomb
 
-	- uni0D00
-
-	- viramamlym
+	- brevecomb
 
 	- candrabindumlym
 
-	- uni0951 
+	- caroncomb
 
-	- And uni0952 [code: unattached-dotted-circle-marks]
+	- cedillacomb
+
+	- circumflexcomb
+
+	- commaaccentcomb
+
+	- commaturnedabovecomb
+
+	- dieresiscomb
+
+	- gravecomb 
+
+	- And 10 more.
+
+Use -F or --full-lists to disable shortening of long lists. [code: unattached-dotted-circle-marks]
 </div></details><details><summary>⚠ <b>WARN:</b> Glyphs are similiar to Google Fonts version? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/production_glyphs_similarity">com.google.fonts/check/production_glyphs_similarity</a>)</summary><div>
 
 
 * ⚠ **WARN** Following glyphs differ greatly from Google Fonts version:
-	* eightmlym
-	* nyachamlym
-	* jhamlym
-	* halamlym
-	* nnamamlym
-	* narramlym
-	* tthallvocalicmlym
-	* galamlym
-	* jhaprehalfmlym
-	* nyajamlym and 151 more.
+	* aamlym
+	* aimlym
+	* aivowelsignmlym
+	* amlym
+	* babamlym
+	* badamlym
+	* badhamlym
+	* balamlym
+	* bamlym
+	* baprehalfmlym and 150 more.
 
 Use -F or --full-lists to disable shortening of long lists.
 </div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 27 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
@@ -1216,25 +1266,25 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 * ⚠ **WARN** The following glyphs could not be reached by codepoint or substitution rules:
 
-	- quotesingle
+	- asciicircum
 
-	- endash
-
-	- nbspace
-
-	- lllallvocalicUImlym
+	- asciitilde
 
 	- asterisk
 
-	- seven
+	- backslash
 
-	- rrallvocalicUImlym
+	- bar
 
-	- semicolon
+	- bhallvocalicUImlym
 
-	- divide
+	- braceleft
 
-	- underscore 
+	- braceright
+
+	- bracketleft
+
+	- bracketright 
 
 	- And 44 more.
 
@@ -1273,9 +1323,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-
 
 
 * ⚠ **WARN** The following mark characters could be in the GDEF mark glyph class:
-	 acutecomb (U+0301), brevecomb (U+0306), caroncomb (U+030C), cedillacomb (U+0327), circumflexcomb (U+0302), commaaccentcomb (U+0326), commaturnedabovecomb (U+0312), dieresiscomb (U+0308), gravecomb (U+0300), hungarumlautcomb (U+030B) and 6 more.
-
-Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]
+	 uni0D3B (U+0D3B) and uni1CDA (U+1CDA) [code: mark-chars]
 </div></details><details><summary>⚠ <b>WARN:</b> Check GDEF mark glyph class doesn't have characters that are not marks. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_non_mark_chars">com.google.fonts/check/gdef_non_mark_chars</a>)</summary><div>
 
 
@@ -1309,11 +1357,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]
 	* jamlym (U+0D1C): B<<255.0,487.0>-<230.0,485.0>-<208.0,478.0>>/B<<208.0,478.0>-<218.0,479.0>-<229.0,479.0>> = 11.939531082430465 
 
 	* And jamlym (U+0D1C): B<<491.5,141.0>-<522.0,151.0>-<550.0,160.0>>/L<<550.0,160.0>--<546.0,159.0>> = 3.782645446596307 [code: found-jaggy-segments]
-</div></details><br></div></details><details><summary><b>[15] NotoSansMalayalam-Thin.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
-
-
-* 💔 **ERROR** Failed with IndexError: list index out of range
-</div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[14] NotoSansMalayalam-Thin.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
 * 🔥 **FAIL** OS/2.usWinAscent value should be equal or greater than 1078, but got 864 instead [code: ascent]
@@ -1326,31 +1370,43 @@ Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]
 
 * 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
 
-	- rephmlym
+	- acutecomb
 
-	- uni0D00
-
-	- viramamlym
+	- brevecomb
 
 	- candrabindumlym
 
-	- uni0951 
+	- caroncomb
 
-	- And uni0952 [code: unattached-dotted-circle-marks]
+	- cedillacomb
+
+	- circumflexcomb
+
+	- commaaccentcomb
+
+	- commaturnedabovecomb
+
+	- dieresiscomb
+
+	- gravecomb 
+
+	- And 10 more.
+
+Use -F or --full-lists to disable shortening of long lists. [code: unattached-dotted-circle-marks]
 </div></details><details><summary>⚠ <b>WARN:</b> Glyphs are similiar to Google Fonts version? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/production_glyphs_similarity">com.google.fonts/check/production_glyphs_similarity</a>)</summary><div>
 
 
 * ⚠ **WARN** Following glyphs differ greatly from Google Fonts version:
-	* nnamamlym
-	* nyajamlym
-	* nyanyamlym
-	* thousandmlym
-	* nnaddamlym
+	* babamlym
+	* badamlym
+	* badhamlym
+	* balamlym
+	* bamlym
+	* baprehalfmlym
 	* ddhamlym
 	* ddhaprehalfmlym
-	* badamlym
-	* uni200C
-	* badhamlym and 5 more.
+	* nnaddamlym
+	* nnaddhamlym and 4 more.
 
 Use -F or --full-lists to disable shortening of long lists.
 </div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 27 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
@@ -1369,25 +1425,25 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 * ⚠ **WARN** The following glyphs could not be reached by codepoint or substitution rules:
 
-	- quotesingle
+	- asciicircum
 
-	- endash
-
-	- nbspace
-
-	- lllallvocalicUImlym
+	- asciitilde
 
 	- asterisk
 
-	- seven
+	- backslash
 
-	- rrallvocalicUImlym
+	- bar
 
-	- semicolon
+	- bhallvocalicUImlym
 
-	- divide
+	- braceleft
 
-	- underscore 
+	- braceright
+
+	- bracketleft
+
+	- bracketright 
 
 	- And 44 more.
 
@@ -1426,9 +1482,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-
 
 
 * ⚠ **WARN** The following mark characters could be in the GDEF mark glyph class:
-	 acutecomb (U+0301), brevecomb (U+0306), caroncomb (U+030C), cedillacomb (U+0327), circumflexcomb (U+0302), commaaccentcomb (U+0326), commaturnedabovecomb (U+0312), dieresiscomb (U+0308), gravecomb (U+0300), hungarumlautcomb (U+030B) and 6 more.
-
-Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]
+	 uni0D3B (U+0D3B) and uni1CDA (U+1CDA) [code: mark-chars]
 </div></details><details><summary>⚠ <b>WARN:</b> Check GDEF mark glyph class doesn't have characters that are not marks. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_non_mark_chars">com.google.fonts/check/gdef_non_mark_chars</a>)</summary><div>
 
 
@@ -1468,11 +1522,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]
 	* exclamdown (U+00A1): L<<122.0,354.0>--<124.0,-186.0>> 
 
 	* And exclamdown (U+00A1): L<<96.0,-186.0>--<98.0,354.0>> [code: found-semi-vertical]
-</div></details><br></div></details><details><summary><b>[13] NotoSansMalayalamUI-Black.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
-
-
-* 💔 **ERROR** Failed with IndexError: list index out of range
-</div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[12] NotoSansMalayalamUI-Black.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
 * 🔥 **FAIL** OS/2.usWinAscent value should be equal or greater than 1078, but got 1069 instead [code: ascent]
@@ -1486,17 +1536,29 @@ Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]
 
 * 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
 
-	- rephmlym
+	- acutecomb
 
-	- uni0D00
-
-	- viramamlym
+	- brevecomb
 
 	- candrabindumlym
 
-	- uni0951 
+	- caroncomb
 
-	- And uni0952 [code: unattached-dotted-circle-marks]
+	- cedillacomb
+
+	- circumflexcomb
+
+	- commaaccentcomb
+
+	- commaturnedabovecomb
+
+	- dieresiscomb
+
+	- gravecomb 
+
+	- And 10 more.
+
+Use -F or --full-lists to disable shortening of long lists. [code: unattached-dotted-circle-marks]
 </div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 27 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
 
 
@@ -1513,25 +1575,25 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 * ⚠ **WARN** The following glyphs could not be reached by codepoint or substitution rules:
 
-	- quotesingle
+	- asciicircum
 
-	- endash
-
-	- nbspace
-
-	- lllallvocalicUImlym
+	- asciitilde
 
 	- asterisk
 
-	- seven
+	- backslash
 
-	- rrallvocalicUImlym
+	- bar
 
-	- semicolon
+	- bhallvocalicUImlym
 
-	- divide
+	- braceleft
 
-	- underscore 
+	- braceright
+
+	- bracketleft
+
+	- bracketright 
 
 	- And 44 more.
 
@@ -1570,9 +1632,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-
 
 
 * ⚠ **WARN** The following mark characters could be in the GDEF mark glyph class:
-	 acutecomb (U+0301), brevecomb (U+0306), caroncomb (U+030C), cedillacomb (U+0327), circumflexcomb (U+0302), commaaccentcomb (U+0326), commaturnedabovecomb (U+0312), dieresiscomb (U+0308), gravecomb (U+0300), hungarumlautcomb (U+030B) and 7 more.
-
-Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]
+	 llvocalicvowelsignUImlym (U+0D63), uni0D3B (U+0D3B) and uni1CDA (U+1CDA) [code: mark-chars]
 </div></details><details><summary>⚠ <b>WARN:</b> Check GDEF mark glyph class doesn't have characters that are not marks. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_non_mark_chars">com.google.fonts/check/gdef_non_mark_chars</a>)</summary><div>
 
 
@@ -1634,11 +1694,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 	* And 7 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-jaggy-segments]
-</div></details><br></div></details><details><summary><b>[12] NotoSansMalayalamUI-Bold.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
-
-
-* 💔 **ERROR** Failed with IndexError: list index out of range
-</div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[11] NotoSansMalayalamUI-Bold.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
 * 🔥 **FAIL** OS/2.usWinAscent value should be equal or greater than 1078, but got 1069 instead [code: ascent]
@@ -1652,17 +1708,29 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-jaggy-s
 
 * 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
 
-	- rephmlym
+	- acutecomb
 
-	- uni0D00
-
-	- viramamlym
+	- brevecomb
 
 	- candrabindumlym
 
-	- uni0951 
+	- caroncomb
 
-	- And uni0952 [code: unattached-dotted-circle-marks]
+	- cedillacomb
+
+	- circumflexcomb
+
+	- commaaccentcomb
+
+	- commaturnedabovecomb
+
+	- dieresiscomb
+
+	- gravecomb 
+
+	- And 10 more.
+
+Use -F or --full-lists to disable shortening of long lists. [code: unattached-dotted-circle-marks]
 </div></details><details><summary>⚠ <b>WARN:</b> Ensure fonts have ScriptLangTags declared on the 'meta' table. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/meta/script_lang_tags">com.google.fonts/check/meta/script_lang_tags</a>)</summary><div>
 
 
@@ -1672,25 +1740,25 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-jaggy-s
 
 * ⚠ **WARN** The following glyphs could not be reached by codepoint or substitution rules:
 
-	- quotesingle
+	- asciicircum
 
-	- endash
-
-	- nbspace
-
-	- lllallvocalicUImlym
+	- asciitilde
 
 	- asterisk
 
-	- seven
+	- backslash
 
-	- rrallvocalicUImlym
+	- bar
 
-	- semicolon
+	- bhallvocalicUImlym
 
-	- divide
+	- braceleft
 
-	- underscore 
+	- braceright
+
+	- bracketleft
+
+	- bracketright 
 
 	- And 44 more.
 
@@ -1729,9 +1797,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-
 
 
 * ⚠ **WARN** The following mark characters could be in the GDEF mark glyph class:
-	 acutecomb (U+0301), brevecomb (U+0306), caroncomb (U+030C), cedillacomb (U+0327), circumflexcomb (U+0302), commaaccentcomb (U+0326), commaturnedabovecomb (U+0312), dieresiscomb (U+0308), gravecomb (U+0300), hungarumlautcomb (U+030B) and 7 more.
-
-Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]
+	 llvocalicvowelsignUImlym (U+0D63), uni0D3B (U+0D3B) and uni1CDA (U+1CDA) [code: mark-chars]
 </div></details><details><summary>⚠ <b>WARN:</b> Check GDEF mark glyph class doesn't have characters that are not marks. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_non_mark_chars">com.google.fonts/check/gdef_non_mark_chars</a>)</summary><div>
 
 
@@ -1793,11 +1859,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 	* And 7 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-jaggy-segments]
-</div></details><br></div></details><details><summary><b>[13] NotoSansMalayalamUI-ExtraBold.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
-
-
-* 💔 **ERROR** Failed with IndexError: list index out of range
-</div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[12] NotoSansMalayalamUI-ExtraBold.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
 * 🔥 **FAIL** OS/2.usWinAscent value should be equal or greater than 1078, but got 1069 instead [code: ascent]
@@ -1811,17 +1873,29 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-jaggy-s
 
 * 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
 
-	- rephmlym
+	- acutecomb
 
-	- uni0D00
-
-	- viramamlym
+	- brevecomb
 
 	- candrabindumlym
 
-	- uni0951 
+	- caroncomb
 
-	- And uni0952 [code: unattached-dotted-circle-marks]
+	- cedillacomb
+
+	- circumflexcomb
+
+	- commaaccentcomb
+
+	- commaturnedabovecomb
+
+	- dieresiscomb
+
+	- gravecomb 
+
+	- And 10 more.
+
+Use -F or --full-lists to disable shortening of long lists. [code: unattached-dotted-circle-marks]
 </div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 27 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
 
 
@@ -1838,25 +1912,25 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 * ⚠ **WARN** The following glyphs could not be reached by codepoint or substitution rules:
 
-	- quotesingle
+	- asciicircum
 
-	- endash
-
-	- nbspace
-
-	- lllallvocalicUImlym
+	- asciitilde
 
 	- asterisk
 
-	- seven
+	- backslash
 
-	- rrallvocalicUImlym
+	- bar
 
-	- semicolon
+	- bhallvocalicUImlym
 
-	- divide
+	- braceleft
 
-	- underscore 
+	- braceright
+
+	- bracketleft
+
+	- bracketright 
 
 	- And 44 more.
 
@@ -1895,9 +1969,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-
 
 
 * ⚠ **WARN** The following mark characters could be in the GDEF mark glyph class:
-	 acutecomb (U+0301), brevecomb (U+0306), caroncomb (U+030C), cedillacomb (U+0327), circumflexcomb (U+0302), commaaccentcomb (U+0326), commaturnedabovecomb (U+0312), dieresiscomb (U+0308), gravecomb (U+0300), hungarumlautcomb (U+030B) and 7 more.
-
-Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]
+	 llvocalicvowelsignUImlym (U+0D63), uni0D3B (U+0D3B) and uni1CDA (U+1CDA) [code: mark-chars]
 </div></details><details><summary>⚠ <b>WARN:</b> Check GDEF mark glyph class doesn't have characters that are not marks. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_non_mark_chars">com.google.fonts/check/gdef_non_mark_chars</a>)</summary><div>
 
 
@@ -1959,11 +2031,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]
 	* And 3 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-jaggy-segments]
-</div></details><br></div></details><details><summary><b>[12] NotoSansMalayalamUI-ExtraLight.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
-
-
-* 💔 **ERROR** Failed with IndexError: list index out of range
-</div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[11] NotoSansMalayalamUI-ExtraLight.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
 * 🔥 **FAIL** OS/2.usWinAscent value should be equal or greater than 1078, but got 1069 instead [code: ascent]
@@ -1977,17 +2045,29 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-jaggy-s
 
 * 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
 
-	- rephmlym
+	- acutecomb
 
-	- uni0D00
-
-	- viramamlym
+	- brevecomb
 
 	- candrabindumlym
 
-	- uni0951 
+	- caroncomb
 
-	- And uni0952 [code: unattached-dotted-circle-marks]
+	- cedillacomb
+
+	- circumflexcomb
+
+	- commaaccentcomb
+
+	- commaturnedabovecomb
+
+	- dieresiscomb
+
+	- gravecomb 
+
+	- And 10 more.
+
+Use -F or --full-lists to disable shortening of long lists. [code: unattached-dotted-circle-marks]
 </div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 27 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
 
 
@@ -2004,25 +2084,25 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 * ⚠ **WARN** The following glyphs could not be reached by codepoint or substitution rules:
 
-	- quotesingle
+	- asciicircum
 
-	- endash
-
-	- nbspace
-
-	- lllallvocalicUImlym
+	- asciitilde
 
 	- asterisk
 
-	- seven
+	- backslash
 
-	- rrallvocalicUImlym
+	- bar
 
-	- semicolon
+	- bhallvocalicUImlym
 
-	- divide
+	- braceleft
 
-	- underscore 
+	- braceright
+
+	- bracketleft
+
+	- bracketright 
 
 	- And 44 more.
 
@@ -2061,9 +2141,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-
 
 
 * ⚠ **WARN** The following mark characters could be in the GDEF mark glyph class:
-	 acutecomb (U+0301), brevecomb (U+0306), caroncomb (U+030C), cedillacomb (U+0327), circumflexcomb (U+0302), commaaccentcomb (U+0326), commaturnedabovecomb (U+0312), dieresiscomb (U+0308), gravecomb (U+0300), hungarumlautcomb (U+030B) and 7 more.
-
-Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]
+	 llvocalicvowelsignUImlym (U+0D63), uni0D3B (U+0D3B) and uni1CDA (U+1CDA) [code: mark-chars]
 </div></details><details><summary>⚠ <b>WARN:</b> Check GDEF mark glyph class doesn't have characters that are not marks. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_non_mark_chars">com.google.fonts/check/gdef_non_mark_chars</a>)</summary><div>
 
 
@@ -2097,11 +2175,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]
 	* And 52 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-misalignments]
-</div></details><br></div></details><details><summary><b>[14] NotoSansMalayalamUI-Light.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
-
-
-* 💔 **ERROR** Failed with IndexError: list index out of range
-</div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[13] NotoSansMalayalamUI-Light.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
 * 🔥 **FAIL** OS/2.usWinAscent value should be equal or greater than 1078, but got 1069 instead [code: ascent]
@@ -2115,17 +2189,29 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 
 * 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
 
-	- rephmlym
+	- acutecomb
 
-	- uni0D00
-
-	- viramamlym
+	- brevecomb
 
 	- candrabindumlym
 
-	- uni0951 
+	- caroncomb
 
-	- And uni0952 [code: unattached-dotted-circle-marks]
+	- cedillacomb
+
+	- circumflexcomb
+
+	- commaaccentcomb
+
+	- commaturnedabovecomb
+
+	- dieresiscomb
+
+	- gravecomb 
+
+	- And 10 more.
+
+Use -F or --full-lists to disable shortening of long lists. [code: unattached-dotted-circle-marks]
 </div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 27 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
 
 
@@ -2142,25 +2228,25 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 * ⚠ **WARN** The following glyphs could not be reached by codepoint or substitution rules:
 
-	- quotesingle
+	- asciicircum
 
-	- endash
-
-	- nbspace
-
-	- lllallvocalicUImlym
+	- asciitilde
 
 	- asterisk
 
-	- seven
+	- backslash
 
-	- rrallvocalicUImlym
+	- bar
 
-	- semicolon
+	- bhallvocalicUImlym
 
-	- divide
+	- braceleft
 
-	- underscore 
+	- braceright
+
+	- bracketleft
+
+	- bracketright 
 
 	- And 44 more.
 
@@ -2199,9 +2285,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-
 
 
 * ⚠ **WARN** The following mark characters could be in the GDEF mark glyph class:
-	 acutecomb (U+0301), brevecomb (U+0306), caroncomb (U+030C), cedillacomb (U+0327), circumflexcomb (U+0302), commaaccentcomb (U+0326), commaturnedabovecomb (U+0312), dieresiscomb (U+0308), gravecomb (U+0300), hungarumlautcomb (U+030B) and 7 more.
-
-Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]
+	 llvocalicvowelsignUImlym (U+0D63), uni0D3B (U+0D3B) and uni1CDA (U+1CDA) [code: mark-chars]
 </div></details><details><summary>⚠ <b>WARN:</b> Check GDEF mark glyph class doesn't have characters that are not marks. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_non_mark_chars">com.google.fonts/check/gdef_non_mark_chars</a>)</summary><div>
 
 
@@ -2247,11 +2331,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 * ⚠ **WARN** The following glyphs have jaggy segments:
 
 	* jamlym (U+0D1C): B<<517.5,220.5>-<552.0,238.0>-<581.0,249.0>>/B<<581.0,249.0>-<559.0,246.0>-<532.0,244.5>> = 13.007088663620442 [code: found-jaggy-segments]
-</div></details><br></div></details><details><summary><b>[13] NotoSansMalayalamUI-Medium.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
-
-
-* 💔 **ERROR** Failed with IndexError: list index out of range
-</div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[12] NotoSansMalayalamUI-Medium.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
 * 🔥 **FAIL** OS/2.usWinAscent value should be equal or greater than 1078, but got 1069 instead [code: ascent]
@@ -2265,17 +2345,29 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 
 * 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
 
-	- rephmlym
+	- acutecomb
 
-	- uni0D00
-
-	- viramamlym
+	- brevecomb
 
 	- candrabindumlym
 
-	- uni0951 
+	- caroncomb
 
-	- And uni0952 [code: unattached-dotted-circle-marks]
+	- cedillacomb
+
+	- circumflexcomb
+
+	- commaaccentcomb
+
+	- commaturnedabovecomb
+
+	- dieresiscomb
+
+	- gravecomb 
+
+	- And 10 more.
+
+Use -F or --full-lists to disable shortening of long lists. [code: unattached-dotted-circle-marks]
 </div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 27 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
 
 
@@ -2292,25 +2384,25 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 * ⚠ **WARN** The following glyphs could not be reached by codepoint or substitution rules:
 
-	- quotesingle
+	- asciicircum
 
-	- endash
-
-	- nbspace
-
-	- lllallvocalicUImlym
+	- asciitilde
 
 	- asterisk
 
-	- seven
+	- backslash
 
-	- rrallvocalicUImlym
+	- bar
 
-	- semicolon
+	- bhallvocalicUImlym
 
-	- divide
+	- braceleft
 
-	- underscore 
+	- braceright
+
+	- bracketleft
+
+	- bracketright 
 
 	- And 44 more.
 
@@ -2349,9 +2441,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-
 
 
 * ⚠ **WARN** The following mark characters could be in the GDEF mark glyph class:
-	 acutecomb (U+0301), brevecomb (U+0306), caroncomb (U+030C), cedillacomb (U+0327), circumflexcomb (U+0302), commaaccentcomb (U+0326), commaturnedabovecomb (U+0312), dieresiscomb (U+0308), gravecomb (U+0300), hungarumlautcomb (U+030B) and 7 more.
-
-Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]
+	 llvocalicvowelsignUImlym (U+0D63), uni0D3B (U+0D3B) and uni1CDA (U+1CDA) [code: mark-chars]
 </div></details><details><summary>⚠ <b>WARN:</b> Check GDEF mark glyph class doesn't have characters that are not marks. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_non_mark_chars">com.google.fonts/check/gdef_non_mark_chars</a>)</summary><div>
 
 
@@ -2391,11 +2481,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 * ⚠ **WARN** The following glyphs have jaggy segments:
 
 	* jamlym (U+0D1C): B<<231.0,556.0>-<200.0,552.0>-<175.0,540.0>>/B<<175.0,540.0>-<198.0,545.0>-<220.0,545.0>> = 13.376232096412883 [code: found-jaggy-segments]
-</div></details><br></div></details><details><summary><b>[13] NotoSansMalayalamUI-Regular.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
-
-
-* 💔 **ERROR** Failed with IndexError: list index out of range
-</div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[12] NotoSansMalayalamUI-Regular.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
 * 🔥 **FAIL** OS/2.usWinAscent value should be equal or greater than 1078, but got 1069 instead [code: ascent]
@@ -2409,17 +2495,29 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 
 * 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
 
-	- rephmlym
+	- acutecomb
 
-	- uni0D00
-
-	- viramamlym
+	- brevecomb
 
 	- candrabindumlym
 
-	- uni0951 
+	- caroncomb
 
-	- And uni0952 [code: unattached-dotted-circle-marks]
+	- cedillacomb
+
+	- circumflexcomb
+
+	- commaaccentcomb
+
+	- commaturnedabovecomb
+
+	- dieresiscomb
+
+	- gravecomb 
+
+	- And 10 more.
+
+Use -F or --full-lists to disable shortening of long lists. [code: unattached-dotted-circle-marks]
 </div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 27 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
 
 
@@ -2436,25 +2534,25 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 * ⚠ **WARN** The following glyphs could not be reached by codepoint or substitution rules:
 
-	- quotesingle
+	- asciicircum
 
-	- endash
-
-	- nbspace
-
-	- lllallvocalicUImlym
+	- asciitilde
 
 	- asterisk
 
-	- seven
+	- backslash
 
-	- rrallvocalicUImlym
+	- bar
 
-	- semicolon
+	- bhallvocalicUImlym
 
-	- divide
+	- braceleft
 
-	- underscore 
+	- braceright
+
+	- bracketleft
+
+	- bracketright 
 
 	- And 44 more.
 
@@ -2493,9 +2591,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-
 
 
 * ⚠ **WARN** The following mark characters could be in the GDEF mark glyph class:
-	 acutecomb (U+0301), brevecomb (U+0306), caroncomb (U+030C), cedillacomb (U+0327), circumflexcomb (U+0302), commaaccentcomb (U+0326), commaturnedabovecomb (U+0312), dieresiscomb (U+0308), gravecomb (U+0300), hungarumlautcomb (U+030B) and 7 more.
-
-Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]
+	 llvocalicvowelsignUImlym (U+0D63), uni0D3B (U+0D3B) and uni1CDA (U+1CDA) [code: mark-chars]
 </div></details><details><summary>⚠ <b>WARN:</b> Check GDEF mark glyph class doesn't have characters that are not marks. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_non_mark_chars">com.google.fonts/check/gdef_non_mark_chars</a>)</summary><div>
 
 
@@ -2535,11 +2631,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 * ⚠ **WARN** The following glyphs have jaggy segments:
 
 	* jamlym (U+0D1C): B<<506.5,214.0>-<537.0,227.0>-<569.0,238.0>>/B<<569.0,238.0>-<541.0,235.0>-<503.5,233.5>> = 12.854904242201115 [code: found-jaggy-segments]
-</div></details><br></div></details><details><summary><b>[13] NotoSansMalayalamUI-SemiBold.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
-
-
-* 💔 **ERROR** Failed with IndexError: list index out of range
-</div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[12] NotoSansMalayalamUI-SemiBold.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
 * 🔥 **FAIL** OS/2.usWinAscent value should be equal or greater than 1078, but got 1069 instead [code: ascent]
@@ -2553,17 +2645,29 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 
 * 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
 
-	- rephmlym
+	- acutecomb
 
-	- uni0D00
-
-	- viramamlym
+	- brevecomb
 
 	- candrabindumlym
 
-	- uni0951 
+	- caroncomb
 
-	- And uni0952 [code: unattached-dotted-circle-marks]
+	- cedillacomb
+
+	- circumflexcomb
+
+	- commaaccentcomb
+
+	- commaturnedabovecomb
+
+	- dieresiscomb
+
+	- gravecomb 
+
+	- And 10 more.
+
+Use -F or --full-lists to disable shortening of long lists. [code: unattached-dotted-circle-marks]
 </div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 27 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
 
 
@@ -2580,25 +2684,25 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 * ⚠ **WARN** The following glyphs could not be reached by codepoint or substitution rules:
 
-	- quotesingle
+	- asciicircum
 
-	- endash
-
-	- nbspace
-
-	- lllallvocalicUImlym
+	- asciitilde
 
 	- asterisk
 
-	- seven
+	- backslash
 
-	- rrallvocalicUImlym
+	- bar
 
-	- semicolon
+	- bhallvocalicUImlym
 
-	- divide
+	- braceleft
 
-	- underscore 
+	- braceright
+
+	- bracketleft
+
+	- bracketright 
 
 	- And 44 more.
 
@@ -2637,9 +2741,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-
 
 
 * ⚠ **WARN** The following mark characters could be in the GDEF mark glyph class:
-	 acutecomb (U+0301), brevecomb (U+0306), caroncomb (U+030C), cedillacomb (U+0327), circumflexcomb (U+0302), commaaccentcomb (U+0326), commaturnedabovecomb (U+0312), dieresiscomb (U+0308), gravecomb (U+0300), hungarumlautcomb (U+030B) and 7 more.
-
-Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]
+	 llvocalicvowelsignUImlym (U+0D63), uni0D3B (U+0D3B) and uni1CDA (U+1CDA) [code: mark-chars]
 </div></details><details><summary>⚠ <b>WARN:</b> Check GDEF mark glyph class doesn't have characters that are not marks. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_non_mark_chars">com.google.fonts/check/gdef_non_mark_chars</a>)</summary><div>
 
 
@@ -2701,11 +2803,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 	* jamlym (U+0D1C): B<<255.0,553.0>-<230.0,551.0>-<208.0,544.0>>/B<<208.0,544.0>-<218.0,545.0>-<229.0,545.0>> = 11.939531082430465 
 
 	* And jamlym (U+0D1C): B<<491.5,207.0>-<522.0,217.0>-<550.0,226.0>>/L<<550.0,226.0>--<546.0,225.0>> = 3.782645446596307 [code: found-jaggy-segments]
-</div></details><br></div></details><details><summary><b>[15] NotoSansMalayalamUI-Thin.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
-
-
-* 💔 **ERROR** Failed with IndexError: list index out of range
-</div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[14] NotoSansMalayalamUI-Thin.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
 * 🔥 **FAIL** OS/2.usWinAscent value should be equal or greater than 1078, but got 1069 instead [code: ascent]
@@ -2719,17 +2817,29 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 
 * 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
 
-	- rephmlym
+	- acutecomb
 
-	- uni0D00
-
-	- viramamlym
+	- brevecomb
 
 	- candrabindumlym
 
-	- uni0951 
+	- caroncomb
 
-	- And uni0952 [code: unattached-dotted-circle-marks]
+	- cedillacomb
+
+	- circumflexcomb
+
+	- commaaccentcomb
+
+	- commaturnedabovecomb
+
+	- dieresiscomb
+
+	- gravecomb 
+
+	- And 10 more.
+
+Use -F or --full-lists to disable shortening of long lists. [code: unattached-dotted-circle-marks]
 </div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 27 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
 
 
@@ -2746,25 +2856,25 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 * ⚠ **WARN** The following glyphs could not be reached by codepoint or substitution rules:
 
-	- quotesingle
+	- asciicircum
 
-	- endash
-
-	- nbspace
-
-	- lllallvocalicUImlym
+	- asciitilde
 
 	- asterisk
 
-	- seven
+	- backslash
 
-	- rrallvocalicUImlym
+	- bar
 
-	- semicolon
+	- bhallvocalicUImlym
 
-	- divide
+	- braceleft
 
-	- underscore 
+	- braceright
+
+	- bracketleft
+
+	- bracketright 
 
 	- And 44 more.
 
@@ -2803,9 +2913,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-
 
 
 * ⚠ **WARN** The following mark characters could be in the GDEF mark glyph class:
-	 acutecomb (U+0301), brevecomb (U+0306), caroncomb (U+030C), cedillacomb (U+0327), circumflexcomb (U+0302), commaaccentcomb (U+0326), commaturnedabovecomb (U+0312), dieresiscomb (U+0308), gravecomb (U+0300), hungarumlautcomb (U+030B) and 7 more.
-
-Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]
+	 llvocalicvowelsignUImlym (U+0D63), uni0D3B (U+0D3B) and uni1CDA (U+1CDA) [code: mark-chars]
 </div></details><details><summary>⚠ <b>WARN:</b> Check GDEF mark glyph class doesn't have characters that are not marks. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_non_mark_chars">com.google.fonts/check/gdef_non_mark_chars</a>)</summary><div>
 
 
@@ -2873,10 +2981,18 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 	* exclamdown (U+00A1): L<<122.0,420.0>--<124.0,-120.0>> 
 
 	* And exclamdown (U+00A1): L<<96.0,-120.0>--<98.0,420.0>> [code: found-semi-vertical]
-</div></details><br></div></details><details><summary><b>[10] NotoSansMalayalam[wdth,wght].ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[11] NotoSansMalayalam[wdth,wght].ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check font names are correct (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/font_names">com.google.fonts/check/font_names</a>)</summary><div>
 
 
-* 💔 **ERROR** Failed with IndexError: list index out of range
+* 💔 **ERROR** The condition <FontBakeryCondition:expected_font_names> had an error: KeyError: 'fvar'
+</div></details><details><summary>💔 <b>ERROR:</b> Check a font's STAT table contains compulsory Axis Values. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/STAT">com.google.fonts/check/STAT</a>)</summary><div>
+
+
+* 💔 **ERROR** The condition <FontBakeryCondition:expected_font_names> had an error: KeyError: 'fvar'
+</div></details><details><summary>💔 <b>ERROR:</b> Check variable font instances (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/fvar_instances">com.google.fonts/check/fvar_instances</a>)</summary><div>
+
+
+* 💔 **ERROR** The condition <FontBakeryCondition:expected_font_names> had an error: KeyError: 'fvar'
 </div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
@@ -2890,21 +3006,29 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 
 * 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
 
-	- rephmlym
-
-	- uni0D00
-
-	- viramamlym
+	- acutecomb
 
 	- candrabindumlym
 
-	- uni0951 
+	- gravecomb
 
-	- And uni0952 [code: unattached-dotted-circle-marks]
-</div></details><details><summary>🔥 <b>FAIL:</b> Validates that when an instance record is included for the default instance, its subfamilyNameID value is set to either 2 or 17, and its postScriptNameID value is set to 6. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/fvar.html#com.adobe.fonts/check/varfont/valid_default_instance_nameids">com.adobe.fonts/check/varfont/valid_default_instance_nameids</a>)</summary><div>
+	- rephmlym
 
+	- tildecomb
 
-* 🔥 **FAIL** 'Regular' instance has the same coordinates as the default instance; its subfamilyNameID should be either 2 or 17, instead of 311. [code: invalid-default-instance-subfamily-nameid:311]
+	- uni0302
+
+	- uni0304
+
+	- uni0306
+
+	- uni0308
+
+	- uni030A 
+
+	- And 10 more.
+
+Use -F or --full-lists to disable shortening of long lists. [code: unattached-dotted-circle-marks]
 </div></details><details><summary>⚠ <b>WARN:</b> Ensure fonts have ScriptLangTags declared on the 'meta' table. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/meta/script_lang_tags">com.google.fonts/check/meta/script_lang_tags</a>)</summary><div>
 
 
@@ -2914,25 +3038,25 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 
 * ⚠ **WARN** The following glyphs could not be reached by codepoint or substitution rules:
 
-	- quotesingle
+	- asciicircum
 
-	- endash
-
-	- lllallvocalicUImlym
+	- asciitilde
 
 	- asterisk
 
-	- seven
+	- backslash
 
-	- rrallvocalicUImlym
+	- bar
 
-	- semicolon
+	- bhallvocalicUImlym
 
-	- divide
+	- braceleft
 
-	- underscore
+	- braceright
 
-	- colon 
+	- bracketleft
+
+	- bracketright 
 
 	- And 44 more.
 
@@ -2949,9 +3073,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: spacing-mark-
 
 
 * ⚠ **WARN** The following mark characters could be in the GDEF mark glyph class:
-	 acutecomb (U+0301), gravecomb (U+0300), tildecomb (U+0303), uni0302 (U+0302), uni0304 (U+0304), uni0306 (U+0306), uni0308 (U+0308), uni030A (U+030A), uni030B (U+030B), uni030C (U+030C) and 6 more.
-
-Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]
+	 uni0D3B (U+0D3B) and uni1CDA (U+1CDA) [code: mark-chars]
 </div></details><details><summary>⚠ <b>WARN:</b> Check GDEF mark glyph class doesn't have characters that are not marks. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_non_mark_chars">com.google.fonts/check/gdef_non_mark_chars</a>)</summary><div>
 
 
@@ -2962,8 +3084,8 @@ Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]
 
 | 💔 ERROR | 🔥 FAIL | ⚠ WARN | 💤 SKIP | ℹ INFO | 🍞 PASS | 🔎 DEBUG |
 |:-----:|:----:|:----:|:----:|:----:|:----:|:----:|
-| 19 | 62 | 170 | 2127 | 118 | 1699 | 0 |
-| 0% | 1% | 4% | 51% | 3% | 41% | 0% |
+| 3 | 61 | 170 | 2068 | 118 | 1623 | 0 |
+| 0% | 2% | 4% | 51% | 3% | 40% | 0% |
 
 **Note:** The following loglevels were omitted in this report:
 * **SKIP**
