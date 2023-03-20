@@ -1,0 +1,6655 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+<head>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>GFR - Glyphs</title>
+    
+    <style type="text/css">
+    
+
+        html{
+	  font-family: sans-serif;
+	}
+	.box-title{
+	  width: 100%;
+	  float: left;
+	  font-size: 8pt;
+	  font-weight: 700;
+	  border-top: 1px solid black;
+	  padding-top: 5px;
+	  margin-bottom: 10pt;
+	  display: block;
+	}
+	.box{
+	  margin-bottom: 20pt;
+	  width: 100%;
+	  float: left;
+	}
+	.box-text{
+		float: left;
+	}
+	
+	#nav{
+	  position: fixed;
+	  right: 20px;
+	  z-index: 100;
+	}
+	#font-toggle{
+	  display: block;
+	  font-weight: 700;
+	  cursor: pointer;
+	  -webkit-user-select: none; /* Safari */        
+	  -moz-user-select: none; /* Firefox */
+          -ms-user-select: none; /* IE10+/Edge */
+	  user-select: none; /* Standard */
+	  text-align: center;
+	  color: white;
+	  background-color: black;
+	  width: 50px;
+	  display: block;
+	  padding: 10px;
+	}
+	.tooltip {
+	position: relative;
+	display: inline-block;
+	border-bottom: 1px dotted black;
+	}
+
+	.tooltip .tooltiptext {
+	font-family: sans-serif;
+	visibility: hidden;
+	width: 500px;
+	background-color: black;
+	color: #fff;
+	text-align: left;
+	font-size: 12pt;
+	line-height: 15pt;
+	border-radius: 6px;
+	padding: 5px 0;
+
+	/* Position the tooltip */
+	position: absolute;
+	z-index: 1;
+	}
+
+	.tooltip:hover .tooltiptext {
+	padding: 10px;
+	visibility: visible;
+	}
+	.tooltipleft {
+		float:left;
+		width: 249px;
+	}
+	.tooltipright {
+		float:right;
+		width:250px;
+	}
+
+			/* Stuff needed for the table differ */
+            body {
+                font-family: Helvetica;
+            }
+            .node {
+                font-family: courier;
+                cursor: pointer;
+                position: relative;
+                left: 30px;
+                padding: 5px;
+                display: block;
+                border: 1px dashed grey;
+            }
+            .header {
+            font-weight: bold;
+            }
+            .attrib-old{
+                color: red;
+                cursor: text;
+            }
+            .attrib-new{
+                color: green;
+                cursor: text;
+            }
+            .leaf {
+            font-weight: bold;
+            }
+            .old .cell .new {
+            	display:  none;
+            }
+            .new .cell .old {
+            	display:  none;
+            }
+            .both .cell .old {
+            	opacity: 0.75;
+            	color:  red;
+            }
+            .both .cell .new {
+            	opacity: 0.75;
+            	position: absolute;
+            	top: 0;
+            	color:  green;
+            }
+			.spacer {
+				display:block;
+				float:left;
+				width:100%;
+			}
+
+	  
+	    @font-face{
+    src: url(old-NotoSerifMalayalam-SemiBold.ttf);
+    font-family: "old Noto Serif Malayalam";
+    font-weight: 600;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(old-NotoSerifMalayalam-Medium.ttf);
+    font-family: "old Noto Serif Malayalam";
+    font-weight: 500;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(old-NotoSerifMalayalam-Bold.ttf);
+    font-family: "old Noto Serif Malayalam";
+    font-weight: 700;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(old-NotoSerifMalayalam-ExtraLight.ttf);
+    font-family: "old Noto Serif Malayalam";
+    font-weight: 200;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(old-NotoSerifMalayalam-Thin.ttf);
+    font-family: "old Noto Serif Malayalam";
+    font-weight: 100;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(old-NotoSerifMalayalam-Black.ttf);
+    font-family: "old Noto Serif Malayalam";
+    font-weight: 900;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(old-NotoSerifMalayalam-Regular.ttf);
+    font-family: "old Noto Serif Malayalam";
+    font-weight: 400;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(old-NotoSerifMalayalam-ExtraBold.ttf);
+    font-family: "old Noto Serif Malayalam";
+    font-weight: 800;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(old-NotoSerifMalayalam-Light.ttf);
+    font-family: "old Noto Serif Malayalam";
+    font-weight: 300;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(old-NotoSerifMalayalam[wght].ttf);
+    font-family: "old Noto Serif Malayalam";
+    font-weight: 200 700;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(old-NotoSerifMalayalam[wght].ttf);
+    font-family: "old Noto Serif Malayalam";
+    font-weight: 100 900;
+    
+    font-style: normal;
+}
+	  
+
+	  
+	    @font-face{
+    src: url(new-NotoSerifMalayalam-Medium.ttf);
+    font-family: "new Noto Serif Malayalam";
+    font-weight: 500;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(new-NotoSerifMalayalam-ExtraBold.ttf);
+    font-family: "new Noto Serif Malayalam";
+    font-weight: 800;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(new-NotoSerifMalayalam-Light.ttf);
+    font-family: "new Noto Serif Malayalam";
+    font-weight: 300;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(new-NotoSerifMalayalam-Regular.ttf);
+    font-family: "new Noto Serif Malayalam";
+    font-weight: 400;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(new-NotoSerifMalayalam-ExtraLight.ttf);
+    font-family: "new Noto Serif Malayalam";
+    font-weight: 200;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(new-NotoSerifMalayalam-Thin.ttf);
+    font-family: "new Noto Serif Malayalam";
+    font-weight: 100;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(new-NotoSerifMalayalam-SemiBold.ttf);
+    font-family: "new Noto Serif Malayalam";
+    font-weight: 600;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(new-NotoSerifMalayalam-Bold.ttf);
+    font-family: "new Noto Serif Malayalam";
+    font-weight: 700;
+    
+    font-style: normal;
+}
+	  
+	    @font-face{
+    src: url(new-NotoSerifMalayalam-Black.ttf);
+    font-family: "new Noto Serif Malayalam";
+    font-weight: 900;
+    
+    font-style: normal;
+}
+	  
+
+	  
+
+	  
+	    .old-Noto-Serif-Malayalam-SemiBold{
+    font-family: "old Noto Serif Malayalam";
+    font-weight: 600;
+    font-stretch: 100%;
+    font-style: normal;
+}
+	  
+	    .old-Noto-Serif-Malayalam-Medium{
+    font-family: "old Noto Serif Malayalam";
+    font-weight: 500;
+    font-stretch: 100%;
+    font-style: normal;
+}
+	  
+	    .old-Noto-Serif-Malayalam-Bold{
+    font-family: "old Noto Serif Malayalam";
+    font-weight: 700;
+    font-stretch: 100%;
+    font-style: normal;
+}
+	  
+	    .old-Noto-Serif-Malayalam-ExtraLight{
+    font-family: "old Noto Serif Malayalam";
+    font-weight: 200;
+    font-stretch: 100%;
+    font-style: normal;
+}
+	  
+	    .old-Noto-Serif-Malayalam-Thin{
+    font-family: "old Noto Serif Malayalam";
+    font-weight: 100;
+    font-stretch: 100%;
+    font-style: normal;
+}
+	  
+	    .old-Noto-Serif-Malayalam-Black{
+    font-family: "old Noto Serif Malayalam";
+    font-weight: 900;
+    font-stretch: 100%;
+    font-style: normal;
+}
+	  
+	    .old-Noto-Serif-Malayalam-Regular{
+    font-family: "old Noto Serif Malayalam";
+    font-weight: 400;
+    font-stretch: 100%;
+    font-style: normal;
+}
+	  
+	    .old-Noto-Serif-Malayalam-ExtraBold{
+    font-family: "old Noto Serif Malayalam";
+    font-weight: 800;
+    font-stretch: 100%;
+    font-style: normal;
+}
+	  
+	    .old-Noto-Serif-Malayalam-Light{
+    font-family: "old Noto Serif Malayalam";
+    font-weight: 300;
+    font-stretch: 100%;
+    font-style: normal;
+}
+	  
+	    .old-Noto-Serif-Malayalam-Medium{
+    font-family: "old Noto Serif Malayalam";
+    font-weight: 500.0;
+    
+    font-style: normal;
+}
+	  
+	    .old-Noto-Serif-Malayalam-SemiBold{
+    font-family: "old Noto Serif Malayalam";
+    font-weight: 600.0;
+    
+    font-style: normal;
+}
+	  
+	    .old-Noto-Serif-Malayalam-Bold{
+    font-family: "old Noto Serif Malayalam";
+    font-weight: 700.0;
+    
+    font-style: normal;
+}
+	  
+	    .old-Noto-Serif-Malayalam-Thin{
+    font-family: "old Noto Serif Malayalam";
+    font-weight: 100.0;
+    
+    font-style: normal;
+}
+	  
+	    .old-Noto-Serif-Malayalam-Medium{
+    font-family: "old Noto Serif Malayalam";
+    font-weight: 500.0;
+    
+    font-style: normal;
+}
+	  
+	    .old-Noto-Serif-Malayalam-SemiBold{
+    font-family: "old Noto Serif Malayalam";
+    font-weight: 600.0;
+    
+    font-style: normal;
+}
+	  
+	    .old-Noto-Serif-Malayalam-Bold{
+    font-family: "old Noto Serif Malayalam";
+    font-weight: 700.0;
+    
+    font-style: normal;
+}
+	  
+
+	  
+	    .new-Noto-Serif-Malayalam-Medium{
+    font-family: "new Noto Serif Malayalam";
+    font-weight: 500;
+    font-stretch: 100%;
+    font-style: normal;
+}
+	  
+	    .new-Noto-Serif-Malayalam-ExtraBold{
+    font-family: "new Noto Serif Malayalam";
+    font-weight: 800;
+    font-stretch: 100%;
+    font-style: normal;
+}
+	  
+	    .new-Noto-Serif-Malayalam-Light{
+    font-family: "new Noto Serif Malayalam";
+    font-weight: 300;
+    font-stretch: 100%;
+    font-style: normal;
+}
+	  
+	    .new-Noto-Serif-Malayalam-Regular{
+    font-family: "new Noto Serif Malayalam";
+    font-weight: 400;
+    font-stretch: 100%;
+    font-style: normal;
+}
+	  
+	    .new-Noto-Serif-Malayalam-ExtraLight{
+    font-family: "new Noto Serif Malayalam";
+    font-weight: 200;
+    font-stretch: 100%;
+    font-style: normal;
+}
+	  
+	    .new-Noto-Serif-Malayalam-Thin{
+    font-family: "new Noto Serif Malayalam";
+    font-weight: 100;
+    font-stretch: 100%;
+    font-style: normal;
+}
+	  
+	    .new-Noto-Serif-Malayalam-SemiBold{
+    font-family: "new Noto Serif Malayalam";
+    font-weight: 600;
+    font-stretch: 100%;
+    font-style: normal;
+}
+	  
+	    .new-Noto-Serif-Malayalam-Bold{
+    font-family: "new Noto Serif Malayalam";
+    font-weight: 700;
+    font-stretch: 100%;
+    font-style: normal;
+}
+	  
+	    .new-Noto-Serif-Malayalam-Black{
+    font-family: "new Noto Serif Malayalam";
+    font-weight: 900;
+    font-stretch: 100%;
+    font-style: normal;
+}
+	  
+
+	  
+	
+.cell{
+  position: relative;
+  z-index: -1;
+  float: left;
+  background-color: #fcfcfc;
+  display: block;
+  text-align: center;
+  padding: 5pt;
+  margin: 5pt;
+  width: 30.0px;
+  line-height: 30.0px;
+}
+
+    </style>
+</head>
+<body>
+    
+    <div id="nav">
+        <div id="font-toggle">old</div>
+     </div>
+    
+    <div id="content">
+	<h2>
+<b>Text</b>
+</h2>
+	
+  
+      <div class="box">
+	<div class="box-title">old-Noto-Serif-Malayalam-SemiBold 20pt</div>
+	  <span class="old-Noto-Serif-Malayalam-SemiBold" style="font-size: 20pt">
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"></div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell">!</div>
+	    
+	      <div class="cell">"</div>
+	    
+	      <div class="cell">#</div>
+	    
+	      <div class="cell">%</div>
+	    
+	      <div class="cell">'</div>
+	    
+	      <div class="cell">(</div>
+	    
+	      <div class="cell">)</div>
+	    
+	      <div class="cell">*</div>
+	    
+	      <div class="cell">+</div>
+	    
+	      <div class="cell">,</div>
+	    
+	      <div class="cell">-</div>
+	    
+	      <div class="cell">.</div>
+	    
+	      <div class="cell">/</div>
+	    
+	      <div class="cell">0</div>
+	    
+	      <div class="cell">1</div>
+	    
+	      <div class="cell">2</div>
+	    
+	      <div class="cell">3</div>
+	    
+	      <div class="cell">4</div>
+	    
+	      <div class="cell">5</div>
+	    
+	      <div class="cell">6</div>
+	    
+	      <div class="cell">7</div>
+	    
+	      <div class="cell">8</div>
+	    
+	      <div class="cell">9</div>
+	    
+	      <div class="cell">:</div>
+	    
+	      <div class="cell">;</div>
+	    
+	      <div class="cell"><</div>
+	    
+	      <div class="cell">=</div>
+	    
+	      <div class="cell">></div>
+	    
+	      <div class="cell">?</div>
+	    
+	      <div class="cell">[</div>
+	    
+	      <div class="cell">\</div>
+	    
+	      <div class="cell">]</div>
+	    
+	      <div class="cell">^</div>
+	    
+	      <div class="cell">_</div>
+	    
+	      <div class="cell">{</div>
+	    
+	      <div class="cell">|</div>
+	    
+	      <div class="cell">}</div>
+	    
+	      <div class="cell">~</div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell">­</div>
+	    
+	      <div class="cell">×</div>
+	    
+	      <div class="cell">÷</div>
+	    
+	      <div class="cell">̇</div>
+	    
+	      <div class="cell">̣</div>
+	    
+	      <div class="cell">॑</div>
+	    
+	      <div class="cell">॒</div>
+	    
+	      <div class="cell">।</div>
+	    
+	      <div class="cell">॥</div>
+	    
+	      <div class="cell">ഀ</div>
+	    
+	      <div class="cell">ഁ</div>
+	    
+	      <div class="cell">ം</div>
+	    
+	      <div class="cell">ഃ</div>
+	    
+	      <div class="cell">ഄ</div>
+	    
+	      <div class="cell">അ</div>
+	    
+	      <div class="cell">ആ</div>
+	    
+	      <div class="cell">ഇ</div>
+	    
+	      <div class="cell">ഈ</div>
+	    
+	      <div class="cell">ഉ</div>
+	    
+	      <div class="cell">ഊ</div>
+	    
+	      <div class="cell">ഋ</div>
+	    
+	      <div class="cell">ഌ</div>
+	    
+	      <div class="cell">എ</div>
+	    
+	      <div class="cell">ഏ</div>
+	    
+	      <div class="cell">ഐ</div>
+	    
+	      <div class="cell">ഒ</div>
+	    
+	      <div class="cell">ഓ</div>
+	    
+	      <div class="cell">ഔ</div>
+	    
+	      <div class="cell">ക</div>
+	    
+	      <div class="cell">ഖ</div>
+	    
+	      <div class="cell">ഗ</div>
+	    
+	      <div class="cell">ഘ</div>
+	    
+	      <div class="cell">ങ</div>
+	    
+	      <div class="cell">ച</div>
+	    
+	      <div class="cell">ഛ</div>
+	    
+	      <div class="cell">ജ</div>
+	    
+	      <div class="cell">ഝ</div>
+	    
+	      <div class="cell">ഞ</div>
+	    
+	      <div class="cell">ട</div>
+	    
+	      <div class="cell">ഠ</div>
+	    
+	      <div class="cell">ഡ</div>
+	    
+	      <div class="cell">ഢ</div>
+	    
+	      <div class="cell">ണ</div>
+	    
+	      <div class="cell">ത</div>
+	    
+	      <div class="cell">ഥ</div>
+	    
+	      <div class="cell">ദ</div>
+	    
+	      <div class="cell">ധ</div>
+	    
+	      <div class="cell">ന</div>
+	    
+	      <div class="cell">ഩ</div>
+	    
+	      <div class="cell">പ</div>
+	    
+	      <div class="cell">ഫ</div>
+	    
+	      <div class="cell">ബ</div>
+	    
+	      <div class="cell">ഭ</div>
+	    
+	      <div class="cell">മ</div>
+	    
+	      <div class="cell">യ</div>
+	    
+	      <div class="cell">ര</div>
+	    
+	      <div class="cell">റ</div>
+	    
+	      <div class="cell">ല</div>
+	    
+	      <div class="cell">ള</div>
+	    
+	      <div class="cell">ഴ</div>
+	    
+	      <div class="cell">വ</div>
+	    
+	      <div class="cell">ശ</div>
+	    
+	      <div class="cell">ഷ</div>
+	    
+	      <div class="cell">സ</div>
+	    
+	      <div class="cell">ഹ</div>
+	    
+	      <div class="cell">ഺ</div>
+	    
+	      <div class="cell">഻</div>
+	    
+	      <div class="cell">഼</div>
+	    
+	      <div class="cell">ഽ</div>
+	    
+	      <div class="cell">ാ</div>
+	    
+	      <div class="cell">ി</div>
+	    
+	      <div class="cell">ീ</div>
+	    
+	      <div class="cell">ു</div>
+	    
+	      <div class="cell">ൂ</div>
+	    
+	      <div class="cell">ൃ</div>
+	    
+	      <div class="cell">ൄ</div>
+	    
+	      <div class="cell">െ</div>
+	    
+	      <div class="cell">േ</div>
+	    
+	      <div class="cell">ൈ</div>
+	    
+	      <div class="cell">ൊ</div>
+	    
+	      <div class="cell">ോ</div>
+	    
+	      <div class="cell">ൌ</div>
+	    
+	      <div class="cell">്</div>
+	    
+	      <div class="cell">ൎ</div>
+	    
+	      <div class="cell">൏</div>
+	    
+	      <div class="cell">ൔ</div>
+	    
+	      <div class="cell">ൕ</div>
+	    
+	      <div class="cell">ൖ</div>
+	    
+	      <div class="cell">ൗ</div>
+	    
+	      <div class="cell">൘</div>
+	    
+	      <div class="cell">൙</div>
+	    
+	      <div class="cell">൚</div>
+	    
+	      <div class="cell">൛</div>
+	    
+	      <div class="cell">൜</div>
+	    
+	      <div class="cell">൝</div>
+	    
+	      <div class="cell">൞</div>
+	    
+	      <div class="cell">ൟ</div>
+	    
+	      <div class="cell">ൠ</div>
+	    
+	      <div class="cell">ൡ</div>
+	    
+	      <div class="cell">ൢ</div>
+	    
+	      <div class="cell">ൣ</div>
+	    
+	      <div class="cell">൦</div>
+	    
+	      <div class="cell">൧</div>
+	    
+	      <div class="cell">൨</div>
+	    
+	      <div class="cell">൩</div>
+	    
+	      <div class="cell">൪</div>
+	    
+	      <div class="cell">൫</div>
+	    
+	      <div class="cell">൬</div>
+	    
+	      <div class="cell">൭</div>
+	    
+	      <div class="cell">൮</div>
+	    
+	      <div class="cell">൯</div>
+	    
+	      <div class="cell">൰</div>
+	    
+	      <div class="cell">൱</div>
+	    
+	      <div class="cell">൲</div>
+	    
+	      <div class="cell">൳</div>
+	    
+	      <div class="cell">൴</div>
+	    
+	      <div class="cell">൵</div>
+	    
+	      <div class="cell">൶</div>
+	    
+	      <div class="cell">൷</div>
+	    
+	      <div class="cell">൸</div>
+	    
+	      <div class="cell">൹</div>
+	    
+	      <div class="cell">ൺ</div>
+	    
+	      <div class="cell">ൻ</div>
+	    
+	      <div class="cell">ർ</div>
+	    
+	      <div class="cell">ൽ</div>
+	    
+	      <div class="cell">ൾ</div>
+	    
+	      <div class="cell">ൿ</div>
+	    
+	      <div class="cell">᳚</div>
+	    
+	      <div class="cell">​</div>
+	    
+	      <div class="cell">‌</div>
+	    
+	      <div class="cell">‍</div>
+	    
+	      <div class="cell">‐</div>
+	    
+	      <div class="cell">–</div>
+	    
+	      <div class="cell">—</div>
+	    
+	      <div class="cell">‘</div>
+	    
+	      <div class="cell">’</div>
+	    
+	      <div class="cell">“</div>
+	    
+	      <div class="cell">”</div>
+	    
+	      <div class="cell">…</div>
+	    
+	      <div class="cell">₹</div>
+	    
+	      <div class="cell">−</div>
+	    
+	      <div class="cell">◌</div>
+	    
+	      <div class="cell">꠰</div>
+	    
+	      <div class="cell">꠱</div>
+	    
+	      <div class="cell">꠲</div>
+	    
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">old-Noto-Serif-Malayalam-Medium 20pt</div>
+	  <span class="old-Noto-Serif-Malayalam-Medium" style="font-size: 20pt">
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"></div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell">!</div>
+	    
+	      <div class="cell">"</div>
+	    
+	      <div class="cell">#</div>
+	    
+	      <div class="cell">%</div>
+	    
+	      <div class="cell">'</div>
+	    
+	      <div class="cell">(</div>
+	    
+	      <div class="cell">)</div>
+	    
+	      <div class="cell">*</div>
+	    
+	      <div class="cell">+</div>
+	    
+	      <div class="cell">,</div>
+	    
+	      <div class="cell">-</div>
+	    
+	      <div class="cell">.</div>
+	    
+	      <div class="cell">/</div>
+	    
+	      <div class="cell">0</div>
+	    
+	      <div class="cell">1</div>
+	    
+	      <div class="cell">2</div>
+	    
+	      <div class="cell">3</div>
+	    
+	      <div class="cell">4</div>
+	    
+	      <div class="cell">5</div>
+	    
+	      <div class="cell">6</div>
+	    
+	      <div class="cell">7</div>
+	    
+	      <div class="cell">8</div>
+	    
+	      <div class="cell">9</div>
+	    
+	      <div class="cell">:</div>
+	    
+	      <div class="cell">;</div>
+	    
+	      <div class="cell"><</div>
+	    
+	      <div class="cell">=</div>
+	    
+	      <div class="cell">></div>
+	    
+	      <div class="cell">?</div>
+	    
+	      <div class="cell">[</div>
+	    
+	      <div class="cell">\</div>
+	    
+	      <div class="cell">]</div>
+	    
+	      <div class="cell">^</div>
+	    
+	      <div class="cell">_</div>
+	    
+	      <div class="cell">{</div>
+	    
+	      <div class="cell">|</div>
+	    
+	      <div class="cell">}</div>
+	    
+	      <div class="cell">~</div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell">­</div>
+	    
+	      <div class="cell">×</div>
+	    
+	      <div class="cell">÷</div>
+	    
+	      <div class="cell">̇</div>
+	    
+	      <div class="cell">̣</div>
+	    
+	      <div class="cell">॑</div>
+	    
+	      <div class="cell">॒</div>
+	    
+	      <div class="cell">।</div>
+	    
+	      <div class="cell">॥</div>
+	    
+	      <div class="cell">ഀ</div>
+	    
+	      <div class="cell">ഁ</div>
+	    
+	      <div class="cell">ം</div>
+	    
+	      <div class="cell">ഃ</div>
+	    
+	      <div class="cell">ഄ</div>
+	    
+	      <div class="cell">അ</div>
+	    
+	      <div class="cell">ആ</div>
+	    
+	      <div class="cell">ഇ</div>
+	    
+	      <div class="cell">ഈ</div>
+	    
+	      <div class="cell">ഉ</div>
+	    
+	      <div class="cell">ഊ</div>
+	    
+	      <div class="cell">ഋ</div>
+	    
+	      <div class="cell">ഌ</div>
+	    
+	      <div class="cell">എ</div>
+	    
+	      <div class="cell">ഏ</div>
+	    
+	      <div class="cell">ഐ</div>
+	    
+	      <div class="cell">ഒ</div>
+	    
+	      <div class="cell">ഓ</div>
+	    
+	      <div class="cell">ഔ</div>
+	    
+	      <div class="cell">ക</div>
+	    
+	      <div class="cell">ഖ</div>
+	    
+	      <div class="cell">ഗ</div>
+	    
+	      <div class="cell">ഘ</div>
+	    
+	      <div class="cell">ങ</div>
+	    
+	      <div class="cell">ച</div>
+	    
+	      <div class="cell">ഛ</div>
+	    
+	      <div class="cell">ജ</div>
+	    
+	      <div class="cell">ഝ</div>
+	    
+	      <div class="cell">ഞ</div>
+	    
+	      <div class="cell">ട</div>
+	    
+	      <div class="cell">ഠ</div>
+	    
+	      <div class="cell">ഡ</div>
+	    
+	      <div class="cell">ഢ</div>
+	    
+	      <div class="cell">ണ</div>
+	    
+	      <div class="cell">ത</div>
+	    
+	      <div class="cell">ഥ</div>
+	    
+	      <div class="cell">ദ</div>
+	    
+	      <div class="cell">ധ</div>
+	    
+	      <div class="cell">ന</div>
+	    
+	      <div class="cell">ഩ</div>
+	    
+	      <div class="cell">പ</div>
+	    
+	      <div class="cell">ഫ</div>
+	    
+	      <div class="cell">ബ</div>
+	    
+	      <div class="cell">ഭ</div>
+	    
+	      <div class="cell">മ</div>
+	    
+	      <div class="cell">യ</div>
+	    
+	      <div class="cell">ര</div>
+	    
+	      <div class="cell">റ</div>
+	    
+	      <div class="cell">ല</div>
+	    
+	      <div class="cell">ള</div>
+	    
+	      <div class="cell">ഴ</div>
+	    
+	      <div class="cell">വ</div>
+	    
+	      <div class="cell">ശ</div>
+	    
+	      <div class="cell">ഷ</div>
+	    
+	      <div class="cell">സ</div>
+	    
+	      <div class="cell">ഹ</div>
+	    
+	      <div class="cell">ഺ</div>
+	    
+	      <div class="cell">഻</div>
+	    
+	      <div class="cell">഼</div>
+	    
+	      <div class="cell">ഽ</div>
+	    
+	      <div class="cell">ാ</div>
+	    
+	      <div class="cell">ി</div>
+	    
+	      <div class="cell">ീ</div>
+	    
+	      <div class="cell">ു</div>
+	    
+	      <div class="cell">ൂ</div>
+	    
+	      <div class="cell">ൃ</div>
+	    
+	      <div class="cell">ൄ</div>
+	    
+	      <div class="cell">െ</div>
+	    
+	      <div class="cell">േ</div>
+	    
+	      <div class="cell">ൈ</div>
+	    
+	      <div class="cell">ൊ</div>
+	    
+	      <div class="cell">ോ</div>
+	    
+	      <div class="cell">ൌ</div>
+	    
+	      <div class="cell">്</div>
+	    
+	      <div class="cell">ൎ</div>
+	    
+	      <div class="cell">൏</div>
+	    
+	      <div class="cell">ൔ</div>
+	    
+	      <div class="cell">ൕ</div>
+	    
+	      <div class="cell">ൖ</div>
+	    
+	      <div class="cell">ൗ</div>
+	    
+	      <div class="cell">൘</div>
+	    
+	      <div class="cell">൙</div>
+	    
+	      <div class="cell">൚</div>
+	    
+	      <div class="cell">൛</div>
+	    
+	      <div class="cell">൜</div>
+	    
+	      <div class="cell">൝</div>
+	    
+	      <div class="cell">൞</div>
+	    
+	      <div class="cell">ൟ</div>
+	    
+	      <div class="cell">ൠ</div>
+	    
+	      <div class="cell">ൡ</div>
+	    
+	      <div class="cell">ൢ</div>
+	    
+	      <div class="cell">ൣ</div>
+	    
+	      <div class="cell">൦</div>
+	    
+	      <div class="cell">൧</div>
+	    
+	      <div class="cell">൨</div>
+	    
+	      <div class="cell">൩</div>
+	    
+	      <div class="cell">൪</div>
+	    
+	      <div class="cell">൫</div>
+	    
+	      <div class="cell">൬</div>
+	    
+	      <div class="cell">൭</div>
+	    
+	      <div class="cell">൮</div>
+	    
+	      <div class="cell">൯</div>
+	    
+	      <div class="cell">൰</div>
+	    
+	      <div class="cell">൱</div>
+	    
+	      <div class="cell">൲</div>
+	    
+	      <div class="cell">൳</div>
+	    
+	      <div class="cell">൴</div>
+	    
+	      <div class="cell">൵</div>
+	    
+	      <div class="cell">൶</div>
+	    
+	      <div class="cell">൷</div>
+	    
+	      <div class="cell">൸</div>
+	    
+	      <div class="cell">൹</div>
+	    
+	      <div class="cell">ൺ</div>
+	    
+	      <div class="cell">ൻ</div>
+	    
+	      <div class="cell">ർ</div>
+	    
+	      <div class="cell">ൽ</div>
+	    
+	      <div class="cell">ൾ</div>
+	    
+	      <div class="cell">ൿ</div>
+	    
+	      <div class="cell">᳚</div>
+	    
+	      <div class="cell">​</div>
+	    
+	      <div class="cell">‌</div>
+	    
+	      <div class="cell">‍</div>
+	    
+	      <div class="cell">‐</div>
+	    
+	      <div class="cell">–</div>
+	    
+	      <div class="cell">—</div>
+	    
+	      <div class="cell">‘</div>
+	    
+	      <div class="cell">’</div>
+	    
+	      <div class="cell">“</div>
+	    
+	      <div class="cell">”</div>
+	    
+	      <div class="cell">…</div>
+	    
+	      <div class="cell">₹</div>
+	    
+	      <div class="cell">−</div>
+	    
+	      <div class="cell">◌</div>
+	    
+	      <div class="cell">꠰</div>
+	    
+	      <div class="cell">꠱</div>
+	    
+	      <div class="cell">꠲</div>
+	    
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">old-Noto-Serif-Malayalam-Bold 20pt</div>
+	  <span class="old-Noto-Serif-Malayalam-Bold" style="font-size: 20pt">
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"></div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell">!</div>
+	    
+	      <div class="cell">"</div>
+	    
+	      <div class="cell">#</div>
+	    
+	      <div class="cell">%</div>
+	    
+	      <div class="cell">'</div>
+	    
+	      <div class="cell">(</div>
+	    
+	      <div class="cell">)</div>
+	    
+	      <div class="cell">*</div>
+	    
+	      <div class="cell">+</div>
+	    
+	      <div class="cell">,</div>
+	    
+	      <div class="cell">-</div>
+	    
+	      <div class="cell">.</div>
+	    
+	      <div class="cell">/</div>
+	    
+	      <div class="cell">0</div>
+	    
+	      <div class="cell">1</div>
+	    
+	      <div class="cell">2</div>
+	    
+	      <div class="cell">3</div>
+	    
+	      <div class="cell">4</div>
+	    
+	      <div class="cell">5</div>
+	    
+	      <div class="cell">6</div>
+	    
+	      <div class="cell">7</div>
+	    
+	      <div class="cell">8</div>
+	    
+	      <div class="cell">9</div>
+	    
+	      <div class="cell">:</div>
+	    
+	      <div class="cell">;</div>
+	    
+	      <div class="cell"><</div>
+	    
+	      <div class="cell">=</div>
+	    
+	      <div class="cell">></div>
+	    
+	      <div class="cell">?</div>
+	    
+	      <div class="cell">[</div>
+	    
+	      <div class="cell">\</div>
+	    
+	      <div class="cell">]</div>
+	    
+	      <div class="cell">^</div>
+	    
+	      <div class="cell">_</div>
+	    
+	      <div class="cell">{</div>
+	    
+	      <div class="cell">|</div>
+	    
+	      <div class="cell">}</div>
+	    
+	      <div class="cell">~</div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell">­</div>
+	    
+	      <div class="cell">×</div>
+	    
+	      <div class="cell">÷</div>
+	    
+	      <div class="cell">̇</div>
+	    
+	      <div class="cell">̣</div>
+	    
+	      <div class="cell">॑</div>
+	    
+	      <div class="cell">॒</div>
+	    
+	      <div class="cell">।</div>
+	    
+	      <div class="cell">॥</div>
+	    
+	      <div class="cell">ഀ</div>
+	    
+	      <div class="cell">ഁ</div>
+	    
+	      <div class="cell">ം</div>
+	    
+	      <div class="cell">ഃ</div>
+	    
+	      <div class="cell">ഄ</div>
+	    
+	      <div class="cell">അ</div>
+	    
+	      <div class="cell">ആ</div>
+	    
+	      <div class="cell">ഇ</div>
+	    
+	      <div class="cell">ഈ</div>
+	    
+	      <div class="cell">ഉ</div>
+	    
+	      <div class="cell">ഊ</div>
+	    
+	      <div class="cell">ഋ</div>
+	    
+	      <div class="cell">ഌ</div>
+	    
+	      <div class="cell">എ</div>
+	    
+	      <div class="cell">ഏ</div>
+	    
+	      <div class="cell">ഐ</div>
+	    
+	      <div class="cell">ഒ</div>
+	    
+	      <div class="cell">ഓ</div>
+	    
+	      <div class="cell">ഔ</div>
+	    
+	      <div class="cell">ക</div>
+	    
+	      <div class="cell">ഖ</div>
+	    
+	      <div class="cell">ഗ</div>
+	    
+	      <div class="cell">ഘ</div>
+	    
+	      <div class="cell">ങ</div>
+	    
+	      <div class="cell">ച</div>
+	    
+	      <div class="cell">ഛ</div>
+	    
+	      <div class="cell">ജ</div>
+	    
+	      <div class="cell">ഝ</div>
+	    
+	      <div class="cell">ഞ</div>
+	    
+	      <div class="cell">ട</div>
+	    
+	      <div class="cell">ഠ</div>
+	    
+	      <div class="cell">ഡ</div>
+	    
+	      <div class="cell">ഢ</div>
+	    
+	      <div class="cell">ണ</div>
+	    
+	      <div class="cell">ത</div>
+	    
+	      <div class="cell">ഥ</div>
+	    
+	      <div class="cell">ദ</div>
+	    
+	      <div class="cell">ധ</div>
+	    
+	      <div class="cell">ന</div>
+	    
+	      <div class="cell">ഩ</div>
+	    
+	      <div class="cell">പ</div>
+	    
+	      <div class="cell">ഫ</div>
+	    
+	      <div class="cell">ബ</div>
+	    
+	      <div class="cell">ഭ</div>
+	    
+	      <div class="cell">മ</div>
+	    
+	      <div class="cell">യ</div>
+	    
+	      <div class="cell">ര</div>
+	    
+	      <div class="cell">റ</div>
+	    
+	      <div class="cell">ല</div>
+	    
+	      <div class="cell">ള</div>
+	    
+	      <div class="cell">ഴ</div>
+	    
+	      <div class="cell">വ</div>
+	    
+	      <div class="cell">ശ</div>
+	    
+	      <div class="cell">ഷ</div>
+	    
+	      <div class="cell">സ</div>
+	    
+	      <div class="cell">ഹ</div>
+	    
+	      <div class="cell">ഺ</div>
+	    
+	      <div class="cell">഻</div>
+	    
+	      <div class="cell">഼</div>
+	    
+	      <div class="cell">ഽ</div>
+	    
+	      <div class="cell">ാ</div>
+	    
+	      <div class="cell">ി</div>
+	    
+	      <div class="cell">ീ</div>
+	    
+	      <div class="cell">ു</div>
+	    
+	      <div class="cell">ൂ</div>
+	    
+	      <div class="cell">ൃ</div>
+	    
+	      <div class="cell">ൄ</div>
+	    
+	      <div class="cell">െ</div>
+	    
+	      <div class="cell">േ</div>
+	    
+	      <div class="cell">ൈ</div>
+	    
+	      <div class="cell">ൊ</div>
+	    
+	      <div class="cell">ോ</div>
+	    
+	      <div class="cell">ൌ</div>
+	    
+	      <div class="cell">്</div>
+	    
+	      <div class="cell">ൎ</div>
+	    
+	      <div class="cell">൏</div>
+	    
+	      <div class="cell">ൔ</div>
+	    
+	      <div class="cell">ൕ</div>
+	    
+	      <div class="cell">ൖ</div>
+	    
+	      <div class="cell">ൗ</div>
+	    
+	      <div class="cell">൘</div>
+	    
+	      <div class="cell">൙</div>
+	    
+	      <div class="cell">൚</div>
+	    
+	      <div class="cell">൛</div>
+	    
+	      <div class="cell">൜</div>
+	    
+	      <div class="cell">൝</div>
+	    
+	      <div class="cell">൞</div>
+	    
+	      <div class="cell">ൟ</div>
+	    
+	      <div class="cell">ൠ</div>
+	    
+	      <div class="cell">ൡ</div>
+	    
+	      <div class="cell">ൢ</div>
+	    
+	      <div class="cell">ൣ</div>
+	    
+	      <div class="cell">൦</div>
+	    
+	      <div class="cell">൧</div>
+	    
+	      <div class="cell">൨</div>
+	    
+	      <div class="cell">൩</div>
+	    
+	      <div class="cell">൪</div>
+	    
+	      <div class="cell">൫</div>
+	    
+	      <div class="cell">൬</div>
+	    
+	      <div class="cell">൭</div>
+	    
+	      <div class="cell">൮</div>
+	    
+	      <div class="cell">൯</div>
+	    
+	      <div class="cell">൰</div>
+	    
+	      <div class="cell">൱</div>
+	    
+	      <div class="cell">൲</div>
+	    
+	      <div class="cell">൳</div>
+	    
+	      <div class="cell">൴</div>
+	    
+	      <div class="cell">൵</div>
+	    
+	      <div class="cell">൶</div>
+	    
+	      <div class="cell">൷</div>
+	    
+	      <div class="cell">൸</div>
+	    
+	      <div class="cell">൹</div>
+	    
+	      <div class="cell">ൺ</div>
+	    
+	      <div class="cell">ൻ</div>
+	    
+	      <div class="cell">ർ</div>
+	    
+	      <div class="cell">ൽ</div>
+	    
+	      <div class="cell">ൾ</div>
+	    
+	      <div class="cell">ൿ</div>
+	    
+	      <div class="cell">᳚</div>
+	    
+	      <div class="cell">​</div>
+	    
+	      <div class="cell">‌</div>
+	    
+	      <div class="cell">‍</div>
+	    
+	      <div class="cell">‐</div>
+	    
+	      <div class="cell">–</div>
+	    
+	      <div class="cell">—</div>
+	    
+	      <div class="cell">‘</div>
+	    
+	      <div class="cell">’</div>
+	    
+	      <div class="cell">“</div>
+	    
+	      <div class="cell">”</div>
+	    
+	      <div class="cell">…</div>
+	    
+	      <div class="cell">₹</div>
+	    
+	      <div class="cell">−</div>
+	    
+	      <div class="cell">◌</div>
+	    
+	      <div class="cell">꠰</div>
+	    
+	      <div class="cell">꠱</div>
+	    
+	      <div class="cell">꠲</div>
+	    
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">old-Noto-Serif-Malayalam-ExtraLight 20pt</div>
+	  <span class="old-Noto-Serif-Malayalam-ExtraLight" style="font-size: 20pt">
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"></div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell">!</div>
+	    
+	      <div class="cell">"</div>
+	    
+	      <div class="cell">#</div>
+	    
+	      <div class="cell">%</div>
+	    
+	      <div class="cell">'</div>
+	    
+	      <div class="cell">(</div>
+	    
+	      <div class="cell">)</div>
+	    
+	      <div class="cell">*</div>
+	    
+	      <div class="cell">+</div>
+	    
+	      <div class="cell">,</div>
+	    
+	      <div class="cell">-</div>
+	    
+	      <div class="cell">.</div>
+	    
+	      <div class="cell">/</div>
+	    
+	      <div class="cell">0</div>
+	    
+	      <div class="cell">1</div>
+	    
+	      <div class="cell">2</div>
+	    
+	      <div class="cell">3</div>
+	    
+	      <div class="cell">4</div>
+	    
+	      <div class="cell">5</div>
+	    
+	      <div class="cell">6</div>
+	    
+	      <div class="cell">7</div>
+	    
+	      <div class="cell">8</div>
+	    
+	      <div class="cell">9</div>
+	    
+	      <div class="cell">:</div>
+	    
+	      <div class="cell">;</div>
+	    
+	      <div class="cell"><</div>
+	    
+	      <div class="cell">=</div>
+	    
+	      <div class="cell">></div>
+	    
+	      <div class="cell">?</div>
+	    
+	      <div class="cell">[</div>
+	    
+	      <div class="cell">\</div>
+	    
+	      <div class="cell">]</div>
+	    
+	      <div class="cell">^</div>
+	    
+	      <div class="cell">_</div>
+	    
+	      <div class="cell">{</div>
+	    
+	      <div class="cell">|</div>
+	    
+	      <div class="cell">}</div>
+	    
+	      <div class="cell">~</div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell">­</div>
+	    
+	      <div class="cell">×</div>
+	    
+	      <div class="cell">÷</div>
+	    
+	      <div class="cell">̇</div>
+	    
+	      <div class="cell">̣</div>
+	    
+	      <div class="cell">॑</div>
+	    
+	      <div class="cell">॒</div>
+	    
+	      <div class="cell">।</div>
+	    
+	      <div class="cell">॥</div>
+	    
+	      <div class="cell">ഀ</div>
+	    
+	      <div class="cell">ഁ</div>
+	    
+	      <div class="cell">ം</div>
+	    
+	      <div class="cell">ഃ</div>
+	    
+	      <div class="cell">ഄ</div>
+	    
+	      <div class="cell">അ</div>
+	    
+	      <div class="cell">ആ</div>
+	    
+	      <div class="cell">ഇ</div>
+	    
+	      <div class="cell">ഈ</div>
+	    
+	      <div class="cell">ഉ</div>
+	    
+	      <div class="cell">ഊ</div>
+	    
+	      <div class="cell">ഋ</div>
+	    
+	      <div class="cell">ഌ</div>
+	    
+	      <div class="cell">എ</div>
+	    
+	      <div class="cell">ഏ</div>
+	    
+	      <div class="cell">ഐ</div>
+	    
+	      <div class="cell">ഒ</div>
+	    
+	      <div class="cell">ഓ</div>
+	    
+	      <div class="cell">ഔ</div>
+	    
+	      <div class="cell">ക</div>
+	    
+	      <div class="cell">ഖ</div>
+	    
+	      <div class="cell">ഗ</div>
+	    
+	      <div class="cell">ഘ</div>
+	    
+	      <div class="cell">ങ</div>
+	    
+	      <div class="cell">ച</div>
+	    
+	      <div class="cell">ഛ</div>
+	    
+	      <div class="cell">ജ</div>
+	    
+	      <div class="cell">ഝ</div>
+	    
+	      <div class="cell">ഞ</div>
+	    
+	      <div class="cell">ട</div>
+	    
+	      <div class="cell">ഠ</div>
+	    
+	      <div class="cell">ഡ</div>
+	    
+	      <div class="cell">ഢ</div>
+	    
+	      <div class="cell">ണ</div>
+	    
+	      <div class="cell">ത</div>
+	    
+	      <div class="cell">ഥ</div>
+	    
+	      <div class="cell">ദ</div>
+	    
+	      <div class="cell">ധ</div>
+	    
+	      <div class="cell">ന</div>
+	    
+	      <div class="cell">ഩ</div>
+	    
+	      <div class="cell">പ</div>
+	    
+	      <div class="cell">ഫ</div>
+	    
+	      <div class="cell">ബ</div>
+	    
+	      <div class="cell">ഭ</div>
+	    
+	      <div class="cell">മ</div>
+	    
+	      <div class="cell">യ</div>
+	    
+	      <div class="cell">ര</div>
+	    
+	      <div class="cell">റ</div>
+	    
+	      <div class="cell">ല</div>
+	    
+	      <div class="cell">ള</div>
+	    
+	      <div class="cell">ഴ</div>
+	    
+	      <div class="cell">വ</div>
+	    
+	      <div class="cell">ശ</div>
+	    
+	      <div class="cell">ഷ</div>
+	    
+	      <div class="cell">സ</div>
+	    
+	      <div class="cell">ഹ</div>
+	    
+	      <div class="cell">ഺ</div>
+	    
+	      <div class="cell">഻</div>
+	    
+	      <div class="cell">഼</div>
+	    
+	      <div class="cell">ഽ</div>
+	    
+	      <div class="cell">ാ</div>
+	    
+	      <div class="cell">ി</div>
+	    
+	      <div class="cell">ീ</div>
+	    
+	      <div class="cell">ു</div>
+	    
+	      <div class="cell">ൂ</div>
+	    
+	      <div class="cell">ൃ</div>
+	    
+	      <div class="cell">ൄ</div>
+	    
+	      <div class="cell">െ</div>
+	    
+	      <div class="cell">േ</div>
+	    
+	      <div class="cell">ൈ</div>
+	    
+	      <div class="cell">ൊ</div>
+	    
+	      <div class="cell">ോ</div>
+	    
+	      <div class="cell">ൌ</div>
+	    
+	      <div class="cell">്</div>
+	    
+	      <div class="cell">ൎ</div>
+	    
+	      <div class="cell">൏</div>
+	    
+	      <div class="cell">ൔ</div>
+	    
+	      <div class="cell">ൕ</div>
+	    
+	      <div class="cell">ൖ</div>
+	    
+	      <div class="cell">ൗ</div>
+	    
+	      <div class="cell">൘</div>
+	    
+	      <div class="cell">൙</div>
+	    
+	      <div class="cell">൚</div>
+	    
+	      <div class="cell">൛</div>
+	    
+	      <div class="cell">൜</div>
+	    
+	      <div class="cell">൝</div>
+	    
+	      <div class="cell">൞</div>
+	    
+	      <div class="cell">ൟ</div>
+	    
+	      <div class="cell">ൠ</div>
+	    
+	      <div class="cell">ൡ</div>
+	    
+	      <div class="cell">ൢ</div>
+	    
+	      <div class="cell">ൣ</div>
+	    
+	      <div class="cell">൦</div>
+	    
+	      <div class="cell">൧</div>
+	    
+	      <div class="cell">൨</div>
+	    
+	      <div class="cell">൩</div>
+	    
+	      <div class="cell">൪</div>
+	    
+	      <div class="cell">൫</div>
+	    
+	      <div class="cell">൬</div>
+	    
+	      <div class="cell">൭</div>
+	    
+	      <div class="cell">൮</div>
+	    
+	      <div class="cell">൯</div>
+	    
+	      <div class="cell">൰</div>
+	    
+	      <div class="cell">൱</div>
+	    
+	      <div class="cell">൲</div>
+	    
+	      <div class="cell">൳</div>
+	    
+	      <div class="cell">൴</div>
+	    
+	      <div class="cell">൵</div>
+	    
+	      <div class="cell">൶</div>
+	    
+	      <div class="cell">൷</div>
+	    
+	      <div class="cell">൸</div>
+	    
+	      <div class="cell">൹</div>
+	    
+	      <div class="cell">ൺ</div>
+	    
+	      <div class="cell">ൻ</div>
+	    
+	      <div class="cell">ർ</div>
+	    
+	      <div class="cell">ൽ</div>
+	    
+	      <div class="cell">ൾ</div>
+	    
+	      <div class="cell">ൿ</div>
+	    
+	      <div class="cell">᳚</div>
+	    
+	      <div class="cell">​</div>
+	    
+	      <div class="cell">‌</div>
+	    
+	      <div class="cell">‍</div>
+	    
+	      <div class="cell">‐</div>
+	    
+	      <div class="cell">–</div>
+	    
+	      <div class="cell">—</div>
+	    
+	      <div class="cell">‘</div>
+	    
+	      <div class="cell">’</div>
+	    
+	      <div class="cell">“</div>
+	    
+	      <div class="cell">”</div>
+	    
+	      <div class="cell">…</div>
+	    
+	      <div class="cell">₹</div>
+	    
+	      <div class="cell">−</div>
+	    
+	      <div class="cell">◌</div>
+	    
+	      <div class="cell">꠰</div>
+	    
+	      <div class="cell">꠱</div>
+	    
+	      <div class="cell">꠲</div>
+	    
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">old-Noto-Serif-Malayalam-Thin 20pt</div>
+	  <span class="old-Noto-Serif-Malayalam-Thin" style="font-size: 20pt">
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"></div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell">!</div>
+	    
+	      <div class="cell">"</div>
+	    
+	      <div class="cell">#</div>
+	    
+	      <div class="cell">%</div>
+	    
+	      <div class="cell">'</div>
+	    
+	      <div class="cell">(</div>
+	    
+	      <div class="cell">)</div>
+	    
+	      <div class="cell">*</div>
+	    
+	      <div class="cell">+</div>
+	    
+	      <div class="cell">,</div>
+	    
+	      <div class="cell">-</div>
+	    
+	      <div class="cell">.</div>
+	    
+	      <div class="cell">/</div>
+	    
+	      <div class="cell">0</div>
+	    
+	      <div class="cell">1</div>
+	    
+	      <div class="cell">2</div>
+	    
+	      <div class="cell">3</div>
+	    
+	      <div class="cell">4</div>
+	    
+	      <div class="cell">5</div>
+	    
+	      <div class="cell">6</div>
+	    
+	      <div class="cell">7</div>
+	    
+	      <div class="cell">8</div>
+	    
+	      <div class="cell">9</div>
+	    
+	      <div class="cell">:</div>
+	    
+	      <div class="cell">;</div>
+	    
+	      <div class="cell"><</div>
+	    
+	      <div class="cell">=</div>
+	    
+	      <div class="cell">></div>
+	    
+	      <div class="cell">?</div>
+	    
+	      <div class="cell">[</div>
+	    
+	      <div class="cell">\</div>
+	    
+	      <div class="cell">]</div>
+	    
+	      <div class="cell">^</div>
+	    
+	      <div class="cell">_</div>
+	    
+	      <div class="cell">{</div>
+	    
+	      <div class="cell">|</div>
+	    
+	      <div class="cell">}</div>
+	    
+	      <div class="cell">~</div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell">­</div>
+	    
+	      <div class="cell">×</div>
+	    
+	      <div class="cell">÷</div>
+	    
+	      <div class="cell">̇</div>
+	    
+	      <div class="cell">̣</div>
+	    
+	      <div class="cell">॑</div>
+	    
+	      <div class="cell">॒</div>
+	    
+	      <div class="cell">।</div>
+	    
+	      <div class="cell">॥</div>
+	    
+	      <div class="cell">ഀ</div>
+	    
+	      <div class="cell">ഁ</div>
+	    
+	      <div class="cell">ം</div>
+	    
+	      <div class="cell">ഃ</div>
+	    
+	      <div class="cell">ഄ</div>
+	    
+	      <div class="cell">അ</div>
+	    
+	      <div class="cell">ആ</div>
+	    
+	      <div class="cell">ഇ</div>
+	    
+	      <div class="cell">ഈ</div>
+	    
+	      <div class="cell">ഉ</div>
+	    
+	      <div class="cell">ഊ</div>
+	    
+	      <div class="cell">ഋ</div>
+	    
+	      <div class="cell">ഌ</div>
+	    
+	      <div class="cell">എ</div>
+	    
+	      <div class="cell">ഏ</div>
+	    
+	      <div class="cell">ഐ</div>
+	    
+	      <div class="cell">ഒ</div>
+	    
+	      <div class="cell">ഓ</div>
+	    
+	      <div class="cell">ഔ</div>
+	    
+	      <div class="cell">ക</div>
+	    
+	      <div class="cell">ഖ</div>
+	    
+	      <div class="cell">ഗ</div>
+	    
+	      <div class="cell">ഘ</div>
+	    
+	      <div class="cell">ങ</div>
+	    
+	      <div class="cell">ച</div>
+	    
+	      <div class="cell">ഛ</div>
+	    
+	      <div class="cell">ജ</div>
+	    
+	      <div class="cell">ഝ</div>
+	    
+	      <div class="cell">ഞ</div>
+	    
+	      <div class="cell">ട</div>
+	    
+	      <div class="cell">ഠ</div>
+	    
+	      <div class="cell">ഡ</div>
+	    
+	      <div class="cell">ഢ</div>
+	    
+	      <div class="cell">ണ</div>
+	    
+	      <div class="cell">ത</div>
+	    
+	      <div class="cell">ഥ</div>
+	    
+	      <div class="cell">ദ</div>
+	    
+	      <div class="cell">ധ</div>
+	    
+	      <div class="cell">ന</div>
+	    
+	      <div class="cell">ഩ</div>
+	    
+	      <div class="cell">പ</div>
+	    
+	      <div class="cell">ഫ</div>
+	    
+	      <div class="cell">ബ</div>
+	    
+	      <div class="cell">ഭ</div>
+	    
+	      <div class="cell">മ</div>
+	    
+	      <div class="cell">യ</div>
+	    
+	      <div class="cell">ര</div>
+	    
+	      <div class="cell">റ</div>
+	    
+	      <div class="cell">ല</div>
+	    
+	      <div class="cell">ള</div>
+	    
+	      <div class="cell">ഴ</div>
+	    
+	      <div class="cell">വ</div>
+	    
+	      <div class="cell">ശ</div>
+	    
+	      <div class="cell">ഷ</div>
+	    
+	      <div class="cell">സ</div>
+	    
+	      <div class="cell">ഹ</div>
+	    
+	      <div class="cell">ഺ</div>
+	    
+	      <div class="cell">഻</div>
+	    
+	      <div class="cell">഼</div>
+	    
+	      <div class="cell">ഽ</div>
+	    
+	      <div class="cell">ാ</div>
+	    
+	      <div class="cell">ി</div>
+	    
+	      <div class="cell">ീ</div>
+	    
+	      <div class="cell">ു</div>
+	    
+	      <div class="cell">ൂ</div>
+	    
+	      <div class="cell">ൃ</div>
+	    
+	      <div class="cell">ൄ</div>
+	    
+	      <div class="cell">െ</div>
+	    
+	      <div class="cell">േ</div>
+	    
+	      <div class="cell">ൈ</div>
+	    
+	      <div class="cell">ൊ</div>
+	    
+	      <div class="cell">ോ</div>
+	    
+	      <div class="cell">ൌ</div>
+	    
+	      <div class="cell">്</div>
+	    
+	      <div class="cell">ൎ</div>
+	    
+	      <div class="cell">൏</div>
+	    
+	      <div class="cell">ൔ</div>
+	    
+	      <div class="cell">ൕ</div>
+	    
+	      <div class="cell">ൖ</div>
+	    
+	      <div class="cell">ൗ</div>
+	    
+	      <div class="cell">൘</div>
+	    
+	      <div class="cell">൙</div>
+	    
+	      <div class="cell">൚</div>
+	    
+	      <div class="cell">൛</div>
+	    
+	      <div class="cell">൜</div>
+	    
+	      <div class="cell">൝</div>
+	    
+	      <div class="cell">൞</div>
+	    
+	      <div class="cell">ൟ</div>
+	    
+	      <div class="cell">ൠ</div>
+	    
+	      <div class="cell">ൡ</div>
+	    
+	      <div class="cell">ൢ</div>
+	    
+	      <div class="cell">ൣ</div>
+	    
+	      <div class="cell">൦</div>
+	    
+	      <div class="cell">൧</div>
+	    
+	      <div class="cell">൨</div>
+	    
+	      <div class="cell">൩</div>
+	    
+	      <div class="cell">൪</div>
+	    
+	      <div class="cell">൫</div>
+	    
+	      <div class="cell">൬</div>
+	    
+	      <div class="cell">൭</div>
+	    
+	      <div class="cell">൮</div>
+	    
+	      <div class="cell">൯</div>
+	    
+	      <div class="cell">൰</div>
+	    
+	      <div class="cell">൱</div>
+	    
+	      <div class="cell">൲</div>
+	    
+	      <div class="cell">൳</div>
+	    
+	      <div class="cell">൴</div>
+	    
+	      <div class="cell">൵</div>
+	    
+	      <div class="cell">൶</div>
+	    
+	      <div class="cell">൷</div>
+	    
+	      <div class="cell">൸</div>
+	    
+	      <div class="cell">൹</div>
+	    
+	      <div class="cell">ൺ</div>
+	    
+	      <div class="cell">ൻ</div>
+	    
+	      <div class="cell">ർ</div>
+	    
+	      <div class="cell">ൽ</div>
+	    
+	      <div class="cell">ൾ</div>
+	    
+	      <div class="cell">ൿ</div>
+	    
+	      <div class="cell">᳚</div>
+	    
+	      <div class="cell">​</div>
+	    
+	      <div class="cell">‌</div>
+	    
+	      <div class="cell">‍</div>
+	    
+	      <div class="cell">‐</div>
+	    
+	      <div class="cell">–</div>
+	    
+	      <div class="cell">—</div>
+	    
+	      <div class="cell">‘</div>
+	    
+	      <div class="cell">’</div>
+	    
+	      <div class="cell">“</div>
+	    
+	      <div class="cell">”</div>
+	    
+	      <div class="cell">…</div>
+	    
+	      <div class="cell">₹</div>
+	    
+	      <div class="cell">−</div>
+	    
+	      <div class="cell">◌</div>
+	    
+	      <div class="cell">꠰</div>
+	    
+	      <div class="cell">꠱</div>
+	    
+	      <div class="cell">꠲</div>
+	    
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">old-Noto-Serif-Malayalam-Black 20pt</div>
+	  <span class="old-Noto-Serif-Malayalam-Black" style="font-size: 20pt">
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"></div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell">!</div>
+	    
+	      <div class="cell">"</div>
+	    
+	      <div class="cell">#</div>
+	    
+	      <div class="cell">%</div>
+	    
+	      <div class="cell">'</div>
+	    
+	      <div class="cell">(</div>
+	    
+	      <div class="cell">)</div>
+	    
+	      <div class="cell">*</div>
+	    
+	      <div class="cell">+</div>
+	    
+	      <div class="cell">,</div>
+	    
+	      <div class="cell">-</div>
+	    
+	      <div class="cell">.</div>
+	    
+	      <div class="cell">/</div>
+	    
+	      <div class="cell">0</div>
+	    
+	      <div class="cell">1</div>
+	    
+	      <div class="cell">2</div>
+	    
+	      <div class="cell">3</div>
+	    
+	      <div class="cell">4</div>
+	    
+	      <div class="cell">5</div>
+	    
+	      <div class="cell">6</div>
+	    
+	      <div class="cell">7</div>
+	    
+	      <div class="cell">8</div>
+	    
+	      <div class="cell">9</div>
+	    
+	      <div class="cell">:</div>
+	    
+	      <div class="cell">;</div>
+	    
+	      <div class="cell"><</div>
+	    
+	      <div class="cell">=</div>
+	    
+	      <div class="cell">></div>
+	    
+	      <div class="cell">?</div>
+	    
+	      <div class="cell">[</div>
+	    
+	      <div class="cell">\</div>
+	    
+	      <div class="cell">]</div>
+	    
+	      <div class="cell">^</div>
+	    
+	      <div class="cell">_</div>
+	    
+	      <div class="cell">{</div>
+	    
+	      <div class="cell">|</div>
+	    
+	      <div class="cell">}</div>
+	    
+	      <div class="cell">~</div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell">­</div>
+	    
+	      <div class="cell">×</div>
+	    
+	      <div class="cell">÷</div>
+	    
+	      <div class="cell">̇</div>
+	    
+	      <div class="cell">̣</div>
+	    
+	      <div class="cell">॑</div>
+	    
+	      <div class="cell">॒</div>
+	    
+	      <div class="cell">।</div>
+	    
+	      <div class="cell">॥</div>
+	    
+	      <div class="cell">ഀ</div>
+	    
+	      <div class="cell">ഁ</div>
+	    
+	      <div class="cell">ം</div>
+	    
+	      <div class="cell">ഃ</div>
+	    
+	      <div class="cell">ഄ</div>
+	    
+	      <div class="cell">അ</div>
+	    
+	      <div class="cell">ആ</div>
+	    
+	      <div class="cell">ഇ</div>
+	    
+	      <div class="cell">ഈ</div>
+	    
+	      <div class="cell">ഉ</div>
+	    
+	      <div class="cell">ഊ</div>
+	    
+	      <div class="cell">ഋ</div>
+	    
+	      <div class="cell">ഌ</div>
+	    
+	      <div class="cell">എ</div>
+	    
+	      <div class="cell">ഏ</div>
+	    
+	      <div class="cell">ഐ</div>
+	    
+	      <div class="cell">ഒ</div>
+	    
+	      <div class="cell">ഓ</div>
+	    
+	      <div class="cell">ഔ</div>
+	    
+	      <div class="cell">ക</div>
+	    
+	      <div class="cell">ഖ</div>
+	    
+	      <div class="cell">ഗ</div>
+	    
+	      <div class="cell">ഘ</div>
+	    
+	      <div class="cell">ങ</div>
+	    
+	      <div class="cell">ച</div>
+	    
+	      <div class="cell">ഛ</div>
+	    
+	      <div class="cell">ജ</div>
+	    
+	      <div class="cell">ഝ</div>
+	    
+	      <div class="cell">ഞ</div>
+	    
+	      <div class="cell">ട</div>
+	    
+	      <div class="cell">ഠ</div>
+	    
+	      <div class="cell">ഡ</div>
+	    
+	      <div class="cell">ഢ</div>
+	    
+	      <div class="cell">ണ</div>
+	    
+	      <div class="cell">ത</div>
+	    
+	      <div class="cell">ഥ</div>
+	    
+	      <div class="cell">ദ</div>
+	    
+	      <div class="cell">ധ</div>
+	    
+	      <div class="cell">ന</div>
+	    
+	      <div class="cell">ഩ</div>
+	    
+	      <div class="cell">പ</div>
+	    
+	      <div class="cell">ഫ</div>
+	    
+	      <div class="cell">ബ</div>
+	    
+	      <div class="cell">ഭ</div>
+	    
+	      <div class="cell">മ</div>
+	    
+	      <div class="cell">യ</div>
+	    
+	      <div class="cell">ര</div>
+	    
+	      <div class="cell">റ</div>
+	    
+	      <div class="cell">ല</div>
+	    
+	      <div class="cell">ള</div>
+	    
+	      <div class="cell">ഴ</div>
+	    
+	      <div class="cell">വ</div>
+	    
+	      <div class="cell">ശ</div>
+	    
+	      <div class="cell">ഷ</div>
+	    
+	      <div class="cell">സ</div>
+	    
+	      <div class="cell">ഹ</div>
+	    
+	      <div class="cell">ഺ</div>
+	    
+	      <div class="cell">഻</div>
+	    
+	      <div class="cell">഼</div>
+	    
+	      <div class="cell">ഽ</div>
+	    
+	      <div class="cell">ാ</div>
+	    
+	      <div class="cell">ി</div>
+	    
+	      <div class="cell">ീ</div>
+	    
+	      <div class="cell">ു</div>
+	    
+	      <div class="cell">ൂ</div>
+	    
+	      <div class="cell">ൃ</div>
+	    
+	      <div class="cell">ൄ</div>
+	    
+	      <div class="cell">െ</div>
+	    
+	      <div class="cell">േ</div>
+	    
+	      <div class="cell">ൈ</div>
+	    
+	      <div class="cell">ൊ</div>
+	    
+	      <div class="cell">ോ</div>
+	    
+	      <div class="cell">ൌ</div>
+	    
+	      <div class="cell">്</div>
+	    
+	      <div class="cell">ൎ</div>
+	    
+	      <div class="cell">൏</div>
+	    
+	      <div class="cell">ൔ</div>
+	    
+	      <div class="cell">ൕ</div>
+	    
+	      <div class="cell">ൖ</div>
+	    
+	      <div class="cell">ൗ</div>
+	    
+	      <div class="cell">൘</div>
+	    
+	      <div class="cell">൙</div>
+	    
+	      <div class="cell">൚</div>
+	    
+	      <div class="cell">൛</div>
+	    
+	      <div class="cell">൜</div>
+	    
+	      <div class="cell">൝</div>
+	    
+	      <div class="cell">൞</div>
+	    
+	      <div class="cell">ൟ</div>
+	    
+	      <div class="cell">ൠ</div>
+	    
+	      <div class="cell">ൡ</div>
+	    
+	      <div class="cell">ൢ</div>
+	    
+	      <div class="cell">ൣ</div>
+	    
+	      <div class="cell">൦</div>
+	    
+	      <div class="cell">൧</div>
+	    
+	      <div class="cell">൨</div>
+	    
+	      <div class="cell">൩</div>
+	    
+	      <div class="cell">൪</div>
+	    
+	      <div class="cell">൫</div>
+	    
+	      <div class="cell">൬</div>
+	    
+	      <div class="cell">൭</div>
+	    
+	      <div class="cell">൮</div>
+	    
+	      <div class="cell">൯</div>
+	    
+	      <div class="cell">൰</div>
+	    
+	      <div class="cell">൱</div>
+	    
+	      <div class="cell">൲</div>
+	    
+	      <div class="cell">൳</div>
+	    
+	      <div class="cell">൴</div>
+	    
+	      <div class="cell">൵</div>
+	    
+	      <div class="cell">൶</div>
+	    
+	      <div class="cell">൷</div>
+	    
+	      <div class="cell">൸</div>
+	    
+	      <div class="cell">൹</div>
+	    
+	      <div class="cell">ൺ</div>
+	    
+	      <div class="cell">ൻ</div>
+	    
+	      <div class="cell">ർ</div>
+	    
+	      <div class="cell">ൽ</div>
+	    
+	      <div class="cell">ൾ</div>
+	    
+	      <div class="cell">ൿ</div>
+	    
+	      <div class="cell">᳚</div>
+	    
+	      <div class="cell">​</div>
+	    
+	      <div class="cell">‌</div>
+	    
+	      <div class="cell">‍</div>
+	    
+	      <div class="cell">‐</div>
+	    
+	      <div class="cell">–</div>
+	    
+	      <div class="cell">—</div>
+	    
+	      <div class="cell">‘</div>
+	    
+	      <div class="cell">’</div>
+	    
+	      <div class="cell">“</div>
+	    
+	      <div class="cell">”</div>
+	    
+	      <div class="cell">…</div>
+	    
+	      <div class="cell">₹</div>
+	    
+	      <div class="cell">−</div>
+	    
+	      <div class="cell">◌</div>
+	    
+	      <div class="cell">꠰</div>
+	    
+	      <div class="cell">꠱</div>
+	    
+	      <div class="cell">꠲</div>
+	    
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">old-Noto-Serif-Malayalam-Regular 20pt</div>
+	  <span class="old-Noto-Serif-Malayalam-Regular" style="font-size: 20pt">
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"></div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell">!</div>
+	    
+	      <div class="cell">"</div>
+	    
+	      <div class="cell">#</div>
+	    
+	      <div class="cell">%</div>
+	    
+	      <div class="cell">'</div>
+	    
+	      <div class="cell">(</div>
+	    
+	      <div class="cell">)</div>
+	    
+	      <div class="cell">*</div>
+	    
+	      <div class="cell">+</div>
+	    
+	      <div class="cell">,</div>
+	    
+	      <div class="cell">-</div>
+	    
+	      <div class="cell">.</div>
+	    
+	      <div class="cell">/</div>
+	    
+	      <div class="cell">0</div>
+	    
+	      <div class="cell">1</div>
+	    
+	      <div class="cell">2</div>
+	    
+	      <div class="cell">3</div>
+	    
+	      <div class="cell">4</div>
+	    
+	      <div class="cell">5</div>
+	    
+	      <div class="cell">6</div>
+	    
+	      <div class="cell">7</div>
+	    
+	      <div class="cell">8</div>
+	    
+	      <div class="cell">9</div>
+	    
+	      <div class="cell">:</div>
+	    
+	      <div class="cell">;</div>
+	    
+	      <div class="cell"><</div>
+	    
+	      <div class="cell">=</div>
+	    
+	      <div class="cell">></div>
+	    
+	      <div class="cell">?</div>
+	    
+	      <div class="cell">[</div>
+	    
+	      <div class="cell">\</div>
+	    
+	      <div class="cell">]</div>
+	    
+	      <div class="cell">^</div>
+	    
+	      <div class="cell">_</div>
+	    
+	      <div class="cell">{</div>
+	    
+	      <div class="cell">|</div>
+	    
+	      <div class="cell">}</div>
+	    
+	      <div class="cell">~</div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell">­</div>
+	    
+	      <div class="cell">×</div>
+	    
+	      <div class="cell">÷</div>
+	    
+	      <div class="cell">̇</div>
+	    
+	      <div class="cell">̣</div>
+	    
+	      <div class="cell">॑</div>
+	    
+	      <div class="cell">॒</div>
+	    
+	      <div class="cell">।</div>
+	    
+	      <div class="cell">॥</div>
+	    
+	      <div class="cell">ഀ</div>
+	    
+	      <div class="cell">ഁ</div>
+	    
+	      <div class="cell">ം</div>
+	    
+	      <div class="cell">ഃ</div>
+	    
+	      <div class="cell">ഄ</div>
+	    
+	      <div class="cell">അ</div>
+	    
+	      <div class="cell">ആ</div>
+	    
+	      <div class="cell">ഇ</div>
+	    
+	      <div class="cell">ഈ</div>
+	    
+	      <div class="cell">ഉ</div>
+	    
+	      <div class="cell">ഊ</div>
+	    
+	      <div class="cell">ഋ</div>
+	    
+	      <div class="cell">ഌ</div>
+	    
+	      <div class="cell">എ</div>
+	    
+	      <div class="cell">ഏ</div>
+	    
+	      <div class="cell">ഐ</div>
+	    
+	      <div class="cell">ഒ</div>
+	    
+	      <div class="cell">ഓ</div>
+	    
+	      <div class="cell">ഔ</div>
+	    
+	      <div class="cell">ക</div>
+	    
+	      <div class="cell">ഖ</div>
+	    
+	      <div class="cell">ഗ</div>
+	    
+	      <div class="cell">ഘ</div>
+	    
+	      <div class="cell">ങ</div>
+	    
+	      <div class="cell">ച</div>
+	    
+	      <div class="cell">ഛ</div>
+	    
+	      <div class="cell">ജ</div>
+	    
+	      <div class="cell">ഝ</div>
+	    
+	      <div class="cell">ഞ</div>
+	    
+	      <div class="cell">ട</div>
+	    
+	      <div class="cell">ഠ</div>
+	    
+	      <div class="cell">ഡ</div>
+	    
+	      <div class="cell">ഢ</div>
+	    
+	      <div class="cell">ണ</div>
+	    
+	      <div class="cell">ത</div>
+	    
+	      <div class="cell">ഥ</div>
+	    
+	      <div class="cell">ദ</div>
+	    
+	      <div class="cell">ധ</div>
+	    
+	      <div class="cell">ന</div>
+	    
+	      <div class="cell">ഩ</div>
+	    
+	      <div class="cell">പ</div>
+	    
+	      <div class="cell">ഫ</div>
+	    
+	      <div class="cell">ബ</div>
+	    
+	      <div class="cell">ഭ</div>
+	    
+	      <div class="cell">മ</div>
+	    
+	      <div class="cell">യ</div>
+	    
+	      <div class="cell">ര</div>
+	    
+	      <div class="cell">റ</div>
+	    
+	      <div class="cell">ല</div>
+	    
+	      <div class="cell">ള</div>
+	    
+	      <div class="cell">ഴ</div>
+	    
+	      <div class="cell">വ</div>
+	    
+	      <div class="cell">ശ</div>
+	    
+	      <div class="cell">ഷ</div>
+	    
+	      <div class="cell">സ</div>
+	    
+	      <div class="cell">ഹ</div>
+	    
+	      <div class="cell">ഺ</div>
+	    
+	      <div class="cell">഻</div>
+	    
+	      <div class="cell">഼</div>
+	    
+	      <div class="cell">ഽ</div>
+	    
+	      <div class="cell">ാ</div>
+	    
+	      <div class="cell">ി</div>
+	    
+	      <div class="cell">ീ</div>
+	    
+	      <div class="cell">ു</div>
+	    
+	      <div class="cell">ൂ</div>
+	    
+	      <div class="cell">ൃ</div>
+	    
+	      <div class="cell">ൄ</div>
+	    
+	      <div class="cell">െ</div>
+	    
+	      <div class="cell">േ</div>
+	    
+	      <div class="cell">ൈ</div>
+	    
+	      <div class="cell">ൊ</div>
+	    
+	      <div class="cell">ോ</div>
+	    
+	      <div class="cell">ൌ</div>
+	    
+	      <div class="cell">്</div>
+	    
+	      <div class="cell">ൎ</div>
+	    
+	      <div class="cell">൏</div>
+	    
+	      <div class="cell">ൔ</div>
+	    
+	      <div class="cell">ൕ</div>
+	    
+	      <div class="cell">ൖ</div>
+	    
+	      <div class="cell">ൗ</div>
+	    
+	      <div class="cell">൘</div>
+	    
+	      <div class="cell">൙</div>
+	    
+	      <div class="cell">൚</div>
+	    
+	      <div class="cell">൛</div>
+	    
+	      <div class="cell">൜</div>
+	    
+	      <div class="cell">൝</div>
+	    
+	      <div class="cell">൞</div>
+	    
+	      <div class="cell">ൟ</div>
+	    
+	      <div class="cell">ൠ</div>
+	    
+	      <div class="cell">ൡ</div>
+	    
+	      <div class="cell">ൢ</div>
+	    
+	      <div class="cell">ൣ</div>
+	    
+	      <div class="cell">൦</div>
+	    
+	      <div class="cell">൧</div>
+	    
+	      <div class="cell">൨</div>
+	    
+	      <div class="cell">൩</div>
+	    
+	      <div class="cell">൪</div>
+	    
+	      <div class="cell">൫</div>
+	    
+	      <div class="cell">൬</div>
+	    
+	      <div class="cell">൭</div>
+	    
+	      <div class="cell">൮</div>
+	    
+	      <div class="cell">൯</div>
+	    
+	      <div class="cell">൰</div>
+	    
+	      <div class="cell">൱</div>
+	    
+	      <div class="cell">൲</div>
+	    
+	      <div class="cell">൳</div>
+	    
+	      <div class="cell">൴</div>
+	    
+	      <div class="cell">൵</div>
+	    
+	      <div class="cell">൶</div>
+	    
+	      <div class="cell">൷</div>
+	    
+	      <div class="cell">൸</div>
+	    
+	      <div class="cell">൹</div>
+	    
+	      <div class="cell">ൺ</div>
+	    
+	      <div class="cell">ൻ</div>
+	    
+	      <div class="cell">ർ</div>
+	    
+	      <div class="cell">ൽ</div>
+	    
+	      <div class="cell">ൾ</div>
+	    
+	      <div class="cell">ൿ</div>
+	    
+	      <div class="cell">᳚</div>
+	    
+	      <div class="cell">​</div>
+	    
+	      <div class="cell">‌</div>
+	    
+	      <div class="cell">‍</div>
+	    
+	      <div class="cell">‐</div>
+	    
+	      <div class="cell">–</div>
+	    
+	      <div class="cell">—</div>
+	    
+	      <div class="cell">‘</div>
+	    
+	      <div class="cell">’</div>
+	    
+	      <div class="cell">“</div>
+	    
+	      <div class="cell">”</div>
+	    
+	      <div class="cell">…</div>
+	    
+	      <div class="cell">₹</div>
+	    
+	      <div class="cell">−</div>
+	    
+	      <div class="cell">◌</div>
+	    
+	      <div class="cell">꠰</div>
+	    
+	      <div class="cell">꠱</div>
+	    
+	      <div class="cell">꠲</div>
+	    
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">old-Noto-Serif-Malayalam-ExtraBold 20pt</div>
+	  <span class="old-Noto-Serif-Malayalam-ExtraBold" style="font-size: 20pt">
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"></div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell">!</div>
+	    
+	      <div class="cell">"</div>
+	    
+	      <div class="cell">#</div>
+	    
+	      <div class="cell">%</div>
+	    
+	      <div class="cell">'</div>
+	    
+	      <div class="cell">(</div>
+	    
+	      <div class="cell">)</div>
+	    
+	      <div class="cell">*</div>
+	    
+	      <div class="cell">+</div>
+	    
+	      <div class="cell">,</div>
+	    
+	      <div class="cell">-</div>
+	    
+	      <div class="cell">.</div>
+	    
+	      <div class="cell">/</div>
+	    
+	      <div class="cell">0</div>
+	    
+	      <div class="cell">1</div>
+	    
+	      <div class="cell">2</div>
+	    
+	      <div class="cell">3</div>
+	    
+	      <div class="cell">4</div>
+	    
+	      <div class="cell">5</div>
+	    
+	      <div class="cell">6</div>
+	    
+	      <div class="cell">7</div>
+	    
+	      <div class="cell">8</div>
+	    
+	      <div class="cell">9</div>
+	    
+	      <div class="cell">:</div>
+	    
+	      <div class="cell">;</div>
+	    
+	      <div class="cell"><</div>
+	    
+	      <div class="cell">=</div>
+	    
+	      <div class="cell">></div>
+	    
+	      <div class="cell">?</div>
+	    
+	      <div class="cell">[</div>
+	    
+	      <div class="cell">\</div>
+	    
+	      <div class="cell">]</div>
+	    
+	      <div class="cell">^</div>
+	    
+	      <div class="cell">_</div>
+	    
+	      <div class="cell">{</div>
+	    
+	      <div class="cell">|</div>
+	    
+	      <div class="cell">}</div>
+	    
+	      <div class="cell">~</div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell">­</div>
+	    
+	      <div class="cell">×</div>
+	    
+	      <div class="cell">÷</div>
+	    
+	      <div class="cell">̇</div>
+	    
+	      <div class="cell">̣</div>
+	    
+	      <div class="cell">॑</div>
+	    
+	      <div class="cell">॒</div>
+	    
+	      <div class="cell">।</div>
+	    
+	      <div class="cell">॥</div>
+	    
+	      <div class="cell">ഀ</div>
+	    
+	      <div class="cell">ഁ</div>
+	    
+	      <div class="cell">ം</div>
+	    
+	      <div class="cell">ഃ</div>
+	    
+	      <div class="cell">ഄ</div>
+	    
+	      <div class="cell">അ</div>
+	    
+	      <div class="cell">ആ</div>
+	    
+	      <div class="cell">ഇ</div>
+	    
+	      <div class="cell">ഈ</div>
+	    
+	      <div class="cell">ഉ</div>
+	    
+	      <div class="cell">ഊ</div>
+	    
+	      <div class="cell">ഋ</div>
+	    
+	      <div class="cell">ഌ</div>
+	    
+	      <div class="cell">എ</div>
+	    
+	      <div class="cell">ഏ</div>
+	    
+	      <div class="cell">ഐ</div>
+	    
+	      <div class="cell">ഒ</div>
+	    
+	      <div class="cell">ഓ</div>
+	    
+	      <div class="cell">ഔ</div>
+	    
+	      <div class="cell">ക</div>
+	    
+	      <div class="cell">ഖ</div>
+	    
+	      <div class="cell">ഗ</div>
+	    
+	      <div class="cell">ഘ</div>
+	    
+	      <div class="cell">ങ</div>
+	    
+	      <div class="cell">ച</div>
+	    
+	      <div class="cell">ഛ</div>
+	    
+	      <div class="cell">ജ</div>
+	    
+	      <div class="cell">ഝ</div>
+	    
+	      <div class="cell">ഞ</div>
+	    
+	      <div class="cell">ട</div>
+	    
+	      <div class="cell">ഠ</div>
+	    
+	      <div class="cell">ഡ</div>
+	    
+	      <div class="cell">ഢ</div>
+	    
+	      <div class="cell">ണ</div>
+	    
+	      <div class="cell">ത</div>
+	    
+	      <div class="cell">ഥ</div>
+	    
+	      <div class="cell">ദ</div>
+	    
+	      <div class="cell">ധ</div>
+	    
+	      <div class="cell">ന</div>
+	    
+	      <div class="cell">ഩ</div>
+	    
+	      <div class="cell">പ</div>
+	    
+	      <div class="cell">ഫ</div>
+	    
+	      <div class="cell">ബ</div>
+	    
+	      <div class="cell">ഭ</div>
+	    
+	      <div class="cell">മ</div>
+	    
+	      <div class="cell">യ</div>
+	    
+	      <div class="cell">ര</div>
+	    
+	      <div class="cell">റ</div>
+	    
+	      <div class="cell">ല</div>
+	    
+	      <div class="cell">ള</div>
+	    
+	      <div class="cell">ഴ</div>
+	    
+	      <div class="cell">വ</div>
+	    
+	      <div class="cell">ശ</div>
+	    
+	      <div class="cell">ഷ</div>
+	    
+	      <div class="cell">സ</div>
+	    
+	      <div class="cell">ഹ</div>
+	    
+	      <div class="cell">ഺ</div>
+	    
+	      <div class="cell">഻</div>
+	    
+	      <div class="cell">഼</div>
+	    
+	      <div class="cell">ഽ</div>
+	    
+	      <div class="cell">ാ</div>
+	    
+	      <div class="cell">ി</div>
+	    
+	      <div class="cell">ീ</div>
+	    
+	      <div class="cell">ു</div>
+	    
+	      <div class="cell">ൂ</div>
+	    
+	      <div class="cell">ൃ</div>
+	    
+	      <div class="cell">ൄ</div>
+	    
+	      <div class="cell">െ</div>
+	    
+	      <div class="cell">േ</div>
+	    
+	      <div class="cell">ൈ</div>
+	    
+	      <div class="cell">ൊ</div>
+	    
+	      <div class="cell">ോ</div>
+	    
+	      <div class="cell">ൌ</div>
+	    
+	      <div class="cell">്</div>
+	    
+	      <div class="cell">ൎ</div>
+	    
+	      <div class="cell">൏</div>
+	    
+	      <div class="cell">ൔ</div>
+	    
+	      <div class="cell">ൕ</div>
+	    
+	      <div class="cell">ൖ</div>
+	    
+	      <div class="cell">ൗ</div>
+	    
+	      <div class="cell">൘</div>
+	    
+	      <div class="cell">൙</div>
+	    
+	      <div class="cell">൚</div>
+	    
+	      <div class="cell">൛</div>
+	    
+	      <div class="cell">൜</div>
+	    
+	      <div class="cell">൝</div>
+	    
+	      <div class="cell">൞</div>
+	    
+	      <div class="cell">ൟ</div>
+	    
+	      <div class="cell">ൠ</div>
+	    
+	      <div class="cell">ൡ</div>
+	    
+	      <div class="cell">ൢ</div>
+	    
+	      <div class="cell">ൣ</div>
+	    
+	      <div class="cell">൦</div>
+	    
+	      <div class="cell">൧</div>
+	    
+	      <div class="cell">൨</div>
+	    
+	      <div class="cell">൩</div>
+	    
+	      <div class="cell">൪</div>
+	    
+	      <div class="cell">൫</div>
+	    
+	      <div class="cell">൬</div>
+	    
+	      <div class="cell">൭</div>
+	    
+	      <div class="cell">൮</div>
+	    
+	      <div class="cell">൯</div>
+	    
+	      <div class="cell">൰</div>
+	    
+	      <div class="cell">൱</div>
+	    
+	      <div class="cell">൲</div>
+	    
+	      <div class="cell">൳</div>
+	    
+	      <div class="cell">൴</div>
+	    
+	      <div class="cell">൵</div>
+	    
+	      <div class="cell">൶</div>
+	    
+	      <div class="cell">൷</div>
+	    
+	      <div class="cell">൸</div>
+	    
+	      <div class="cell">൹</div>
+	    
+	      <div class="cell">ൺ</div>
+	    
+	      <div class="cell">ൻ</div>
+	    
+	      <div class="cell">ർ</div>
+	    
+	      <div class="cell">ൽ</div>
+	    
+	      <div class="cell">ൾ</div>
+	    
+	      <div class="cell">ൿ</div>
+	    
+	      <div class="cell">᳚</div>
+	    
+	      <div class="cell">​</div>
+	    
+	      <div class="cell">‌</div>
+	    
+	      <div class="cell">‍</div>
+	    
+	      <div class="cell">‐</div>
+	    
+	      <div class="cell">–</div>
+	    
+	      <div class="cell">—</div>
+	    
+	      <div class="cell">‘</div>
+	    
+	      <div class="cell">’</div>
+	    
+	      <div class="cell">“</div>
+	    
+	      <div class="cell">”</div>
+	    
+	      <div class="cell">…</div>
+	    
+	      <div class="cell">₹</div>
+	    
+	      <div class="cell">−</div>
+	    
+	      <div class="cell">◌</div>
+	    
+	      <div class="cell">꠰</div>
+	    
+	      <div class="cell">꠱</div>
+	    
+	      <div class="cell">꠲</div>
+	    
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">old-Noto-Serif-Malayalam-Light 20pt</div>
+	  <span class="old-Noto-Serif-Malayalam-Light" style="font-size: 20pt">
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"></div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell">!</div>
+	    
+	      <div class="cell">"</div>
+	    
+	      <div class="cell">#</div>
+	    
+	      <div class="cell">%</div>
+	    
+	      <div class="cell">'</div>
+	    
+	      <div class="cell">(</div>
+	    
+	      <div class="cell">)</div>
+	    
+	      <div class="cell">*</div>
+	    
+	      <div class="cell">+</div>
+	    
+	      <div class="cell">,</div>
+	    
+	      <div class="cell">-</div>
+	    
+	      <div class="cell">.</div>
+	    
+	      <div class="cell">/</div>
+	    
+	      <div class="cell">0</div>
+	    
+	      <div class="cell">1</div>
+	    
+	      <div class="cell">2</div>
+	    
+	      <div class="cell">3</div>
+	    
+	      <div class="cell">4</div>
+	    
+	      <div class="cell">5</div>
+	    
+	      <div class="cell">6</div>
+	    
+	      <div class="cell">7</div>
+	    
+	      <div class="cell">8</div>
+	    
+	      <div class="cell">9</div>
+	    
+	      <div class="cell">:</div>
+	    
+	      <div class="cell">;</div>
+	    
+	      <div class="cell"><</div>
+	    
+	      <div class="cell">=</div>
+	    
+	      <div class="cell">></div>
+	    
+	      <div class="cell">?</div>
+	    
+	      <div class="cell">[</div>
+	    
+	      <div class="cell">\</div>
+	    
+	      <div class="cell">]</div>
+	    
+	      <div class="cell">^</div>
+	    
+	      <div class="cell">_</div>
+	    
+	      <div class="cell">{</div>
+	    
+	      <div class="cell">|</div>
+	    
+	      <div class="cell">}</div>
+	    
+	      <div class="cell">~</div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell">­</div>
+	    
+	      <div class="cell">×</div>
+	    
+	      <div class="cell">÷</div>
+	    
+	      <div class="cell">̇</div>
+	    
+	      <div class="cell">̣</div>
+	    
+	      <div class="cell">॑</div>
+	    
+	      <div class="cell">॒</div>
+	    
+	      <div class="cell">।</div>
+	    
+	      <div class="cell">॥</div>
+	    
+	      <div class="cell">ഀ</div>
+	    
+	      <div class="cell">ഁ</div>
+	    
+	      <div class="cell">ം</div>
+	    
+	      <div class="cell">ഃ</div>
+	    
+	      <div class="cell">ഄ</div>
+	    
+	      <div class="cell">അ</div>
+	    
+	      <div class="cell">ആ</div>
+	    
+	      <div class="cell">ഇ</div>
+	    
+	      <div class="cell">ഈ</div>
+	    
+	      <div class="cell">ഉ</div>
+	    
+	      <div class="cell">ഊ</div>
+	    
+	      <div class="cell">ഋ</div>
+	    
+	      <div class="cell">ഌ</div>
+	    
+	      <div class="cell">എ</div>
+	    
+	      <div class="cell">ഏ</div>
+	    
+	      <div class="cell">ഐ</div>
+	    
+	      <div class="cell">ഒ</div>
+	    
+	      <div class="cell">ഓ</div>
+	    
+	      <div class="cell">ഔ</div>
+	    
+	      <div class="cell">ക</div>
+	    
+	      <div class="cell">ഖ</div>
+	    
+	      <div class="cell">ഗ</div>
+	    
+	      <div class="cell">ഘ</div>
+	    
+	      <div class="cell">ങ</div>
+	    
+	      <div class="cell">ച</div>
+	    
+	      <div class="cell">ഛ</div>
+	    
+	      <div class="cell">ജ</div>
+	    
+	      <div class="cell">ഝ</div>
+	    
+	      <div class="cell">ഞ</div>
+	    
+	      <div class="cell">ട</div>
+	    
+	      <div class="cell">ഠ</div>
+	    
+	      <div class="cell">ഡ</div>
+	    
+	      <div class="cell">ഢ</div>
+	    
+	      <div class="cell">ണ</div>
+	    
+	      <div class="cell">ത</div>
+	    
+	      <div class="cell">ഥ</div>
+	    
+	      <div class="cell">ദ</div>
+	    
+	      <div class="cell">ധ</div>
+	    
+	      <div class="cell">ന</div>
+	    
+	      <div class="cell">ഩ</div>
+	    
+	      <div class="cell">പ</div>
+	    
+	      <div class="cell">ഫ</div>
+	    
+	      <div class="cell">ബ</div>
+	    
+	      <div class="cell">ഭ</div>
+	    
+	      <div class="cell">മ</div>
+	    
+	      <div class="cell">യ</div>
+	    
+	      <div class="cell">ര</div>
+	    
+	      <div class="cell">റ</div>
+	    
+	      <div class="cell">ല</div>
+	    
+	      <div class="cell">ള</div>
+	    
+	      <div class="cell">ഴ</div>
+	    
+	      <div class="cell">വ</div>
+	    
+	      <div class="cell">ശ</div>
+	    
+	      <div class="cell">ഷ</div>
+	    
+	      <div class="cell">സ</div>
+	    
+	      <div class="cell">ഹ</div>
+	    
+	      <div class="cell">ഺ</div>
+	    
+	      <div class="cell">഻</div>
+	    
+	      <div class="cell">഼</div>
+	    
+	      <div class="cell">ഽ</div>
+	    
+	      <div class="cell">ാ</div>
+	    
+	      <div class="cell">ി</div>
+	    
+	      <div class="cell">ീ</div>
+	    
+	      <div class="cell">ു</div>
+	    
+	      <div class="cell">ൂ</div>
+	    
+	      <div class="cell">ൃ</div>
+	    
+	      <div class="cell">ൄ</div>
+	    
+	      <div class="cell">െ</div>
+	    
+	      <div class="cell">േ</div>
+	    
+	      <div class="cell">ൈ</div>
+	    
+	      <div class="cell">ൊ</div>
+	    
+	      <div class="cell">ോ</div>
+	    
+	      <div class="cell">ൌ</div>
+	    
+	      <div class="cell">്</div>
+	    
+	      <div class="cell">ൎ</div>
+	    
+	      <div class="cell">൏</div>
+	    
+	      <div class="cell">ൔ</div>
+	    
+	      <div class="cell">ൕ</div>
+	    
+	      <div class="cell">ൖ</div>
+	    
+	      <div class="cell">ൗ</div>
+	    
+	      <div class="cell">൘</div>
+	    
+	      <div class="cell">൙</div>
+	    
+	      <div class="cell">൚</div>
+	    
+	      <div class="cell">൛</div>
+	    
+	      <div class="cell">൜</div>
+	    
+	      <div class="cell">൝</div>
+	    
+	      <div class="cell">൞</div>
+	    
+	      <div class="cell">ൟ</div>
+	    
+	      <div class="cell">ൠ</div>
+	    
+	      <div class="cell">ൡ</div>
+	    
+	      <div class="cell">ൢ</div>
+	    
+	      <div class="cell">ൣ</div>
+	    
+	      <div class="cell">൦</div>
+	    
+	      <div class="cell">൧</div>
+	    
+	      <div class="cell">൨</div>
+	    
+	      <div class="cell">൩</div>
+	    
+	      <div class="cell">൪</div>
+	    
+	      <div class="cell">൫</div>
+	    
+	      <div class="cell">൬</div>
+	    
+	      <div class="cell">൭</div>
+	    
+	      <div class="cell">൮</div>
+	    
+	      <div class="cell">൯</div>
+	    
+	      <div class="cell">൰</div>
+	    
+	      <div class="cell">൱</div>
+	    
+	      <div class="cell">൲</div>
+	    
+	      <div class="cell">൳</div>
+	    
+	      <div class="cell">൴</div>
+	    
+	      <div class="cell">൵</div>
+	    
+	      <div class="cell">൶</div>
+	    
+	      <div class="cell">൷</div>
+	    
+	      <div class="cell">൸</div>
+	    
+	      <div class="cell">൹</div>
+	    
+	      <div class="cell">ൺ</div>
+	    
+	      <div class="cell">ൻ</div>
+	    
+	      <div class="cell">ർ</div>
+	    
+	      <div class="cell">ൽ</div>
+	    
+	      <div class="cell">ൾ</div>
+	    
+	      <div class="cell">ൿ</div>
+	    
+	      <div class="cell">᳚</div>
+	    
+	      <div class="cell">​</div>
+	    
+	      <div class="cell">‌</div>
+	    
+	      <div class="cell">‍</div>
+	    
+	      <div class="cell">‐</div>
+	    
+	      <div class="cell">–</div>
+	    
+	      <div class="cell">—</div>
+	    
+	      <div class="cell">‘</div>
+	    
+	      <div class="cell">’</div>
+	    
+	      <div class="cell">“</div>
+	    
+	      <div class="cell">”</div>
+	    
+	      <div class="cell">…</div>
+	    
+	      <div class="cell">₹</div>
+	    
+	      <div class="cell">−</div>
+	    
+	      <div class="cell">◌</div>
+	    
+	      <div class="cell">꠰</div>
+	    
+	      <div class="cell">꠱</div>
+	    
+	      <div class="cell">꠲</div>
+	    
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">old-Noto-Serif-Malayalam-Medium 20pt</div>
+	  <span class="old-Noto-Serif-Malayalam-Medium" style="font-size: 20pt">
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"></div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell">!</div>
+	    
+	      <div class="cell">"</div>
+	    
+	      <div class="cell">#</div>
+	    
+	      <div class="cell">%</div>
+	    
+	      <div class="cell">'</div>
+	    
+	      <div class="cell">(</div>
+	    
+	      <div class="cell">)</div>
+	    
+	      <div class="cell">*</div>
+	    
+	      <div class="cell">+</div>
+	    
+	      <div class="cell">,</div>
+	    
+	      <div class="cell">-</div>
+	    
+	      <div class="cell">.</div>
+	    
+	      <div class="cell">/</div>
+	    
+	      <div class="cell">0</div>
+	    
+	      <div class="cell">1</div>
+	    
+	      <div class="cell">2</div>
+	    
+	      <div class="cell">3</div>
+	    
+	      <div class="cell">4</div>
+	    
+	      <div class="cell">5</div>
+	    
+	      <div class="cell">6</div>
+	    
+	      <div class="cell">7</div>
+	    
+	      <div class="cell">8</div>
+	    
+	      <div class="cell">9</div>
+	    
+	      <div class="cell">:</div>
+	    
+	      <div class="cell">;</div>
+	    
+	      <div class="cell"><</div>
+	    
+	      <div class="cell">=</div>
+	    
+	      <div class="cell">></div>
+	    
+	      <div class="cell">?</div>
+	    
+	      <div class="cell">[</div>
+	    
+	      <div class="cell">\</div>
+	    
+	      <div class="cell">]</div>
+	    
+	      <div class="cell">^</div>
+	    
+	      <div class="cell">_</div>
+	    
+	      <div class="cell">{</div>
+	    
+	      <div class="cell">|</div>
+	    
+	      <div class="cell">}</div>
+	    
+	      <div class="cell">~</div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell">­</div>
+	    
+	      <div class="cell">×</div>
+	    
+	      <div class="cell">÷</div>
+	    
+	      <div class="cell">̇</div>
+	    
+	      <div class="cell">̣</div>
+	    
+	      <div class="cell">॑</div>
+	    
+	      <div class="cell">॒</div>
+	    
+	      <div class="cell">।</div>
+	    
+	      <div class="cell">॥</div>
+	    
+	      <div class="cell">ഀ</div>
+	    
+	      <div class="cell">ഁ</div>
+	    
+	      <div class="cell">ം</div>
+	    
+	      <div class="cell">ഃ</div>
+	    
+	      <div class="cell">ഄ</div>
+	    
+	      <div class="cell">അ</div>
+	    
+	      <div class="cell">ആ</div>
+	    
+	      <div class="cell">ഇ</div>
+	    
+	      <div class="cell">ഈ</div>
+	    
+	      <div class="cell">ഉ</div>
+	    
+	      <div class="cell">ഊ</div>
+	    
+	      <div class="cell">ഋ</div>
+	    
+	      <div class="cell">ഌ</div>
+	    
+	      <div class="cell">എ</div>
+	    
+	      <div class="cell">ഏ</div>
+	    
+	      <div class="cell">ഐ</div>
+	    
+	      <div class="cell">ഒ</div>
+	    
+	      <div class="cell">ഓ</div>
+	    
+	      <div class="cell">ഔ</div>
+	    
+	      <div class="cell">ക</div>
+	    
+	      <div class="cell">ഖ</div>
+	    
+	      <div class="cell">ഗ</div>
+	    
+	      <div class="cell">ഘ</div>
+	    
+	      <div class="cell">ങ</div>
+	    
+	      <div class="cell">ച</div>
+	    
+	      <div class="cell">ഛ</div>
+	    
+	      <div class="cell">ജ</div>
+	    
+	      <div class="cell">ഝ</div>
+	    
+	      <div class="cell">ഞ</div>
+	    
+	      <div class="cell">ട</div>
+	    
+	      <div class="cell">ഠ</div>
+	    
+	      <div class="cell">ഡ</div>
+	    
+	      <div class="cell">ഢ</div>
+	    
+	      <div class="cell">ണ</div>
+	    
+	      <div class="cell">ത</div>
+	    
+	      <div class="cell">ഥ</div>
+	    
+	      <div class="cell">ദ</div>
+	    
+	      <div class="cell">ധ</div>
+	    
+	      <div class="cell">ന</div>
+	    
+	      <div class="cell">ഩ</div>
+	    
+	      <div class="cell">പ</div>
+	    
+	      <div class="cell">ഫ</div>
+	    
+	      <div class="cell">ബ</div>
+	    
+	      <div class="cell">ഭ</div>
+	    
+	      <div class="cell">മ</div>
+	    
+	      <div class="cell">യ</div>
+	    
+	      <div class="cell">ര</div>
+	    
+	      <div class="cell">റ</div>
+	    
+	      <div class="cell">ല</div>
+	    
+	      <div class="cell">ള</div>
+	    
+	      <div class="cell">ഴ</div>
+	    
+	      <div class="cell">വ</div>
+	    
+	      <div class="cell">ശ</div>
+	    
+	      <div class="cell">ഷ</div>
+	    
+	      <div class="cell">സ</div>
+	    
+	      <div class="cell">ഹ</div>
+	    
+	      <div class="cell">ഺ</div>
+	    
+	      <div class="cell">഻</div>
+	    
+	      <div class="cell">഼</div>
+	    
+	      <div class="cell">ഽ</div>
+	    
+	      <div class="cell">ാ</div>
+	    
+	      <div class="cell">ി</div>
+	    
+	      <div class="cell">ീ</div>
+	    
+	      <div class="cell">ു</div>
+	    
+	      <div class="cell">ൂ</div>
+	    
+	      <div class="cell">ൃ</div>
+	    
+	      <div class="cell">ൄ</div>
+	    
+	      <div class="cell">െ</div>
+	    
+	      <div class="cell">േ</div>
+	    
+	      <div class="cell">ൈ</div>
+	    
+	      <div class="cell">ൊ</div>
+	    
+	      <div class="cell">ോ</div>
+	    
+	      <div class="cell">ൌ</div>
+	    
+	      <div class="cell">്</div>
+	    
+	      <div class="cell">ൎ</div>
+	    
+	      <div class="cell">൏</div>
+	    
+	      <div class="cell">ൔ</div>
+	    
+	      <div class="cell">ൕ</div>
+	    
+	      <div class="cell">ൖ</div>
+	    
+	      <div class="cell">ൗ</div>
+	    
+	      <div class="cell">൘</div>
+	    
+	      <div class="cell">൙</div>
+	    
+	      <div class="cell">൚</div>
+	    
+	      <div class="cell">൛</div>
+	    
+	      <div class="cell">൜</div>
+	    
+	      <div class="cell">൝</div>
+	    
+	      <div class="cell">൞</div>
+	    
+	      <div class="cell">ൟ</div>
+	    
+	      <div class="cell">ൠ</div>
+	    
+	      <div class="cell">ൡ</div>
+	    
+	      <div class="cell">ൢ</div>
+	    
+	      <div class="cell">ൣ</div>
+	    
+	      <div class="cell">൦</div>
+	    
+	      <div class="cell">൧</div>
+	    
+	      <div class="cell">൨</div>
+	    
+	      <div class="cell">൩</div>
+	    
+	      <div class="cell">൪</div>
+	    
+	      <div class="cell">൫</div>
+	    
+	      <div class="cell">൬</div>
+	    
+	      <div class="cell">൭</div>
+	    
+	      <div class="cell">൮</div>
+	    
+	      <div class="cell">൯</div>
+	    
+	      <div class="cell">൰</div>
+	    
+	      <div class="cell">൱</div>
+	    
+	      <div class="cell">൲</div>
+	    
+	      <div class="cell">൳</div>
+	    
+	      <div class="cell">൴</div>
+	    
+	      <div class="cell">൵</div>
+	    
+	      <div class="cell">൶</div>
+	    
+	      <div class="cell">൷</div>
+	    
+	      <div class="cell">൸</div>
+	    
+	      <div class="cell">൹</div>
+	    
+	      <div class="cell">ൺ</div>
+	    
+	      <div class="cell">ൻ</div>
+	    
+	      <div class="cell">ർ</div>
+	    
+	      <div class="cell">ൽ</div>
+	    
+	      <div class="cell">ൾ</div>
+	    
+	      <div class="cell">ൿ</div>
+	    
+	      <div class="cell">᳚</div>
+	    
+	      <div class="cell">​</div>
+	    
+	      <div class="cell">‌</div>
+	    
+	      <div class="cell">‍</div>
+	    
+	      <div class="cell">‐</div>
+	    
+	      <div class="cell">–</div>
+	    
+	      <div class="cell">—</div>
+	    
+	      <div class="cell">‘</div>
+	    
+	      <div class="cell">’</div>
+	    
+	      <div class="cell">“</div>
+	    
+	      <div class="cell">”</div>
+	    
+	      <div class="cell">…</div>
+	    
+	      <div class="cell">₹</div>
+	    
+	      <div class="cell">−</div>
+	    
+	      <div class="cell">◌</div>
+	    
+	      <div class="cell">꠰</div>
+	    
+	      <div class="cell">꠱</div>
+	    
+	      <div class="cell">꠲</div>
+	    
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">old-Noto-Serif-Malayalam-SemiBold 20pt</div>
+	  <span class="old-Noto-Serif-Malayalam-SemiBold" style="font-size: 20pt">
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"></div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell">!</div>
+	    
+	      <div class="cell">"</div>
+	    
+	      <div class="cell">#</div>
+	    
+	      <div class="cell">%</div>
+	    
+	      <div class="cell">'</div>
+	    
+	      <div class="cell">(</div>
+	    
+	      <div class="cell">)</div>
+	    
+	      <div class="cell">*</div>
+	    
+	      <div class="cell">+</div>
+	    
+	      <div class="cell">,</div>
+	    
+	      <div class="cell">-</div>
+	    
+	      <div class="cell">.</div>
+	    
+	      <div class="cell">/</div>
+	    
+	      <div class="cell">0</div>
+	    
+	      <div class="cell">1</div>
+	    
+	      <div class="cell">2</div>
+	    
+	      <div class="cell">3</div>
+	    
+	      <div class="cell">4</div>
+	    
+	      <div class="cell">5</div>
+	    
+	      <div class="cell">6</div>
+	    
+	      <div class="cell">7</div>
+	    
+	      <div class="cell">8</div>
+	    
+	      <div class="cell">9</div>
+	    
+	      <div class="cell">:</div>
+	    
+	      <div class="cell">;</div>
+	    
+	      <div class="cell"><</div>
+	    
+	      <div class="cell">=</div>
+	    
+	      <div class="cell">></div>
+	    
+	      <div class="cell">?</div>
+	    
+	      <div class="cell">[</div>
+	    
+	      <div class="cell">\</div>
+	    
+	      <div class="cell">]</div>
+	    
+	      <div class="cell">^</div>
+	    
+	      <div class="cell">_</div>
+	    
+	      <div class="cell">{</div>
+	    
+	      <div class="cell">|</div>
+	    
+	      <div class="cell">}</div>
+	    
+	      <div class="cell">~</div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell">­</div>
+	    
+	      <div class="cell">×</div>
+	    
+	      <div class="cell">÷</div>
+	    
+	      <div class="cell">̇</div>
+	    
+	      <div class="cell">̣</div>
+	    
+	      <div class="cell">॑</div>
+	    
+	      <div class="cell">॒</div>
+	    
+	      <div class="cell">।</div>
+	    
+	      <div class="cell">॥</div>
+	    
+	      <div class="cell">ഀ</div>
+	    
+	      <div class="cell">ഁ</div>
+	    
+	      <div class="cell">ം</div>
+	    
+	      <div class="cell">ഃ</div>
+	    
+	      <div class="cell">ഄ</div>
+	    
+	      <div class="cell">അ</div>
+	    
+	      <div class="cell">ആ</div>
+	    
+	      <div class="cell">ഇ</div>
+	    
+	      <div class="cell">ഈ</div>
+	    
+	      <div class="cell">ഉ</div>
+	    
+	      <div class="cell">ഊ</div>
+	    
+	      <div class="cell">ഋ</div>
+	    
+	      <div class="cell">ഌ</div>
+	    
+	      <div class="cell">എ</div>
+	    
+	      <div class="cell">ഏ</div>
+	    
+	      <div class="cell">ഐ</div>
+	    
+	      <div class="cell">ഒ</div>
+	    
+	      <div class="cell">ഓ</div>
+	    
+	      <div class="cell">ഔ</div>
+	    
+	      <div class="cell">ക</div>
+	    
+	      <div class="cell">ഖ</div>
+	    
+	      <div class="cell">ഗ</div>
+	    
+	      <div class="cell">ഘ</div>
+	    
+	      <div class="cell">ങ</div>
+	    
+	      <div class="cell">ച</div>
+	    
+	      <div class="cell">ഛ</div>
+	    
+	      <div class="cell">ജ</div>
+	    
+	      <div class="cell">ഝ</div>
+	    
+	      <div class="cell">ഞ</div>
+	    
+	      <div class="cell">ട</div>
+	    
+	      <div class="cell">ഠ</div>
+	    
+	      <div class="cell">ഡ</div>
+	    
+	      <div class="cell">ഢ</div>
+	    
+	      <div class="cell">ണ</div>
+	    
+	      <div class="cell">ത</div>
+	    
+	      <div class="cell">ഥ</div>
+	    
+	      <div class="cell">ദ</div>
+	    
+	      <div class="cell">ധ</div>
+	    
+	      <div class="cell">ന</div>
+	    
+	      <div class="cell">ഩ</div>
+	    
+	      <div class="cell">പ</div>
+	    
+	      <div class="cell">ഫ</div>
+	    
+	      <div class="cell">ബ</div>
+	    
+	      <div class="cell">ഭ</div>
+	    
+	      <div class="cell">മ</div>
+	    
+	      <div class="cell">യ</div>
+	    
+	      <div class="cell">ര</div>
+	    
+	      <div class="cell">റ</div>
+	    
+	      <div class="cell">ല</div>
+	    
+	      <div class="cell">ള</div>
+	    
+	      <div class="cell">ഴ</div>
+	    
+	      <div class="cell">വ</div>
+	    
+	      <div class="cell">ശ</div>
+	    
+	      <div class="cell">ഷ</div>
+	    
+	      <div class="cell">സ</div>
+	    
+	      <div class="cell">ഹ</div>
+	    
+	      <div class="cell">ഺ</div>
+	    
+	      <div class="cell">഻</div>
+	    
+	      <div class="cell">഼</div>
+	    
+	      <div class="cell">ഽ</div>
+	    
+	      <div class="cell">ാ</div>
+	    
+	      <div class="cell">ി</div>
+	    
+	      <div class="cell">ീ</div>
+	    
+	      <div class="cell">ു</div>
+	    
+	      <div class="cell">ൂ</div>
+	    
+	      <div class="cell">ൃ</div>
+	    
+	      <div class="cell">ൄ</div>
+	    
+	      <div class="cell">െ</div>
+	    
+	      <div class="cell">േ</div>
+	    
+	      <div class="cell">ൈ</div>
+	    
+	      <div class="cell">ൊ</div>
+	    
+	      <div class="cell">ോ</div>
+	    
+	      <div class="cell">ൌ</div>
+	    
+	      <div class="cell">്</div>
+	    
+	      <div class="cell">ൎ</div>
+	    
+	      <div class="cell">൏</div>
+	    
+	      <div class="cell">ൔ</div>
+	    
+	      <div class="cell">ൕ</div>
+	    
+	      <div class="cell">ൖ</div>
+	    
+	      <div class="cell">ൗ</div>
+	    
+	      <div class="cell">൘</div>
+	    
+	      <div class="cell">൙</div>
+	    
+	      <div class="cell">൚</div>
+	    
+	      <div class="cell">൛</div>
+	    
+	      <div class="cell">൜</div>
+	    
+	      <div class="cell">൝</div>
+	    
+	      <div class="cell">൞</div>
+	    
+	      <div class="cell">ൟ</div>
+	    
+	      <div class="cell">ൠ</div>
+	    
+	      <div class="cell">ൡ</div>
+	    
+	      <div class="cell">ൢ</div>
+	    
+	      <div class="cell">ൣ</div>
+	    
+	      <div class="cell">൦</div>
+	    
+	      <div class="cell">൧</div>
+	    
+	      <div class="cell">൨</div>
+	    
+	      <div class="cell">൩</div>
+	    
+	      <div class="cell">൪</div>
+	    
+	      <div class="cell">൫</div>
+	    
+	      <div class="cell">൬</div>
+	    
+	      <div class="cell">൭</div>
+	    
+	      <div class="cell">൮</div>
+	    
+	      <div class="cell">൯</div>
+	    
+	      <div class="cell">൰</div>
+	    
+	      <div class="cell">൱</div>
+	    
+	      <div class="cell">൲</div>
+	    
+	      <div class="cell">൳</div>
+	    
+	      <div class="cell">൴</div>
+	    
+	      <div class="cell">൵</div>
+	    
+	      <div class="cell">൶</div>
+	    
+	      <div class="cell">൷</div>
+	    
+	      <div class="cell">൸</div>
+	    
+	      <div class="cell">൹</div>
+	    
+	      <div class="cell">ൺ</div>
+	    
+	      <div class="cell">ൻ</div>
+	    
+	      <div class="cell">ർ</div>
+	    
+	      <div class="cell">ൽ</div>
+	    
+	      <div class="cell">ൾ</div>
+	    
+	      <div class="cell">ൿ</div>
+	    
+	      <div class="cell">᳚</div>
+	    
+	      <div class="cell">​</div>
+	    
+	      <div class="cell">‌</div>
+	    
+	      <div class="cell">‍</div>
+	    
+	      <div class="cell">‐</div>
+	    
+	      <div class="cell">–</div>
+	    
+	      <div class="cell">—</div>
+	    
+	      <div class="cell">‘</div>
+	    
+	      <div class="cell">’</div>
+	    
+	      <div class="cell">“</div>
+	    
+	      <div class="cell">”</div>
+	    
+	      <div class="cell">…</div>
+	    
+	      <div class="cell">₹</div>
+	    
+	      <div class="cell">−</div>
+	    
+	      <div class="cell">◌</div>
+	    
+	      <div class="cell">꠰</div>
+	    
+	      <div class="cell">꠱</div>
+	    
+	      <div class="cell">꠲</div>
+	    
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">old-Noto-Serif-Malayalam-Bold 20pt</div>
+	  <span class="old-Noto-Serif-Malayalam-Bold" style="font-size: 20pt">
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"></div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell">!</div>
+	    
+	      <div class="cell">"</div>
+	    
+	      <div class="cell">#</div>
+	    
+	      <div class="cell">%</div>
+	    
+	      <div class="cell">'</div>
+	    
+	      <div class="cell">(</div>
+	    
+	      <div class="cell">)</div>
+	    
+	      <div class="cell">*</div>
+	    
+	      <div class="cell">+</div>
+	    
+	      <div class="cell">,</div>
+	    
+	      <div class="cell">-</div>
+	    
+	      <div class="cell">.</div>
+	    
+	      <div class="cell">/</div>
+	    
+	      <div class="cell">0</div>
+	    
+	      <div class="cell">1</div>
+	    
+	      <div class="cell">2</div>
+	    
+	      <div class="cell">3</div>
+	    
+	      <div class="cell">4</div>
+	    
+	      <div class="cell">5</div>
+	    
+	      <div class="cell">6</div>
+	    
+	      <div class="cell">7</div>
+	    
+	      <div class="cell">8</div>
+	    
+	      <div class="cell">9</div>
+	    
+	      <div class="cell">:</div>
+	    
+	      <div class="cell">;</div>
+	    
+	      <div class="cell"><</div>
+	    
+	      <div class="cell">=</div>
+	    
+	      <div class="cell">></div>
+	    
+	      <div class="cell">?</div>
+	    
+	      <div class="cell">[</div>
+	    
+	      <div class="cell">\</div>
+	    
+	      <div class="cell">]</div>
+	    
+	      <div class="cell">^</div>
+	    
+	      <div class="cell">_</div>
+	    
+	      <div class="cell">{</div>
+	    
+	      <div class="cell">|</div>
+	    
+	      <div class="cell">}</div>
+	    
+	      <div class="cell">~</div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell">­</div>
+	    
+	      <div class="cell">×</div>
+	    
+	      <div class="cell">÷</div>
+	    
+	      <div class="cell">̇</div>
+	    
+	      <div class="cell">̣</div>
+	    
+	      <div class="cell">॑</div>
+	    
+	      <div class="cell">॒</div>
+	    
+	      <div class="cell">।</div>
+	    
+	      <div class="cell">॥</div>
+	    
+	      <div class="cell">ഀ</div>
+	    
+	      <div class="cell">ഁ</div>
+	    
+	      <div class="cell">ം</div>
+	    
+	      <div class="cell">ഃ</div>
+	    
+	      <div class="cell">ഄ</div>
+	    
+	      <div class="cell">അ</div>
+	    
+	      <div class="cell">ആ</div>
+	    
+	      <div class="cell">ഇ</div>
+	    
+	      <div class="cell">ഈ</div>
+	    
+	      <div class="cell">ഉ</div>
+	    
+	      <div class="cell">ഊ</div>
+	    
+	      <div class="cell">ഋ</div>
+	    
+	      <div class="cell">ഌ</div>
+	    
+	      <div class="cell">എ</div>
+	    
+	      <div class="cell">ഏ</div>
+	    
+	      <div class="cell">ഐ</div>
+	    
+	      <div class="cell">ഒ</div>
+	    
+	      <div class="cell">ഓ</div>
+	    
+	      <div class="cell">ഔ</div>
+	    
+	      <div class="cell">ക</div>
+	    
+	      <div class="cell">ഖ</div>
+	    
+	      <div class="cell">ഗ</div>
+	    
+	      <div class="cell">ഘ</div>
+	    
+	      <div class="cell">ങ</div>
+	    
+	      <div class="cell">ച</div>
+	    
+	      <div class="cell">ഛ</div>
+	    
+	      <div class="cell">ജ</div>
+	    
+	      <div class="cell">ഝ</div>
+	    
+	      <div class="cell">ഞ</div>
+	    
+	      <div class="cell">ട</div>
+	    
+	      <div class="cell">ഠ</div>
+	    
+	      <div class="cell">ഡ</div>
+	    
+	      <div class="cell">ഢ</div>
+	    
+	      <div class="cell">ണ</div>
+	    
+	      <div class="cell">ത</div>
+	    
+	      <div class="cell">ഥ</div>
+	    
+	      <div class="cell">ദ</div>
+	    
+	      <div class="cell">ധ</div>
+	    
+	      <div class="cell">ന</div>
+	    
+	      <div class="cell">ഩ</div>
+	    
+	      <div class="cell">പ</div>
+	    
+	      <div class="cell">ഫ</div>
+	    
+	      <div class="cell">ബ</div>
+	    
+	      <div class="cell">ഭ</div>
+	    
+	      <div class="cell">മ</div>
+	    
+	      <div class="cell">യ</div>
+	    
+	      <div class="cell">ര</div>
+	    
+	      <div class="cell">റ</div>
+	    
+	      <div class="cell">ല</div>
+	    
+	      <div class="cell">ള</div>
+	    
+	      <div class="cell">ഴ</div>
+	    
+	      <div class="cell">വ</div>
+	    
+	      <div class="cell">ശ</div>
+	    
+	      <div class="cell">ഷ</div>
+	    
+	      <div class="cell">സ</div>
+	    
+	      <div class="cell">ഹ</div>
+	    
+	      <div class="cell">ഺ</div>
+	    
+	      <div class="cell">഻</div>
+	    
+	      <div class="cell">഼</div>
+	    
+	      <div class="cell">ഽ</div>
+	    
+	      <div class="cell">ാ</div>
+	    
+	      <div class="cell">ി</div>
+	    
+	      <div class="cell">ീ</div>
+	    
+	      <div class="cell">ു</div>
+	    
+	      <div class="cell">ൂ</div>
+	    
+	      <div class="cell">ൃ</div>
+	    
+	      <div class="cell">ൄ</div>
+	    
+	      <div class="cell">െ</div>
+	    
+	      <div class="cell">േ</div>
+	    
+	      <div class="cell">ൈ</div>
+	    
+	      <div class="cell">ൊ</div>
+	    
+	      <div class="cell">ോ</div>
+	    
+	      <div class="cell">ൌ</div>
+	    
+	      <div class="cell">്</div>
+	    
+	      <div class="cell">ൎ</div>
+	    
+	      <div class="cell">൏</div>
+	    
+	      <div class="cell">ൔ</div>
+	    
+	      <div class="cell">ൕ</div>
+	    
+	      <div class="cell">ൖ</div>
+	    
+	      <div class="cell">ൗ</div>
+	    
+	      <div class="cell">൘</div>
+	    
+	      <div class="cell">൙</div>
+	    
+	      <div class="cell">൚</div>
+	    
+	      <div class="cell">൛</div>
+	    
+	      <div class="cell">൜</div>
+	    
+	      <div class="cell">൝</div>
+	    
+	      <div class="cell">൞</div>
+	    
+	      <div class="cell">ൟ</div>
+	    
+	      <div class="cell">ൠ</div>
+	    
+	      <div class="cell">ൡ</div>
+	    
+	      <div class="cell">ൢ</div>
+	    
+	      <div class="cell">ൣ</div>
+	    
+	      <div class="cell">൦</div>
+	    
+	      <div class="cell">൧</div>
+	    
+	      <div class="cell">൨</div>
+	    
+	      <div class="cell">൩</div>
+	    
+	      <div class="cell">൪</div>
+	    
+	      <div class="cell">൫</div>
+	    
+	      <div class="cell">൬</div>
+	    
+	      <div class="cell">൭</div>
+	    
+	      <div class="cell">൮</div>
+	    
+	      <div class="cell">൯</div>
+	    
+	      <div class="cell">൰</div>
+	    
+	      <div class="cell">൱</div>
+	    
+	      <div class="cell">൲</div>
+	    
+	      <div class="cell">൳</div>
+	    
+	      <div class="cell">൴</div>
+	    
+	      <div class="cell">൵</div>
+	    
+	      <div class="cell">൶</div>
+	    
+	      <div class="cell">൷</div>
+	    
+	      <div class="cell">൸</div>
+	    
+	      <div class="cell">൹</div>
+	    
+	      <div class="cell">ൺ</div>
+	    
+	      <div class="cell">ൻ</div>
+	    
+	      <div class="cell">ർ</div>
+	    
+	      <div class="cell">ൽ</div>
+	    
+	      <div class="cell">ൾ</div>
+	    
+	      <div class="cell">ൿ</div>
+	    
+	      <div class="cell">᳚</div>
+	    
+	      <div class="cell">​</div>
+	    
+	      <div class="cell">‌</div>
+	    
+	      <div class="cell">‍</div>
+	    
+	      <div class="cell">‐</div>
+	    
+	      <div class="cell">–</div>
+	    
+	      <div class="cell">—</div>
+	    
+	      <div class="cell">‘</div>
+	    
+	      <div class="cell">’</div>
+	    
+	      <div class="cell">“</div>
+	    
+	      <div class="cell">”</div>
+	    
+	      <div class="cell">…</div>
+	    
+	      <div class="cell">₹</div>
+	    
+	      <div class="cell">−</div>
+	    
+	      <div class="cell">◌</div>
+	    
+	      <div class="cell">꠰</div>
+	    
+	      <div class="cell">꠱</div>
+	    
+	      <div class="cell">꠲</div>
+	    
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">old-Noto-Serif-Malayalam-Thin 20pt</div>
+	  <span class="old-Noto-Serif-Malayalam-Thin" style="font-size: 20pt">
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"></div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell">!</div>
+	    
+	      <div class="cell">"</div>
+	    
+	      <div class="cell">#</div>
+	    
+	      <div class="cell">%</div>
+	    
+	      <div class="cell">'</div>
+	    
+	      <div class="cell">(</div>
+	    
+	      <div class="cell">)</div>
+	    
+	      <div class="cell">*</div>
+	    
+	      <div class="cell">+</div>
+	    
+	      <div class="cell">,</div>
+	    
+	      <div class="cell">-</div>
+	    
+	      <div class="cell">.</div>
+	    
+	      <div class="cell">/</div>
+	    
+	      <div class="cell">0</div>
+	    
+	      <div class="cell">1</div>
+	    
+	      <div class="cell">2</div>
+	    
+	      <div class="cell">3</div>
+	    
+	      <div class="cell">4</div>
+	    
+	      <div class="cell">5</div>
+	    
+	      <div class="cell">6</div>
+	    
+	      <div class="cell">7</div>
+	    
+	      <div class="cell">8</div>
+	    
+	      <div class="cell">9</div>
+	    
+	      <div class="cell">:</div>
+	    
+	      <div class="cell">;</div>
+	    
+	      <div class="cell"><</div>
+	    
+	      <div class="cell">=</div>
+	    
+	      <div class="cell">></div>
+	    
+	      <div class="cell">?</div>
+	    
+	      <div class="cell">[</div>
+	    
+	      <div class="cell">\</div>
+	    
+	      <div class="cell">]</div>
+	    
+	      <div class="cell">^</div>
+	    
+	      <div class="cell">_</div>
+	    
+	      <div class="cell">{</div>
+	    
+	      <div class="cell">|</div>
+	    
+	      <div class="cell">}</div>
+	    
+	      <div class="cell">~</div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell">­</div>
+	    
+	      <div class="cell">×</div>
+	    
+	      <div class="cell">÷</div>
+	    
+	      <div class="cell">̇</div>
+	    
+	      <div class="cell">̣</div>
+	    
+	      <div class="cell">॑</div>
+	    
+	      <div class="cell">॒</div>
+	    
+	      <div class="cell">।</div>
+	    
+	      <div class="cell">॥</div>
+	    
+	      <div class="cell">ഀ</div>
+	    
+	      <div class="cell">ഁ</div>
+	    
+	      <div class="cell">ം</div>
+	    
+	      <div class="cell">ഃ</div>
+	    
+	      <div class="cell">ഄ</div>
+	    
+	      <div class="cell">അ</div>
+	    
+	      <div class="cell">ആ</div>
+	    
+	      <div class="cell">ഇ</div>
+	    
+	      <div class="cell">ഈ</div>
+	    
+	      <div class="cell">ഉ</div>
+	    
+	      <div class="cell">ഊ</div>
+	    
+	      <div class="cell">ഋ</div>
+	    
+	      <div class="cell">ഌ</div>
+	    
+	      <div class="cell">എ</div>
+	    
+	      <div class="cell">ഏ</div>
+	    
+	      <div class="cell">ഐ</div>
+	    
+	      <div class="cell">ഒ</div>
+	    
+	      <div class="cell">ഓ</div>
+	    
+	      <div class="cell">ഔ</div>
+	    
+	      <div class="cell">ക</div>
+	    
+	      <div class="cell">ഖ</div>
+	    
+	      <div class="cell">ഗ</div>
+	    
+	      <div class="cell">ഘ</div>
+	    
+	      <div class="cell">ങ</div>
+	    
+	      <div class="cell">ച</div>
+	    
+	      <div class="cell">ഛ</div>
+	    
+	      <div class="cell">ജ</div>
+	    
+	      <div class="cell">ഝ</div>
+	    
+	      <div class="cell">ഞ</div>
+	    
+	      <div class="cell">ട</div>
+	    
+	      <div class="cell">ഠ</div>
+	    
+	      <div class="cell">ഡ</div>
+	    
+	      <div class="cell">ഢ</div>
+	    
+	      <div class="cell">ണ</div>
+	    
+	      <div class="cell">ത</div>
+	    
+	      <div class="cell">ഥ</div>
+	    
+	      <div class="cell">ദ</div>
+	    
+	      <div class="cell">ധ</div>
+	    
+	      <div class="cell">ന</div>
+	    
+	      <div class="cell">ഩ</div>
+	    
+	      <div class="cell">പ</div>
+	    
+	      <div class="cell">ഫ</div>
+	    
+	      <div class="cell">ബ</div>
+	    
+	      <div class="cell">ഭ</div>
+	    
+	      <div class="cell">മ</div>
+	    
+	      <div class="cell">യ</div>
+	    
+	      <div class="cell">ര</div>
+	    
+	      <div class="cell">റ</div>
+	    
+	      <div class="cell">ല</div>
+	    
+	      <div class="cell">ള</div>
+	    
+	      <div class="cell">ഴ</div>
+	    
+	      <div class="cell">വ</div>
+	    
+	      <div class="cell">ശ</div>
+	    
+	      <div class="cell">ഷ</div>
+	    
+	      <div class="cell">സ</div>
+	    
+	      <div class="cell">ഹ</div>
+	    
+	      <div class="cell">ഺ</div>
+	    
+	      <div class="cell">഻</div>
+	    
+	      <div class="cell">഼</div>
+	    
+	      <div class="cell">ഽ</div>
+	    
+	      <div class="cell">ാ</div>
+	    
+	      <div class="cell">ി</div>
+	    
+	      <div class="cell">ീ</div>
+	    
+	      <div class="cell">ു</div>
+	    
+	      <div class="cell">ൂ</div>
+	    
+	      <div class="cell">ൃ</div>
+	    
+	      <div class="cell">ൄ</div>
+	    
+	      <div class="cell">െ</div>
+	    
+	      <div class="cell">േ</div>
+	    
+	      <div class="cell">ൈ</div>
+	    
+	      <div class="cell">ൊ</div>
+	    
+	      <div class="cell">ോ</div>
+	    
+	      <div class="cell">ൌ</div>
+	    
+	      <div class="cell">്</div>
+	    
+	      <div class="cell">ൎ</div>
+	    
+	      <div class="cell">൏</div>
+	    
+	      <div class="cell">ൔ</div>
+	    
+	      <div class="cell">ൕ</div>
+	    
+	      <div class="cell">ൖ</div>
+	    
+	      <div class="cell">ൗ</div>
+	    
+	      <div class="cell">൘</div>
+	    
+	      <div class="cell">൙</div>
+	    
+	      <div class="cell">൚</div>
+	    
+	      <div class="cell">൛</div>
+	    
+	      <div class="cell">൜</div>
+	    
+	      <div class="cell">൝</div>
+	    
+	      <div class="cell">൞</div>
+	    
+	      <div class="cell">ൟ</div>
+	    
+	      <div class="cell">ൠ</div>
+	    
+	      <div class="cell">ൡ</div>
+	    
+	      <div class="cell">ൢ</div>
+	    
+	      <div class="cell">ൣ</div>
+	    
+	      <div class="cell">൦</div>
+	    
+	      <div class="cell">൧</div>
+	    
+	      <div class="cell">൨</div>
+	    
+	      <div class="cell">൩</div>
+	    
+	      <div class="cell">൪</div>
+	    
+	      <div class="cell">൫</div>
+	    
+	      <div class="cell">൬</div>
+	    
+	      <div class="cell">൭</div>
+	    
+	      <div class="cell">൮</div>
+	    
+	      <div class="cell">൯</div>
+	    
+	      <div class="cell">൰</div>
+	    
+	      <div class="cell">൱</div>
+	    
+	      <div class="cell">൲</div>
+	    
+	      <div class="cell">൳</div>
+	    
+	      <div class="cell">൴</div>
+	    
+	      <div class="cell">൵</div>
+	    
+	      <div class="cell">൶</div>
+	    
+	      <div class="cell">൷</div>
+	    
+	      <div class="cell">൸</div>
+	    
+	      <div class="cell">൹</div>
+	    
+	      <div class="cell">ൺ</div>
+	    
+	      <div class="cell">ൻ</div>
+	    
+	      <div class="cell">ർ</div>
+	    
+	      <div class="cell">ൽ</div>
+	    
+	      <div class="cell">ൾ</div>
+	    
+	      <div class="cell">ൿ</div>
+	    
+	      <div class="cell">᳚</div>
+	    
+	      <div class="cell">​</div>
+	    
+	      <div class="cell">‌</div>
+	    
+	      <div class="cell">‍</div>
+	    
+	      <div class="cell">‐</div>
+	    
+	      <div class="cell">–</div>
+	    
+	      <div class="cell">—</div>
+	    
+	      <div class="cell">‘</div>
+	    
+	      <div class="cell">’</div>
+	    
+	      <div class="cell">“</div>
+	    
+	      <div class="cell">”</div>
+	    
+	      <div class="cell">…</div>
+	    
+	      <div class="cell">₹</div>
+	    
+	      <div class="cell">−</div>
+	    
+	      <div class="cell">◌</div>
+	    
+	      <div class="cell">꠰</div>
+	    
+	      <div class="cell">꠱</div>
+	    
+	      <div class="cell">꠲</div>
+	    
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">old-Noto-Serif-Malayalam-Medium 20pt</div>
+	  <span class="old-Noto-Serif-Malayalam-Medium" style="font-size: 20pt">
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"></div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell">!</div>
+	    
+	      <div class="cell">"</div>
+	    
+	      <div class="cell">#</div>
+	    
+	      <div class="cell">%</div>
+	    
+	      <div class="cell">'</div>
+	    
+	      <div class="cell">(</div>
+	    
+	      <div class="cell">)</div>
+	    
+	      <div class="cell">*</div>
+	    
+	      <div class="cell">+</div>
+	    
+	      <div class="cell">,</div>
+	    
+	      <div class="cell">-</div>
+	    
+	      <div class="cell">.</div>
+	    
+	      <div class="cell">/</div>
+	    
+	      <div class="cell">0</div>
+	    
+	      <div class="cell">1</div>
+	    
+	      <div class="cell">2</div>
+	    
+	      <div class="cell">3</div>
+	    
+	      <div class="cell">4</div>
+	    
+	      <div class="cell">5</div>
+	    
+	      <div class="cell">6</div>
+	    
+	      <div class="cell">7</div>
+	    
+	      <div class="cell">8</div>
+	    
+	      <div class="cell">9</div>
+	    
+	      <div class="cell">:</div>
+	    
+	      <div class="cell">;</div>
+	    
+	      <div class="cell"><</div>
+	    
+	      <div class="cell">=</div>
+	    
+	      <div class="cell">></div>
+	    
+	      <div class="cell">?</div>
+	    
+	      <div class="cell">[</div>
+	    
+	      <div class="cell">\</div>
+	    
+	      <div class="cell">]</div>
+	    
+	      <div class="cell">^</div>
+	    
+	      <div class="cell">_</div>
+	    
+	      <div class="cell">{</div>
+	    
+	      <div class="cell">|</div>
+	    
+	      <div class="cell">}</div>
+	    
+	      <div class="cell">~</div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell">­</div>
+	    
+	      <div class="cell">×</div>
+	    
+	      <div class="cell">÷</div>
+	    
+	      <div class="cell">̇</div>
+	    
+	      <div class="cell">̣</div>
+	    
+	      <div class="cell">॑</div>
+	    
+	      <div class="cell">॒</div>
+	    
+	      <div class="cell">।</div>
+	    
+	      <div class="cell">॥</div>
+	    
+	      <div class="cell">ഀ</div>
+	    
+	      <div class="cell">ഁ</div>
+	    
+	      <div class="cell">ം</div>
+	    
+	      <div class="cell">ഃ</div>
+	    
+	      <div class="cell">ഄ</div>
+	    
+	      <div class="cell">അ</div>
+	    
+	      <div class="cell">ആ</div>
+	    
+	      <div class="cell">ഇ</div>
+	    
+	      <div class="cell">ഈ</div>
+	    
+	      <div class="cell">ഉ</div>
+	    
+	      <div class="cell">ഊ</div>
+	    
+	      <div class="cell">ഋ</div>
+	    
+	      <div class="cell">ഌ</div>
+	    
+	      <div class="cell">എ</div>
+	    
+	      <div class="cell">ഏ</div>
+	    
+	      <div class="cell">ഐ</div>
+	    
+	      <div class="cell">ഒ</div>
+	    
+	      <div class="cell">ഓ</div>
+	    
+	      <div class="cell">ഔ</div>
+	    
+	      <div class="cell">ക</div>
+	    
+	      <div class="cell">ഖ</div>
+	    
+	      <div class="cell">ഗ</div>
+	    
+	      <div class="cell">ഘ</div>
+	    
+	      <div class="cell">ങ</div>
+	    
+	      <div class="cell">ച</div>
+	    
+	      <div class="cell">ഛ</div>
+	    
+	      <div class="cell">ജ</div>
+	    
+	      <div class="cell">ഝ</div>
+	    
+	      <div class="cell">ഞ</div>
+	    
+	      <div class="cell">ട</div>
+	    
+	      <div class="cell">ഠ</div>
+	    
+	      <div class="cell">ഡ</div>
+	    
+	      <div class="cell">ഢ</div>
+	    
+	      <div class="cell">ണ</div>
+	    
+	      <div class="cell">ത</div>
+	    
+	      <div class="cell">ഥ</div>
+	    
+	      <div class="cell">ദ</div>
+	    
+	      <div class="cell">ധ</div>
+	    
+	      <div class="cell">ന</div>
+	    
+	      <div class="cell">ഩ</div>
+	    
+	      <div class="cell">പ</div>
+	    
+	      <div class="cell">ഫ</div>
+	    
+	      <div class="cell">ബ</div>
+	    
+	      <div class="cell">ഭ</div>
+	    
+	      <div class="cell">മ</div>
+	    
+	      <div class="cell">യ</div>
+	    
+	      <div class="cell">ര</div>
+	    
+	      <div class="cell">റ</div>
+	    
+	      <div class="cell">ല</div>
+	    
+	      <div class="cell">ള</div>
+	    
+	      <div class="cell">ഴ</div>
+	    
+	      <div class="cell">വ</div>
+	    
+	      <div class="cell">ശ</div>
+	    
+	      <div class="cell">ഷ</div>
+	    
+	      <div class="cell">സ</div>
+	    
+	      <div class="cell">ഹ</div>
+	    
+	      <div class="cell">ഺ</div>
+	    
+	      <div class="cell">഻</div>
+	    
+	      <div class="cell">഼</div>
+	    
+	      <div class="cell">ഽ</div>
+	    
+	      <div class="cell">ാ</div>
+	    
+	      <div class="cell">ി</div>
+	    
+	      <div class="cell">ീ</div>
+	    
+	      <div class="cell">ു</div>
+	    
+	      <div class="cell">ൂ</div>
+	    
+	      <div class="cell">ൃ</div>
+	    
+	      <div class="cell">ൄ</div>
+	    
+	      <div class="cell">െ</div>
+	    
+	      <div class="cell">േ</div>
+	    
+	      <div class="cell">ൈ</div>
+	    
+	      <div class="cell">ൊ</div>
+	    
+	      <div class="cell">ോ</div>
+	    
+	      <div class="cell">ൌ</div>
+	    
+	      <div class="cell">്</div>
+	    
+	      <div class="cell">ൎ</div>
+	    
+	      <div class="cell">൏</div>
+	    
+	      <div class="cell">ൔ</div>
+	    
+	      <div class="cell">ൕ</div>
+	    
+	      <div class="cell">ൖ</div>
+	    
+	      <div class="cell">ൗ</div>
+	    
+	      <div class="cell">൘</div>
+	    
+	      <div class="cell">൙</div>
+	    
+	      <div class="cell">൚</div>
+	    
+	      <div class="cell">൛</div>
+	    
+	      <div class="cell">൜</div>
+	    
+	      <div class="cell">൝</div>
+	    
+	      <div class="cell">൞</div>
+	    
+	      <div class="cell">ൟ</div>
+	    
+	      <div class="cell">ൠ</div>
+	    
+	      <div class="cell">ൡ</div>
+	    
+	      <div class="cell">ൢ</div>
+	    
+	      <div class="cell">ൣ</div>
+	    
+	      <div class="cell">൦</div>
+	    
+	      <div class="cell">൧</div>
+	    
+	      <div class="cell">൨</div>
+	    
+	      <div class="cell">൩</div>
+	    
+	      <div class="cell">൪</div>
+	    
+	      <div class="cell">൫</div>
+	    
+	      <div class="cell">൬</div>
+	    
+	      <div class="cell">൭</div>
+	    
+	      <div class="cell">൮</div>
+	    
+	      <div class="cell">൯</div>
+	    
+	      <div class="cell">൰</div>
+	    
+	      <div class="cell">൱</div>
+	    
+	      <div class="cell">൲</div>
+	    
+	      <div class="cell">൳</div>
+	    
+	      <div class="cell">൴</div>
+	    
+	      <div class="cell">൵</div>
+	    
+	      <div class="cell">൶</div>
+	    
+	      <div class="cell">൷</div>
+	    
+	      <div class="cell">൸</div>
+	    
+	      <div class="cell">൹</div>
+	    
+	      <div class="cell">ൺ</div>
+	    
+	      <div class="cell">ൻ</div>
+	    
+	      <div class="cell">ർ</div>
+	    
+	      <div class="cell">ൽ</div>
+	    
+	      <div class="cell">ൾ</div>
+	    
+	      <div class="cell">ൿ</div>
+	    
+	      <div class="cell">᳚</div>
+	    
+	      <div class="cell">​</div>
+	    
+	      <div class="cell">‌</div>
+	    
+	      <div class="cell">‍</div>
+	    
+	      <div class="cell">‐</div>
+	    
+	      <div class="cell">–</div>
+	    
+	      <div class="cell">—</div>
+	    
+	      <div class="cell">‘</div>
+	    
+	      <div class="cell">’</div>
+	    
+	      <div class="cell">“</div>
+	    
+	      <div class="cell">”</div>
+	    
+	      <div class="cell">…</div>
+	    
+	      <div class="cell">₹</div>
+	    
+	      <div class="cell">−</div>
+	    
+	      <div class="cell">◌</div>
+	    
+	      <div class="cell">꠰</div>
+	    
+	      <div class="cell">꠱</div>
+	    
+	      <div class="cell">꠲</div>
+	    
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">old-Noto-Serif-Malayalam-SemiBold 20pt</div>
+	  <span class="old-Noto-Serif-Malayalam-SemiBold" style="font-size: 20pt">
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"></div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell">!</div>
+	    
+	      <div class="cell">"</div>
+	    
+	      <div class="cell">#</div>
+	    
+	      <div class="cell">%</div>
+	    
+	      <div class="cell">'</div>
+	    
+	      <div class="cell">(</div>
+	    
+	      <div class="cell">)</div>
+	    
+	      <div class="cell">*</div>
+	    
+	      <div class="cell">+</div>
+	    
+	      <div class="cell">,</div>
+	    
+	      <div class="cell">-</div>
+	    
+	      <div class="cell">.</div>
+	    
+	      <div class="cell">/</div>
+	    
+	      <div class="cell">0</div>
+	    
+	      <div class="cell">1</div>
+	    
+	      <div class="cell">2</div>
+	    
+	      <div class="cell">3</div>
+	    
+	      <div class="cell">4</div>
+	    
+	      <div class="cell">5</div>
+	    
+	      <div class="cell">6</div>
+	    
+	      <div class="cell">7</div>
+	    
+	      <div class="cell">8</div>
+	    
+	      <div class="cell">9</div>
+	    
+	      <div class="cell">:</div>
+	    
+	      <div class="cell">;</div>
+	    
+	      <div class="cell"><</div>
+	    
+	      <div class="cell">=</div>
+	    
+	      <div class="cell">></div>
+	    
+	      <div class="cell">?</div>
+	    
+	      <div class="cell">[</div>
+	    
+	      <div class="cell">\</div>
+	    
+	      <div class="cell">]</div>
+	    
+	      <div class="cell">^</div>
+	    
+	      <div class="cell">_</div>
+	    
+	      <div class="cell">{</div>
+	    
+	      <div class="cell">|</div>
+	    
+	      <div class="cell">}</div>
+	    
+	      <div class="cell">~</div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell">­</div>
+	    
+	      <div class="cell">×</div>
+	    
+	      <div class="cell">÷</div>
+	    
+	      <div class="cell">̇</div>
+	    
+	      <div class="cell">̣</div>
+	    
+	      <div class="cell">॑</div>
+	    
+	      <div class="cell">॒</div>
+	    
+	      <div class="cell">।</div>
+	    
+	      <div class="cell">॥</div>
+	    
+	      <div class="cell">ഀ</div>
+	    
+	      <div class="cell">ഁ</div>
+	    
+	      <div class="cell">ം</div>
+	    
+	      <div class="cell">ഃ</div>
+	    
+	      <div class="cell">ഄ</div>
+	    
+	      <div class="cell">അ</div>
+	    
+	      <div class="cell">ആ</div>
+	    
+	      <div class="cell">ഇ</div>
+	    
+	      <div class="cell">ഈ</div>
+	    
+	      <div class="cell">ഉ</div>
+	    
+	      <div class="cell">ഊ</div>
+	    
+	      <div class="cell">ഋ</div>
+	    
+	      <div class="cell">ഌ</div>
+	    
+	      <div class="cell">എ</div>
+	    
+	      <div class="cell">ഏ</div>
+	    
+	      <div class="cell">ഐ</div>
+	    
+	      <div class="cell">ഒ</div>
+	    
+	      <div class="cell">ഓ</div>
+	    
+	      <div class="cell">ഔ</div>
+	    
+	      <div class="cell">ക</div>
+	    
+	      <div class="cell">ഖ</div>
+	    
+	      <div class="cell">ഗ</div>
+	    
+	      <div class="cell">ഘ</div>
+	    
+	      <div class="cell">ങ</div>
+	    
+	      <div class="cell">ച</div>
+	    
+	      <div class="cell">ഛ</div>
+	    
+	      <div class="cell">ജ</div>
+	    
+	      <div class="cell">ഝ</div>
+	    
+	      <div class="cell">ഞ</div>
+	    
+	      <div class="cell">ട</div>
+	    
+	      <div class="cell">ഠ</div>
+	    
+	      <div class="cell">ഡ</div>
+	    
+	      <div class="cell">ഢ</div>
+	    
+	      <div class="cell">ണ</div>
+	    
+	      <div class="cell">ത</div>
+	    
+	      <div class="cell">ഥ</div>
+	    
+	      <div class="cell">ദ</div>
+	    
+	      <div class="cell">ധ</div>
+	    
+	      <div class="cell">ന</div>
+	    
+	      <div class="cell">ഩ</div>
+	    
+	      <div class="cell">പ</div>
+	    
+	      <div class="cell">ഫ</div>
+	    
+	      <div class="cell">ബ</div>
+	    
+	      <div class="cell">ഭ</div>
+	    
+	      <div class="cell">മ</div>
+	    
+	      <div class="cell">യ</div>
+	    
+	      <div class="cell">ര</div>
+	    
+	      <div class="cell">റ</div>
+	    
+	      <div class="cell">ല</div>
+	    
+	      <div class="cell">ള</div>
+	    
+	      <div class="cell">ഴ</div>
+	    
+	      <div class="cell">വ</div>
+	    
+	      <div class="cell">ശ</div>
+	    
+	      <div class="cell">ഷ</div>
+	    
+	      <div class="cell">സ</div>
+	    
+	      <div class="cell">ഹ</div>
+	    
+	      <div class="cell">ഺ</div>
+	    
+	      <div class="cell">഻</div>
+	    
+	      <div class="cell">഼</div>
+	    
+	      <div class="cell">ഽ</div>
+	    
+	      <div class="cell">ാ</div>
+	    
+	      <div class="cell">ി</div>
+	    
+	      <div class="cell">ീ</div>
+	    
+	      <div class="cell">ു</div>
+	    
+	      <div class="cell">ൂ</div>
+	    
+	      <div class="cell">ൃ</div>
+	    
+	      <div class="cell">ൄ</div>
+	    
+	      <div class="cell">െ</div>
+	    
+	      <div class="cell">േ</div>
+	    
+	      <div class="cell">ൈ</div>
+	    
+	      <div class="cell">ൊ</div>
+	    
+	      <div class="cell">ോ</div>
+	    
+	      <div class="cell">ൌ</div>
+	    
+	      <div class="cell">്</div>
+	    
+	      <div class="cell">ൎ</div>
+	    
+	      <div class="cell">൏</div>
+	    
+	      <div class="cell">ൔ</div>
+	    
+	      <div class="cell">ൕ</div>
+	    
+	      <div class="cell">ൖ</div>
+	    
+	      <div class="cell">ൗ</div>
+	    
+	      <div class="cell">൘</div>
+	    
+	      <div class="cell">൙</div>
+	    
+	      <div class="cell">൚</div>
+	    
+	      <div class="cell">൛</div>
+	    
+	      <div class="cell">൜</div>
+	    
+	      <div class="cell">൝</div>
+	    
+	      <div class="cell">൞</div>
+	    
+	      <div class="cell">ൟ</div>
+	    
+	      <div class="cell">ൠ</div>
+	    
+	      <div class="cell">ൡ</div>
+	    
+	      <div class="cell">ൢ</div>
+	    
+	      <div class="cell">ൣ</div>
+	    
+	      <div class="cell">൦</div>
+	    
+	      <div class="cell">൧</div>
+	    
+	      <div class="cell">൨</div>
+	    
+	      <div class="cell">൩</div>
+	    
+	      <div class="cell">൪</div>
+	    
+	      <div class="cell">൫</div>
+	    
+	      <div class="cell">൬</div>
+	    
+	      <div class="cell">൭</div>
+	    
+	      <div class="cell">൮</div>
+	    
+	      <div class="cell">൯</div>
+	    
+	      <div class="cell">൰</div>
+	    
+	      <div class="cell">൱</div>
+	    
+	      <div class="cell">൲</div>
+	    
+	      <div class="cell">൳</div>
+	    
+	      <div class="cell">൴</div>
+	    
+	      <div class="cell">൵</div>
+	    
+	      <div class="cell">൶</div>
+	    
+	      <div class="cell">൷</div>
+	    
+	      <div class="cell">൸</div>
+	    
+	      <div class="cell">൹</div>
+	    
+	      <div class="cell">ൺ</div>
+	    
+	      <div class="cell">ൻ</div>
+	    
+	      <div class="cell">ർ</div>
+	    
+	      <div class="cell">ൽ</div>
+	    
+	      <div class="cell">ൾ</div>
+	    
+	      <div class="cell">ൿ</div>
+	    
+	      <div class="cell">᳚</div>
+	    
+	      <div class="cell">​</div>
+	    
+	      <div class="cell">‌</div>
+	    
+	      <div class="cell">‍</div>
+	    
+	      <div class="cell">‐</div>
+	    
+	      <div class="cell">–</div>
+	    
+	      <div class="cell">—</div>
+	    
+	      <div class="cell">‘</div>
+	    
+	      <div class="cell">’</div>
+	    
+	      <div class="cell">“</div>
+	    
+	      <div class="cell">”</div>
+	    
+	      <div class="cell">…</div>
+	    
+	      <div class="cell">₹</div>
+	    
+	      <div class="cell">−</div>
+	    
+	      <div class="cell">◌</div>
+	    
+	      <div class="cell">꠰</div>
+	    
+	      <div class="cell">꠱</div>
+	    
+	      <div class="cell">꠲</div>
+	    
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">old-Noto-Serif-Malayalam-Bold 20pt</div>
+	  <span class="old-Noto-Serif-Malayalam-Bold" style="font-size: 20pt">
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell"></div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell">!</div>
+	    
+	      <div class="cell">"</div>
+	    
+	      <div class="cell">#</div>
+	    
+	      <div class="cell">%</div>
+	    
+	      <div class="cell">'</div>
+	    
+	      <div class="cell">(</div>
+	    
+	      <div class="cell">)</div>
+	    
+	      <div class="cell">*</div>
+	    
+	      <div class="cell">+</div>
+	    
+	      <div class="cell">,</div>
+	    
+	      <div class="cell">-</div>
+	    
+	      <div class="cell">.</div>
+	    
+	      <div class="cell">/</div>
+	    
+	      <div class="cell">0</div>
+	    
+	      <div class="cell">1</div>
+	    
+	      <div class="cell">2</div>
+	    
+	      <div class="cell">3</div>
+	    
+	      <div class="cell">4</div>
+	    
+	      <div class="cell">5</div>
+	    
+	      <div class="cell">6</div>
+	    
+	      <div class="cell">7</div>
+	    
+	      <div class="cell">8</div>
+	    
+	      <div class="cell">9</div>
+	    
+	      <div class="cell">:</div>
+	    
+	      <div class="cell">;</div>
+	    
+	      <div class="cell"><</div>
+	    
+	      <div class="cell">=</div>
+	    
+	      <div class="cell">></div>
+	    
+	      <div class="cell">?</div>
+	    
+	      <div class="cell">[</div>
+	    
+	      <div class="cell">\</div>
+	    
+	      <div class="cell">]</div>
+	    
+	      <div class="cell">^</div>
+	    
+	      <div class="cell">_</div>
+	    
+	      <div class="cell">{</div>
+	    
+	      <div class="cell">|</div>
+	    
+	      <div class="cell">}</div>
+	    
+	      <div class="cell">~</div>
+	    
+	      <div class="cell"> </div>
+	    
+	      <div class="cell">­</div>
+	    
+	      <div class="cell">×</div>
+	    
+	      <div class="cell">÷</div>
+	    
+	      <div class="cell">̇</div>
+	    
+	      <div class="cell">̣</div>
+	    
+	      <div class="cell">॑</div>
+	    
+	      <div class="cell">॒</div>
+	    
+	      <div class="cell">।</div>
+	    
+	      <div class="cell">॥</div>
+	    
+	      <div class="cell">ഀ</div>
+	    
+	      <div class="cell">ഁ</div>
+	    
+	      <div class="cell">ം</div>
+	    
+	      <div class="cell">ഃ</div>
+	    
+	      <div class="cell">ഄ</div>
+	    
+	      <div class="cell">അ</div>
+	    
+	      <div class="cell">ആ</div>
+	    
+	      <div class="cell">ഇ</div>
+	    
+	      <div class="cell">ഈ</div>
+	    
+	      <div class="cell">ഉ</div>
+	    
+	      <div class="cell">ഊ</div>
+	    
+	      <div class="cell">ഋ</div>
+	    
+	      <div class="cell">ഌ</div>
+	    
+	      <div class="cell">എ</div>
+	    
+	      <div class="cell">ഏ</div>
+	    
+	      <div class="cell">ഐ</div>
+	    
+	      <div class="cell">ഒ</div>
+	    
+	      <div class="cell">ഓ</div>
+	    
+	      <div class="cell">ഔ</div>
+	    
+	      <div class="cell">ക</div>
+	    
+	      <div class="cell">ഖ</div>
+	    
+	      <div class="cell">ഗ</div>
+	    
+	      <div class="cell">ഘ</div>
+	    
+	      <div class="cell">ങ</div>
+	    
+	      <div class="cell">ച</div>
+	    
+	      <div class="cell">ഛ</div>
+	    
+	      <div class="cell">ജ</div>
+	    
+	      <div class="cell">ഝ</div>
+	    
+	      <div class="cell">ഞ</div>
+	    
+	      <div class="cell">ട</div>
+	    
+	      <div class="cell">ഠ</div>
+	    
+	      <div class="cell">ഡ</div>
+	    
+	      <div class="cell">ഢ</div>
+	    
+	      <div class="cell">ണ</div>
+	    
+	      <div class="cell">ത</div>
+	    
+	      <div class="cell">ഥ</div>
+	    
+	      <div class="cell">ദ</div>
+	    
+	      <div class="cell">ധ</div>
+	    
+	      <div class="cell">ന</div>
+	    
+	      <div class="cell">ഩ</div>
+	    
+	      <div class="cell">പ</div>
+	    
+	      <div class="cell">ഫ</div>
+	    
+	      <div class="cell">ബ</div>
+	    
+	      <div class="cell">ഭ</div>
+	    
+	      <div class="cell">മ</div>
+	    
+	      <div class="cell">യ</div>
+	    
+	      <div class="cell">ര</div>
+	    
+	      <div class="cell">റ</div>
+	    
+	      <div class="cell">ല</div>
+	    
+	      <div class="cell">ള</div>
+	    
+	      <div class="cell">ഴ</div>
+	    
+	      <div class="cell">വ</div>
+	    
+	      <div class="cell">ശ</div>
+	    
+	      <div class="cell">ഷ</div>
+	    
+	      <div class="cell">സ</div>
+	    
+	      <div class="cell">ഹ</div>
+	    
+	      <div class="cell">ഺ</div>
+	    
+	      <div class="cell">഻</div>
+	    
+	      <div class="cell">഼</div>
+	    
+	      <div class="cell">ഽ</div>
+	    
+	      <div class="cell">ാ</div>
+	    
+	      <div class="cell">ി</div>
+	    
+	      <div class="cell">ീ</div>
+	    
+	      <div class="cell">ു</div>
+	    
+	      <div class="cell">ൂ</div>
+	    
+	      <div class="cell">ൃ</div>
+	    
+	      <div class="cell">ൄ</div>
+	    
+	      <div class="cell">െ</div>
+	    
+	      <div class="cell">േ</div>
+	    
+	      <div class="cell">ൈ</div>
+	    
+	      <div class="cell">ൊ</div>
+	    
+	      <div class="cell">ോ</div>
+	    
+	      <div class="cell">ൌ</div>
+	    
+	      <div class="cell">്</div>
+	    
+	      <div class="cell">ൎ</div>
+	    
+	      <div class="cell">൏</div>
+	    
+	      <div class="cell">ൔ</div>
+	    
+	      <div class="cell">ൕ</div>
+	    
+	      <div class="cell">ൖ</div>
+	    
+	      <div class="cell">ൗ</div>
+	    
+	      <div class="cell">൘</div>
+	    
+	      <div class="cell">൙</div>
+	    
+	      <div class="cell">൚</div>
+	    
+	      <div class="cell">൛</div>
+	    
+	      <div class="cell">൜</div>
+	    
+	      <div class="cell">൝</div>
+	    
+	      <div class="cell">൞</div>
+	    
+	      <div class="cell">ൟ</div>
+	    
+	      <div class="cell">ൠ</div>
+	    
+	      <div class="cell">ൡ</div>
+	    
+	      <div class="cell">ൢ</div>
+	    
+	      <div class="cell">ൣ</div>
+	    
+	      <div class="cell">൦</div>
+	    
+	      <div class="cell">൧</div>
+	    
+	      <div class="cell">൨</div>
+	    
+	      <div class="cell">൩</div>
+	    
+	      <div class="cell">൪</div>
+	    
+	      <div class="cell">൫</div>
+	    
+	      <div class="cell">൬</div>
+	    
+	      <div class="cell">൭</div>
+	    
+	      <div class="cell">൮</div>
+	    
+	      <div class="cell">൯</div>
+	    
+	      <div class="cell">൰</div>
+	    
+	      <div class="cell">൱</div>
+	    
+	      <div class="cell">൲</div>
+	    
+	      <div class="cell">൳</div>
+	    
+	      <div class="cell">൴</div>
+	    
+	      <div class="cell">൵</div>
+	    
+	      <div class="cell">൶</div>
+	    
+	      <div class="cell">൷</div>
+	    
+	      <div class="cell">൸</div>
+	    
+	      <div class="cell">൹</div>
+	    
+	      <div class="cell">ൺ</div>
+	    
+	      <div class="cell">ൻ</div>
+	    
+	      <div class="cell">ർ</div>
+	    
+	      <div class="cell">ൽ</div>
+	    
+	      <div class="cell">ൾ</div>
+	    
+	      <div class="cell">ൿ</div>
+	    
+	      <div class="cell">᳚</div>
+	    
+	      <div class="cell">​</div>
+	    
+	      <div class="cell">‌</div>
+	    
+	      <div class="cell">‍</div>
+	    
+	      <div class="cell">‐</div>
+	    
+	      <div class="cell">–</div>
+	    
+	      <div class="cell">—</div>
+	    
+	      <div class="cell">‘</div>
+	    
+	      <div class="cell">’</div>
+	    
+	      <div class="cell">“</div>
+	    
+	      <div class="cell">”</div>
+	    
+	      <div class="cell">…</div>
+	    
+	      <div class="cell">₹</div>
+	    
+	      <div class="cell">−</div>
+	    
+	      <div class="cell">◌</div>
+	    
+	      <div class="cell">꠰</div>
+	    
+	      <div class="cell">꠱</div>
+	    
+	      <div class="cell">꠲</div>
+	    
+          </span>
+       </div>
+    
+
+    </div>
+</body>
+	<script>
+
+	POSITION = "old"
+	fontToggle = document.getElementById("font-toggle")
+	function switchFonts() {
+	  items = document.getElementsByClassName("box");
+	  console.log("Click from "+POSITION)
+	  
+	  if (POSITION === "old") {
+	  POSITION = "new"
+	  for (item of items) {
+	    item.firstElementChild.textContent = item.firstElementChild.textContent.replace("old", "new")
+            item.lastElementChild.className = item.lastElementChild.className.replace("old", "new")
+	    fontToggle.textContent = "new"
+	  }
+
+	  } else {
+	  POSITION = "old"
+	  for (item of items) {
+	    item.firstElementChild.textContent = item.firstElementChild.textContent.replace("new", "old")
+            item.lastElementChild.className = item.lastElementChild.className.replace("new", "old")
+	    fontToggle.textContent = "old"
+	  }
+	}
+	}
+	if (fontToggle !== null) {
+		fontToggle.addEventListener("click", switchFonts);
+	}
+
+    const divs = document.querySelectorAll('.node');
+    divs.forEach(el => el.addEventListener('click', event => {
+    var children = event.target.querySelectorAll(".node");
+    children.forEach(function(e) {
+        if (e.style.display === "none") {
+            e.style.display = "block";
+        } else {
+            e.style.display = "none";
+        }
+    })
+    }));
+    
+	
+
+    </script>
+</html>
