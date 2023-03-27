@@ -141,7 +141,7 @@ value = "This Font Software is licensed under the SIL Open Font License, Version
 },
 {
 name = versionString;
-value = "Version 2.103";
+value = "Version 2.104";
 },
 {
 name = Axes;
@@ -69197,5 +69197,5 @@ OV = "28";
 };
 };
 versionMajor = 2;
-versionMinor = 103;
+versionMinor = 104;
 }
