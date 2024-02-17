@@ -1,0 +1,3739 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+<head>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>GFR - Glyphs</title>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <style type="text/css">
+    
+
+        html{
+	  font-family: sans-serif;
+	}
+    @font-face {
+        font-family: "Adobe NotDef";
+        src: url(https://cdn.jsdelivr.net/gh/adobe-fonts/adobe-notdef/AND-Regular.ttf);
+    }
+	.box-title{
+	  width: 100%;
+	  font-size: 8pt;
+	  font-weight: 700;
+	  border-top: 1px solid black;
+	  padding-top: 5px;
+	  margin-bottom: 10pt;
+	  display: block;
+	}
+	.box{
+	  margin-bottom: 20pt;
+	  width: 100%;
+	  float: left;
+	}
+	.box-text{
+	}
+	
+	#nav{
+	  position: fixed;
+	  right: 20px;
+	  z-index: 100;
+	}
+	#font-toggle{
+	}
+	.nav-item{
+		display: block;
+		cursor: pointer;
+		-webkit-user-select: none; /* Safari */        
+		-moz-user-select: none; /* Firefox */
+			-ms-user-select: none; /* IE10+/Edge */
+		user-select: none; /* Standard */
+		text-align: center;
+		color: white;
+		background-color: black;
+		display: block;
+		font-size: 9pt;
+		padding: 5px;
+		margin: 2px;
+	}
+	.tooltip {
+	position: relative;
+	display: inline-block;
+	border-bottom: 1px dotted black;
+	}
+
+	.tooltip .tooltiptext {
+	font-family: sans-serif;
+	visibility: hidden;
+	width: 500px;
+	background-color: black;
+	color: #fff;
+	text-align: left;
+	font-size: 12pt;
+	line-height: 15pt;
+	border-radius: 6px;
+	padding: 5px 0;
+
+	/* Position the tooltip */
+	position: absolute;
+	z-index: 1;
+	}
+
+	.tooltip:hover .tooltiptext {
+	padding: 10px;
+	visibility: visible;
+	}
+	.tooltipleft {
+		float:left;
+		width: 249px;
+	}
+	.tooltipright {
+		float:right;
+		width:250px;
+	}
+
+			/* Stuff needed for the table differ */
+            body {
+                font-family: Helvetica;
+            }
+            .node {
+                font-family: courier;
+                cursor: pointer;
+                position: relative;
+                left: 30px;
+                padding: 5px;
+                display: block;
+                border: 1px dashed grey;
+            }
+            .header {
+            font-weight: bold;
+            }
+            .attr-before{
+                color: red;
+                cursor: text;
+            }
+            .attr-after{
+                color: green;
+                cursor: text;
+            }
+            .leaf {
+            font-weight: bold;
+            }
+            .old .cell .new {
+            	display:  none;
+            }
+            .new .cell .old {
+            	display:  none;
+            }
+            .both .cell .old {
+            	opacity: 0.75;
+            	color:  red;
+            }
+            .both .cell .new {
+            	opacity: 0.75;
+            	position: absolute;
+            	top: 0;
+            	color:  green;
+            }
+			.spacer {
+				display:block;
+				float:left;
+				width:100%;
+			}
+
+	  
+	    @font-face{
+    src: url(old-NotoSansMalayalam-ExtraCondensed.ttf);
+    font-family: "old font";
+    font-weight: 400;
+    
+    font-style: normal;
+}
+	  
+
+	  
+	    @font-face{
+    src: url(new-NotoSansMalayalamUI-ExtraCondensed.ttf);
+    font-family: "new font";
+    font-weight: 400;
+    
+    font-style: normal;
+}
+	  
+
+	  
+
+	  
+	    .old-wght-400{
+    font-family: "old font", "Adobe NotDef";
+    font-weight: 400;
+    
+    font-style: normal;
+    font-variation-settings: "wght" 400;
+}
+	  
+
+	  
+	    .new-wght-400{
+    font-family: "new font", "Adobe NotDef";
+    font-weight: 400;
+    
+    font-style: normal;
+    font-variation-settings: "wght" 400;
+}
+	  
+
+	  
+	
+.cell{
+  z-index: -100;
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 5pt;
+  margin: 5pt;
+  width: 50pt;
+  line-height: 48.0px;
+}
+.cell-word{
+  z-index: -100;
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 5pt;
+  margin: 5pt;
+  line-height: 48.0px;
+}
+.cat-strings .cell {
+  clear: both;
+  position: static;
+  float: none;
+  text-align: left;
+}
+.box-title {
+  clear: both;
+}
+
+
+	   #ot-panel {
+		max-height: 400px;
+		overflow-y: scroll;
+		background: white;
+		padding: 10px;
+		display: none;
+	   }
+    </style>
+</head>
+<body>
+    <div id="nav">
+		
+			<div class="nav-item" id="font-toggle">old</div>
+		
+			<div class="nav-item" id="ot-button">OT features</div>
+			<div id="ot-panel">
+			</div>
+		
+	</div>
+    <div id="content">
+	<h2>
+<b>Diffenator</b>
+</h2>
+	
+  
+    <div class="box">
+    <div class="box-title">Tables</div>
+      <div data-path="root" data-open="0" id="difftable"></div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+      <div class="box">
+        <div class="box-title">Modified encoded Glyphs</div>
+        <div class="box-text old-wght-400" style="font-size: 32pt">
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ൚<br>
+        <span class="tooltiptext">
+            name: MALAYALAM FRACTION THREE EIGHTIETHS<br>
+            unicode: U+0D5A<br>
+            changed pixels: 9.93%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ൱<br>
+        <span class="tooltiptext">
+            name: MALAYALAM NUMBER ONE HUNDRED<br>
+            unicode: U+0D71<br>
+            changed pixels: 9.85%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ശ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM LETTER SHA<br>
+            unicode: U+0D36<br>
+            changed pixels: 9.81%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ൙<br>
+        <span class="tooltiptext">
+            name: MALAYALAM FRACTION ONE FORTIETH<br>
+            unicode: U+0D59<br>
+            changed pixels: 9.79%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ൘<br>
+        <span class="tooltiptext">
+            name: MALAYALAM FRACTION ONE ONE-HUNDRED-AND-SIXTIETH<br>
+            unicode: U+0D58<br>
+            changed pixels: 9.79%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ൬<br>
+        <span class="tooltiptext">
+            name: MALAYALAM DIGIT SIX<br>
+            unicode: U+0D6C<br>
+            changed pixels: 9.73%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        !<br>
+        <span class="tooltiptext">
+            name: EXCLAMATION MARK<br>
+            unicode: U+0021<br>
+            changed pixels: 9.68%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ഠ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM LETTER TTHA<br>
+            unicode: U+0D20<br>
+            changed pixels: 9.54%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ണ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM LETTER NNA<br>
+            unicode: U+0D23<br>
+            changed pixels: 9.50%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ഗ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM LETTER GA<br>
+            unicode: U+0D17<br>
+            changed pixels: 9.48%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ൄ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM VOWEL SIGN VOCALIC RR<br>
+            unicode: U+0D44<br>
+            changed pixels: 9.48%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        }<br>
+        <span class="tooltiptext">
+            name: RIGHT CURLY BRACKET<br>
+            unicode: U+007D<br>
+            changed pixels: 9.45%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        {<br>
+        <span class="tooltiptext">
+            name: LEFT CURLY BRACKET<br>
+            unicode: U+007B<br>
+            changed pixels: 9.43%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ?<br>
+        <span class="tooltiptext">
+            name: QUESTION MARK<br>
+            unicode: U+003F<br>
+            changed pixels: 9.43%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ൞<br>
+        <span class="tooltiptext">
+            name: MALAYALAM FRACTION ONE FIFTH<br>
+            unicode: U+0D5E<br>
+            changed pixels: 9.42%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ൹<br>
+        <span class="tooltiptext">
+            name: MALAYALAM DATE MARK<br>
+            unicode: U+0D79<br>
+            changed pixels: 9.35%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ഝ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM LETTER JHA<br>
+            unicode: U+0D1D<br>
+            changed pixels: 9.35%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ഛ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM LETTER CHA<br>
+            unicode: U+0D1B<br>
+            changed pixels: 9.34%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ൲<br>
+        <span class="tooltiptext">
+            name: MALAYALAM NUMBER ONE THOUSAND<br>
+            unicode: U+0D72<br>
+            changed pixels: 9.27%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        7<br>
+        <span class="tooltiptext">
+            name: DIGIT SEVEN<br>
+            unicode: U+0037<br>
+            changed pixels: 9.16%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ൦<br>
+        <span class="tooltiptext">
+            name: MALAYALAM DIGIT ZERO<br>
+            unicode: U+0D66<br>
+            changed pixels: 9.15%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ബ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM LETTER BA<br>
+            unicode: U+0D2C<br>
+            changed pixels: 9.13%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        4<br>
+        <span class="tooltiptext">
+            name: DIGIT FOUR<br>
+            unicode: U+0034<br>
+            changed pixels: 9.04%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ഘ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM LETTER GHA<br>
+            unicode: U+0D18<br>
+            changed pixels: 8.99%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ൟ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM LETTER ARCHAIC II<br>
+            unicode: U+0D5F<br>
+            changed pixels: 8.97%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ൈ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM VOWEL SIGN AI<br>
+            unicode: U+0D48<br>
+            changed pixels: 8.97%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ല<br>
+        <span class="tooltiptext">
+            name: MALAYALAM LETTER LA<br>
+            unicode: U+0D32<br>
+            changed pixels: 8.90%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ൃ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM VOWEL SIGN VOCALIC R<br>
+            unicode: U+0D43<br>
+            changed pixels: 8.87%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ോ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM VOWEL SIGN OO<br>
+            unicode: U+0D4B<br>
+            changed pixels: 8.83%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ൷<br>
+        <span class="tooltiptext">
+            name: MALAYALAM FRACTION ONE EIGHTH<br>
+            unicode: U+0D77<br>
+            changed pixels: 8.77%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ഖ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM LETTER KHA<br>
+            unicode: U+0D16<br>
+            changed pixels: 8.63%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ഢ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM LETTER DDHA<br>
+            unicode: U+0D22<br>
+            changed pixels: 8.59%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ഷ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM LETTER SSA<br>
+            unicode: U+0D37<br>
+            changed pixels: 8.54%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        റ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM LETTER RRA<br>
+            unicode: U+0D31<br>
+            changed pixels: 8.52%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        മ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM LETTER MA<br>
+            unicode: U+0D2E<br>
+            changed pixels: 8.45%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ×<br>
+        <span class="tooltiptext">
+            name: MULTIPLICATION SIGN<br>
+            unicode: U+00D7<br>
+            changed pixels: 8.43%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ൊ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM VOWEL SIGN O<br>
+            unicode: U+0D4A<br>
+            changed pixels: 8.34%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        <<br>
+        <span class="tooltiptext">
+            name: LESS-THAN SIGN<br>
+            unicode: U+003C<br>
+            changed pixels: 8.27%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ><br>
+        <span class="tooltiptext">
+            name: GREATER-THAN SIGN<br>
+            unicode: U+003E<br>
+            changed pixels: 8.27%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ൶<br>
+        <span class="tooltiptext">
+            name: MALAYALAM FRACTION ONE SIXTEENTH<br>
+            unicode: U+0D76<br>
+            changed pixels: 8.24%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        :<br>
+        <span class="tooltiptext">
+            name: COLON<br>
+            unicode: U+003A<br>
+            changed pixels: 8.18%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ൌ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM VOWEL SIGN AU<br>
+            unicode: U+0D4C<br>
+            changed pixels: 8.13%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ൳<br>
+        <span class="tooltiptext">
+            name: MALAYALAM FRACTION ONE QUARTER<br>
+            unicode: U+0D73<br>
+            changed pixels: 8.09%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ന<br>
+        <span class="tooltiptext">
+            name: MALAYALAM LETTER NA<br>
+            unicode: U+0D28<br>
+            changed pixels: 8.08%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        േ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM VOWEL SIGN EE<br>
+            unicode: U+0D47<br>
+            changed pixels: 8.08%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        =<br>
+        <span class="tooltiptext">
+            name: EQUALS SIGN<br>
+            unicode: U+003D<br>
+            changed pixels: 8.08%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ൧<br>
+        <span class="tooltiptext">
+            name: MALAYALAM DIGIT ONE<br>
+            unicode: U+0D67<br>
+            changed pixels: 8.03%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ഹ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM LETTER HA<br>
+            unicode: U+0D39<br>
+            changed pixels: 8.01%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ÷<br>
+        <span class="tooltiptext">
+            name: DIVISION SIGN<br>
+            unicode: U+00F7<br>
+            changed pixels: 8.00%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ധ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM LETTER DHA<br>
+            unicode: U+0D27<br>
+            changed pixels: 7.98%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        സ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM LETTER SA<br>
+            unicode: U+0D38<br>
+            changed pixels: 7.92%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ൨<br>
+        <span class="tooltiptext">
+            name: MALAYALAM DIGIT TWO<br>
+            unicode: U+0D68<br>
+            changed pixels: 7.92%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ൂ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM VOWEL SIGN UU<br>
+            unicode: U+0D42<br>
+            changed pixels: 7.83%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ഀ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM SIGN COMBINING ANUSVARA ABOVE<br>
+            unicode: U+0D00<br>
+            changed pixels: 7.83%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ഁ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM SIGN CANDRABINDU<br>
+            unicode: U+0D01<br>
+            changed pixels: 7.78%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ൸<br>
+        <span class="tooltiptext">
+            name: MALAYALAM FRACTION THREE SIXTEENTHS<br>
+            unicode: U+0D78<br>
+            changed pixels: 7.77%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ഡ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM LETTER DDA<br>
+            unicode: U+0D21<br>
+            changed pixels: 7.70%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ു<br>
+        <span class="tooltiptext">
+            name: MALAYALAM VOWEL SIGN U<br>
+            unicode: U+0D41<br>
+            changed pixels: 7.69%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ൜<br>
+        <span class="tooltiptext">
+            name: MALAYALAM FRACTION ONE TENTH<br>
+            unicode: U+0D5C<br>
+            changed pixels: 7.68%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        വ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM LETTER VA<br>
+            unicode: U+0D35<br>
+            changed pixels: 7.65%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ഺ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM LETTER TTTA<br>
+            unicode: U+0D3A<br>
+            changed pixels: 7.64%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        െ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM VOWEL SIGN E<br>
+            unicode: U+0D46<br>
+            changed pixels: 7.64%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ൩<br>
+        <span class="tooltiptext">
+            name: MALAYALAM DIGIT THREE<br>
+            unicode: U+0D69<br>
+            changed pixels: 7.59%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ൛<br>
+        <span class="tooltiptext">
+            name: MALAYALAM FRACTION ONE TWENTIETH<br>
+            unicode: U+0D5B<br>
+            changed pixels: 7.57%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ീ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM VOWEL SIGN II<br>
+            unicode: U+0D40<br>
+            changed pixels: 7.55%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ൗ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM AU LENGTH MARK<br>
+            unicode: U+0D57<br>
+            changed pixels: 7.32%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ഼<br>
+        <span class="tooltiptext">
+            name: MALAYALAM SIGN CIRCULAR VIRAMA<br>
+            unicode: U+0D3C<br>
+            changed pixels: 7.11%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        *<br>
+        <span class="tooltiptext">
+            name: ASTERISK<br>
+            unicode: U+002A<br>
+            changed pixels: 7.06%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        '<br>
+        <span class="tooltiptext">
+            name: APOSTROPHE<br>
+            unicode: U+0027<br>
+            changed pixels: 7.03%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ൝<br>
+        <span class="tooltiptext">
+            name: MALAYALAM FRACTION THREE TWENTIETHS<br>
+            unicode: U+0D5D<br>
+            changed pixels: 7.03%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ാ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM VOWEL SIGN AA<br>
+            unicode: U+0D3E<br>
+            changed pixels: 7.02%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ഫ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM LETTER PHA<br>
+            unicode: U+0D2B<br>
+            changed pixels: 6.99%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ഄ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM LETTER VEDIC ANUSVARA<br>
+            unicode: U+0D04<br>
+            changed pixels: 6.96%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ്<br>
+        <span class="tooltiptext">
+            name: MALAYALAM SIGN VIRAMA<br>
+            unicode: U+0D4D<br>
+            changed pixels: 6.95%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ഃ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM SIGN VISARGA<br>
+            unicode: U+0D03<br>
+            changed pixels: 6.94%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ]<br>
+        <span class="tooltiptext">
+            name: RIGHT SQUARE BRACKET<br>
+            unicode: U+005D<br>
+            changed pixels: 6.89%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ॑<br>
+        <span class="tooltiptext">
+            name: DEVANAGARI STRESS SIGN UDATTA<br>
+            unicode: U+0951<br>
+            changed pixels: 6.84%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ൰<br>
+        <span class="tooltiptext">
+            name: MALAYALAM NUMBER TEN<br>
+            unicode: U+0D70<br>
+            changed pixels: 6.68%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ി<br>
+        <span class="tooltiptext">
+            name: MALAYALAM VOWEL SIGN I<br>
+            unicode: U+0D3F<br>
+            changed pixels: 6.54%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ”<br>
+        <span class="tooltiptext">
+            name: RIGHT DOUBLE QUOTATION MARK<br>
+            unicode: U+201D<br>
+            changed pixels: 6.45%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ച<br>
+        <span class="tooltiptext">
+            name: MALAYALAM LETTER CA<br>
+            unicode: U+0D1A<br>
+            changed pixels: 6.25%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ൎ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM LETTER DOT REPH<br>
+            unicode: U+0D4E<br>
+            changed pixels: 6.13%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ’<br>
+        <span class="tooltiptext">
+            name: RIGHT SINGLE QUOTATION MARK<br>
+            unicode: U+2019<br>
+            changed pixels: 5.96%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ,<br>
+        <span class="tooltiptext">
+            name: COMMA<br>
+            unicode: U+002C<br>
+            changed pixels: 5.89%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        പ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM LETTER PA<br>
+            unicode: U+0D2A<br>
+            changed pixels: 5.84%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ഽ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM SIGN AVAGRAHA<br>
+            unicode: U+0D3D<br>
+            changed pixels: 5.82%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        “<br>
+        <span class="tooltiptext">
+            name: LEFT DOUBLE QUOTATION MARK<br>
+            unicode: U+201C<br>
+            changed pixels: 5.80%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ം<br>
+        <span class="tooltiptext">
+            name: MALAYALAM SIGN ANUSVARA<br>
+            unicode: U+0D02<br>
+            changed pixels: 5.74%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ഥ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM LETTER THA<br>
+            unicode: U+0D25<br>
+            changed pixels: 5.73%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        +<br>
+        <span class="tooltiptext">
+            name: PLUS SIGN<br>
+            unicode: U+002B<br>
+            changed pixels: 5.71%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ^<br>
+        <span class="tooltiptext">
+            name: CIRCUMFLEX ACCENT<br>
+            unicode: U+005E<br>
+            changed pixels: 5.56%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        "<br>
+        <span class="tooltiptext">
+            name: QUOTATION MARK<br>
+            unicode: U+0022<br>
+            changed pixels: 5.45%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ‘<br>
+        <span class="tooltiptext">
+            name: LEFT SINGLE QUOTATION MARK<br>
+            unicode: U+2018<br>
+            changed pixels: 5.36%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        [<br>
+        <span class="tooltiptext">
+            name: LEFT SQUARE BRACKET<br>
+            unicode: U+005B<br>
+            changed pixels: 5.36%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ഻<br>
+        <span class="tooltiptext">
+            name: MALAYALAM SIGN VERTICAL BAR VIRAMA<br>
+            unicode: U+0D3B<br>
+            changed pixels: 5.28%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        1<br>
+        <span class="tooltiptext">
+            name: DIGIT ONE<br>
+            unicode: U+0031<br>
+            changed pixels: 5.02%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ̣<br>
+        <span class="tooltiptext">
+            name: COMBINING DOT BELOW<br>
+            unicode: U+0323<br>
+            changed pixels: 4.57%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        —<br>
+        <span class="tooltiptext">
+            name: EM DASH<br>
+            unicode: U+2014<br>
+            changed pixels: 4.57%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ̇<br>
+        <span class="tooltiptext">
+            name: COMBINING DOT ABOVE<br>
+            unicode: U+0307<br>
+            changed pixels: 4.57%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ॒<br>
+        <span class="tooltiptext">
+            name: DEVANAGARI STRESS SIGN ANUDATTA<br>
+            unicode: U+0952<br>
+            changed pixels: 4.57%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        −<br>
+        <span class="tooltiptext">
+            name: MINUS SIGN<br>
+            unicode: U+2212<br>
+            changed pixels: 4.57%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        –<br>
+        <span class="tooltiptext">
+            name: EN DASH<br>
+            unicode: U+2013<br>
+            changed pixels: 4.56%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        -<br>
+        <span class="tooltiptext">
+            name: HYPHEN-MINUS<br>
+            unicode: U+002D<br>
+            changed pixels: 4.53%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ‐<br>
+        <span class="tooltiptext">
+            name: HYPHEN<br>
+            unicode: U+2010<br>
+            changed pixels: 4.53%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ◌<br>
+        <span class="tooltiptext">
+            name: DOTTED CIRCLE<br>
+            unicode: U+25CC<br>
+            changed pixels: 4.45%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ~<br>
+        <span class="tooltiptext">
+            name: TILDE<br>
+            unicode: U+007E<br>
+            changed pixels: 4.41%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        _<br>
+        <span class="tooltiptext">
+            name: LOW LINE<br>
+            unicode: U+005F<br>
+            changed pixels: 4.08%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ᳚<br>
+        <span class="tooltiptext">
+            name: VEDIC TONE DOUBLE SVARITA<br>
+            unicode: U+1CDA<br>
+            changed pixels: 3.94%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ।<br>
+        <span class="tooltiptext">
+            name: DEVANAGARI DANDA<br>
+            unicode: U+0964<br>
+            changed pixels: 3.65%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        .<br>
+        <span class="tooltiptext">
+            name: FULL STOP<br>
+            unicode: U+002E<br>
+            changed pixels: 3.50%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        |<br>
+        <span class="tooltiptext">
+            name: VERTICAL LINE<br>
+            unicode: U+007C<br>
+            changed pixels: 2.94%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        …<br>
+        <span class="tooltiptext">
+            name: HORIZONTAL ELLIPSIS<br>
+            unicode: U+2026<br>
+            changed pixels: 2.87%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ꠰<br>
+        <span class="tooltiptext">
+            name: NORTH INDIC FRACTION ONE QUARTER<br>
+            unicode: U+A830<br>
+            changed pixels: 2.75%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ꠱<br>
+        <span class="tooltiptext">
+            name: NORTH INDIC FRACTION ONE HALF<br>
+            unicode: U+A831<br>
+            changed pixels: 2.74%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ꠲<br>
+        <span class="tooltiptext">
+            name: NORTH INDIC FRACTION THREE QUARTERS<br>
+            unicode: U+A832<br>
+            changed pixels: 2.47%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ॥<br>
+        <span class="tooltiptext">
+            name: DEVANAGARI DOUBLE DANDA<br>
+            unicode: U+0965<br>
+            changed pixels: 2.35%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ൠ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM LETTER VOCALIC RR<br>
+            unicode: U+0D60<br>
+            changed pixels: 16.89%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ഋ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM LETTER VOCALIC R<br>
+            unicode: U+0D0B<br>
+            changed pixels: 16.11%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ള<br>
+        <span class="tooltiptext">
+            name: MALAYALAM LETTER LLA<br>
+            unicode: U+0D33<br>
+            changed pixels: 16.03%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ഉ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM LETTER U<br>
+            unicode: U+0D09<br>
+            changed pixels: 15.82%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ൫<br>
+        <span class="tooltiptext">
+            name: MALAYALAM DIGIT FIVE<br>
+            unicode: U+0D6B<br>
+            changed pixels: 14.99%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        8<br>
+        <span class="tooltiptext">
+            name: DIGIT EIGHT<br>
+            unicode: U+0038<br>
+            changed pixels: 14.87%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ൖ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM LETTER CHILLU LLL<br>
+            unicode: U+0D56<br>
+            changed pixels: 14.58%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ഇ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM LETTER I<br>
+            unicode: U+0D07<br>
+            changed pixels: 14.10%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ൭<br>
+        <span class="tooltiptext">
+            name: MALAYALAM DIGIT SEVEN<br>
+            unicode: U+0D6D<br>
+            changed pixels: 13.41%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ൽ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM LETTER CHILLU L<br>
+            unicode: U+0D7D<br>
+            changed pixels: 13.19%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ജ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM LETTER JA<br>
+            unicode: U+0D1C<br>
+            changed pixels: 13.10%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        9<br>
+        <span class="tooltiptext">
+            name: DIGIT NINE<br>
+            unicode: U+0039<br>
+            changed pixels: 13.05%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ഈ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM LETTER II<br>
+            unicode: U+0D08<br>
+            changed pixels: 12.86%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ർ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM LETTER CHILLU RR<br>
+            unicode: U+0D7C<br>
+            changed pixels: 12.70%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ഊ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM LETTER UU<br>
+            unicode: U+0D0A<br>
+            changed pixels: 12.68%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        3<br>
+        <span class="tooltiptext">
+            name: DIGIT THREE<br>
+            unicode: U+0033<br>
+            changed pixels: 12.60%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ൡ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM LETTER VOCALIC LL<br>
+            unicode: U+0D61<br>
+            changed pixels: 12.49%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ₹<br>
+        <span class="tooltiptext">
+            name: INDIAN RUPEE SIGN<br>
+            unicode: U+20B9<br>
+            changed pixels: 12.48%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        (<br>
+        <span class="tooltiptext">
+            name: LEFT PARENTHESIS<br>
+            unicode: U+0028<br>
+            changed pixels: 12.47%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ൏<br>
+        <span class="tooltiptext">
+            name: MALAYALAM SIGN PARA<br>
+            unicode: U+0D4F<br>
+            changed pixels: 12.46%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        6<br>
+        <span class="tooltiptext">
+            name: DIGIT SIX<br>
+            unicode: U+0036<br>
+            changed pixels: 12.41%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ൢ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM VOWEL SIGN VOCALIC L<br>
+            unicode: U+0D62<br>
+            changed pixels: 12.40%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ൿ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM LETTER CHILLU K<br>
+            unicode: U+0D7F<br>
+            changed pixels: 12.36%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ആ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM LETTER AA<br>
+            unicode: U+0D06<br>
+            changed pixels: 12.29%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        2<br>
+        <span class="tooltiptext">
+            name: DIGIT TWO<br>
+            unicode: U+0032<br>
+            changed pixels: 12.23%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ട<br>
+        <span class="tooltiptext">
+            name: MALAYALAM LETTER TTA<br>
+            unicode: U+0D1F<br>
+            changed pixels: 12.20%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ൕ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM LETTER CHILLU Y<br>
+            unicode: U+0D55<br>
+            changed pixels: 12.19%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        #<br>
+        <span class="tooltiptext">
+            name: NUMBER SIGN<br>
+            unicode: U+0023<br>
+            changed pixels: 12.09%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        അ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM LETTER A<br>
+            unicode: U+0D05<br>
+            changed pixels: 11.94%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ഒ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM LETTER O<br>
+            unicode: U+0D12<br>
+            changed pixels: 11.70%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ൣ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM VOWEL SIGN VOCALIC LL<br>
+            unicode: U+0D63<br>
+            changed pixels: 11.59%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        %<br>
+        <span class="tooltiptext">
+            name: PERCENT SIGN<br>
+            unicode: U+0025<br>
+            changed pixels: 11.53%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        )<br>
+        <span class="tooltiptext">
+            name: RIGHT PARENTHESIS<br>
+            unicode: U+0029<br>
+            changed pixels: 11.48%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ൔ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM LETTER CHILLU M<br>
+            unicode: U+0D54<br>
+            changed pixels: 11.45%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ത<br>
+        <span class="tooltiptext">
+            name: MALAYALAM LETTER TA<br>
+            unicode: U+0D24<br>
+            changed pixels: 11.31%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ഔ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM LETTER AU<br>
+            unicode: U+0D14<br>
+            changed pixels: 11.30%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ൪<br>
+        <span class="tooltiptext">
+            name: MALAYALAM DIGIT FOUR<br>
+            unicode: U+0D6A<br>
+            changed pixels: 11.26%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ൾ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM LETTER CHILLU LL<br>
+            unicode: U+0D7E<br>
+            changed pixels: 11.25%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ൵<br>
+        <span class="tooltiptext">
+            name: MALAYALAM FRACTION THREE QUARTERS<br>
+            unicode: U+0D75<br>
+            changed pixels: 11.25%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        5<br>
+        <span class="tooltiptext">
+            name: DIGIT FIVE<br>
+            unicode: U+0035<br>
+            changed pixels: 11.25%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ഭ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM LETTER BHA<br>
+            unicode: U+0D2D<br>
+            changed pixels: 11.20%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ങ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM LETTER NGA<br>
+            unicode: U+0D19<br>
+            changed pixels: 11.08%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ഴ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM LETTER LLLA<br>
+            unicode: U+0D34<br>
+            changed pixels: 11.01%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ഏ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM LETTER EE<br>
+            unicode: U+0D0F<br>
+            changed pixels: 10.97%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ഓ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM LETTER OO<br>
+            unicode: U+0D13<br>
+            changed pixels: 10.88%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ൻ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM LETTER CHILLU N<br>
+            unicode: U+0D7B<br>
+            changed pixels: 10.87%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ഞ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM LETTER NYA<br>
+            unicode: U+0D1E<br>
+            changed pixels: 10.85%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ൺ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM LETTER CHILLU NN<br>
+            unicode: U+0D7A<br>
+            changed pixels: 10.72%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        \<br>
+        <span class="tooltiptext">
+            name: REVERSE SOLIDUS<br>
+            unicode: U+005C<br>
+            changed pixels: 10.68%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ;<br>
+        <span class="tooltiptext">
+            name: SEMICOLON<br>
+            unicode: U+003B<br>
+            changed pixels: 10.61%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ഌ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM LETTER VOCALIC L<br>
+            unicode: U+0D0C<br>
+            changed pixels: 10.56%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ഩ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM LETTER NNNA<br>
+            unicode: U+0D29<br>
+            changed pixels: 10.51%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        0<br>
+        <span class="tooltiptext">
+            name: DIGIT ZERO<br>
+            unicode: U+0030<br>
+            changed pixels: 10.45%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ര<br>
+        <span class="tooltiptext">
+            name: MALAYALAM LETTER RA<br>
+            unicode: U+0D30<br>
+            changed pixels: 10.39%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        /<br>
+        <span class="tooltiptext">
+            name: SOLIDUS<br>
+            unicode: U+002F<br>
+            changed pixels: 10.32%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        യ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM LETTER YA<br>
+            unicode: U+0D2F<br>
+            changed pixels: 10.31%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ൮<br>
+        <span class="tooltiptext">
+            name: MALAYALAM DIGIT EIGHT<br>
+            unicode: U+0D6E<br>
+            changed pixels: 10.30%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ഐ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM LETTER AI<br>
+            unicode: U+0D10<br>
+            changed pixels: 10.25%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ൴<br>
+        <span class="tooltiptext">
+            name: MALAYALAM FRACTION ONE HALF<br>
+            unicode: U+0D74<br>
+            changed pixels: 10.23%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ൯<br>
+        <span class="tooltiptext">
+            name: MALAYALAM DIGIT NINE<br>
+            unicode: U+0D6F<br>
+            changed pixels: 10.19%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ക<br>
+        <span class="tooltiptext">
+            name: MALAYALAM LETTER KA<br>
+            unicode: U+0D15<br>
+            changed pixels: 10.07%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ദ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM LETTER DA<br>
+            unicode: U+0D26<br>
+            changed pixels: 10.01%
+        </span>
+    </div>
+</div>
+            </div>
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        എ<br>
+        <span class="tooltiptext">
+            name: MALAYALAM LETTER E<br>
+            unicode: U+0D0E<br>
+            changed pixels: 10.01%
+        </span>
+    </div>
+</div>
+            </div>
+          
+          </div>
+      </div>
+    
+
+    
+      <div class="box">
+        <div class="box-title">Misshapen Common words</div>
+        <div class="box-text old-wght-400" style="font-size: 32pt">
+          
+              <div class="cell-word" style="font-feature-settings:  'zero' 1 " lang="None">
+    <div class="tooltip">
+        0<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=290, pos=(0, 0, 429, 0)<br>
+            feats=('zero',)
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=290, pos=(0, 0, 429, 0)<br>
+            feats=('zero',)
+        </div>
+        <div>
+            changed pixels: 10.45%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings:  'dnom' 1 " lang="None">
+    <div class="tooltip">
+        0123456789<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=290, pos=(0, 0, 429, 0)<br>gid=291, pos=(0, 0, 429, 0)<br>gid=292, pos=(0, 0, 429, 0)<br>gid=293, pos=(0, 0, 429, 0)<br>gid=294, pos=(0, 0, 429, 0)<br>gid=295, pos=(0, 0, 429, 0)<br>gid=296, pos=(0, 0, 429, 0)<br>gid=297, pos=(0, 0, 429, 0)<br>gid=298, pos=(0, 0, 429, 0)<br>gid=299, pos=(0, 0, 429, 0)<br>
+            feats=('dnom',)
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=290, pos=(0, 0, 429, 0)<br>gid=291, pos=(0, 0, 429, 0)<br>gid=292, pos=(0, 0, 429, 0)<br>gid=293, pos=(0, 0, 429, 0)<br>gid=294, pos=(0, 0, 429, 0)<br>gid=295, pos=(0, 0, 429, 0)<br>gid=296, pos=(0, 0, 429, 0)<br>gid=297, pos=(0, 0, 429, 0)<br>gid=298, pos=(0, 0, 429, 0)<br>gid=299, pos=(0, 0, 429, 0)<br>
+            feats=('dnom',)
+        </div>
+        <div>
+            changed pixels: 10.38%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings:  'frac' 1 " lang="None">
+    <div class="tooltip">
+        1/234<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=291, pos=(0, 0, 429, 0)<br>gid=289, pos=(0, 0, 382, 0)<br>gid=292, pos=(0, 0, 429, 0)<br>gid=293, pos=(0, 0, 429, 0)<br>gid=294, pos=(0, 0, 429, 0)<br>
+            feats=('frac',)
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=291, pos=(0, 0, 429, 0)<br>gid=289, pos=(0, 0, 382, 0)<br>gid=292, pos=(0, 0, 429, 0)<br>gid=293, pos=(0, 0, 429, 0)<br>gid=294, pos=(0, 0, 429, 0)<br>
+            feats=('frac',)
+        </div>
+        <div>
+            changed pixels: 8.95%
+        </div>
+        </span>
+    </div>
+</div>
+          
+        </div>
+      </div>
+    
+      <div class="box">
+        <div class="box-title">Misshapen Malayalam words</div>
+        <div class="box-text old-wght-400" style="font-size: 32pt">
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ഇതെഴുതുക<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=11, pos=(0, 0, 740, 0)<br>gid=38, pos=(0, 0, 777, 0)<br>gid=71, pos=(0, 0, 0, 0)<br>gid=54, pos=(0, 0, 513, 0)<br>gid=67, pos=(0, 0, 0, 0)<br>gid=38, pos=(0, 0, 777, 0)<br>gid=67, pos=(0, 0, 0, 0)<br>gid=23, pos=(0, 0, 795, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=11, pos=(0, 0, 740, 0)<br>gid=38, pos=(0, 0, 777, 0)<br>gid=71, pos=(0, 0, 0, 0)<br>gid=54, pos=(0, 0, 513, 0)<br>gid=67, pos=(0, 0, 0, 0)<br>gid=38, pos=(0, 0, 777, 0)<br>gid=67, pos=(0, 0, 0, 0)<br>gid=23, pos=(0, 0, 795, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 12.93%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ഈ<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=12, pos=(0, 0, 1326, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=12, pos=(0, 0, 1326, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 12.86%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        തട്ടിക്കളയുക<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=38, pos=(0, 0, 777, 0)<br>gid=33, pos=(0, 0, 426, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=33, pos=(0, 0, 426, 0)<br>gid=65, pos=(0, 0, 0, 0)<br>gid=23, pos=(0, 0, 795, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=23, pos=(0, 0, 795, 0)<br>gid=53, pos=(0, 0, 557, 0)<br>gid=49, pos=(0, 0, 800, 0)<br>gid=67, pos=(0, 0, 0, 0)<br>gid=23, pos=(0, 0, 795, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=38, pos=(0, 0, 777, 0)<br>gid=33, pos=(0, 0, 426, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=33, pos=(0, 0, 426, 0)<br>gid=65, pos=(0, 0, 0, 0)<br>gid=23, pos=(0, 0, 795, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=23, pos=(0, 0, 795, 0)<br>gid=53, pos=(0, 0, 557, 0)<br>gid=49, pos=(0, 0, 800, 0)<br>gid=67, pos=(0, 0, 0, 0)<br>gid=23, pos=(0, 0, 795, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 12.80%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        സ്ത്രീകള്‍<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=58, pos=(0, 0, 926, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=38, pos=(0, 0, 777, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=50, pos=(0, 0, 568, 0)<br>gid=66, pos=(0, 0, 0, 0)<br>gid=23, pos=(0, 0, 795, 0)<br>gid=53, pos=(0, 0, 557, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=3, pos=(0, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=58, pos=(0, 0, 926, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=38, pos=(0, 0, 777, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=50, pos=(0, 0, 568, 0)<br>gid=66, pos=(0, 0, 0, 0)<br>gid=23, pos=(0, 0, 795, 0)<br>gid=53, pos=(0, 0, 557, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=3, pos=(0, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 12.56%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ഉണ്ടായിരിക്കട്ടെ<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=13, pos=(0, 0, 529, 0)<br>gid=37, pos=(0, 0, 1030, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=33, pos=(0, 0, 426, 0)<br>gid=64, pos=(0, 0, 0, 0)<br>gid=49, pos=(0, 0, 800, 0)<br>gid=65, pos=(0, 0, 0, 0)<br>gid=50, pos=(0, 0, 568, 0)<br>gid=65, pos=(0, 0, 0, 0)<br>gid=23, pos=(0, 0, 795, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=23, pos=(0, 0, 795, 0)<br>gid=33, pos=(0, 0, 426, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=33, pos=(0, 0, 426, 0)<br>gid=71, pos=(0, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=13, pos=(0, 0, 529, 0)<br>gid=37, pos=(0, 0, 1030, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=33, pos=(0, 0, 426, 0)<br>gid=64, pos=(0, 0, 0, 0)<br>gid=49, pos=(0, 0, 800, 0)<br>gid=65, pos=(0, 0, 0, 0)<br>gid=50, pos=(0, 0, 568, 0)<br>gid=65, pos=(0, 0, 0, 0)<br>gid=23, pos=(0, 0, 795, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=23, pos=(0, 0, 795, 0)<br>gid=33, pos=(0, 0, 426, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=33, pos=(0, 0, 426, 0)<br>gid=71, pos=(0, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 12.23%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ഒരുത്തന്‍<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=20, pos=(0, 0, 590, 0)<br>gid=50, pos=(0, 0, 568, 0)<br>gid=67, pos=(0, 0, 0, 0)<br>gid=38, pos=(0, 0, 777, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=38, pos=(0, 0, 777, 0)<br>gid=42, pos=(0, 0, 693, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=3, pos=(0, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=20, pos=(0, 0, 590, 0)<br>gid=50, pos=(0, 0, 568, 0)<br>gid=67, pos=(0, 0, 0, 0)<br>gid=38, pos=(0, 0, 777, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=38, pos=(0, 0, 777, 0)<br>gid=42, pos=(0, 0, 693, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=3, pos=(0, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 12.13%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ഓര്‍ത്തു<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=21, pos=(0, 0, 993, 0)<br>gid=50, pos=(0, 0, 568, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=3, pos=(0, 0, 0, 0)<br>gid=38, pos=(0, 0, 777, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=38, pos=(0, 0, 777, 0)<br>gid=67, pos=(0, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=21, pos=(0, 0, 993, 0)<br>gid=50, pos=(0, 0, 568, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=3, pos=(0, 0, 0, 0)<br>gid=38, pos=(0, 0, 777, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=38, pos=(0, 0, 777, 0)<br>gid=67, pos=(0, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 12.11%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ആഘോഷങ്ങള്‍<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=10, pos=(0, 0, 1239, 0)<br>gid=26, pos=(0, 0, 1009, 0)<br>gid=75, pos=(0, 0, 0, 0)<br>gid=57, pos=(0, 0, 884, 0)<br>gid=27, pos=(0, 0, 808, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=27, pos=(0, 0, 808, 0)<br>gid=53, pos=(0, 0, 557, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=3, pos=(0, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=10, pos=(0, 0, 1239, 0)<br>gid=26, pos=(0, 0, 1009, 0)<br>gid=75, pos=(0, 0, 0, 0)<br>gid=57, pos=(0, 0, 884, 0)<br>gid=27, pos=(0, 0, 808, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=27, pos=(0, 0, 808, 0)<br>gid=53, pos=(0, 0, 557, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=3, pos=(0, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 11.87%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ദുഃഖിക്കുക<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=40, pos=(0, 0, 495, 0)<br>gid=67, pos=(0, 0, 0, 0)<br>gid=7, pos=(0, 0, 0, 0)<br>gid=24, pos=(0, 0, 765, 0)<br>gid=65, pos=(0, 0, 0, 0)<br>gid=23, pos=(0, 0, 795, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=23, pos=(0, 0, 795, 0)<br>gid=67, pos=(0, 0, 0, 0)<br>gid=23, pos=(0, 0, 795, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=40, pos=(0, 0, 495, 0)<br>gid=67, pos=(0, 0, 0, 0)<br>gid=7, pos=(0, 0, 0, 0)<br>gid=24, pos=(0, 0, 765, 0)<br>gid=65, pos=(0, 0, 0, 0)<br>gid=23, pos=(0, 0, 795, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=23, pos=(0, 0, 795, 0)<br>gid=67, pos=(0, 0, 0, 0)<br>gid=23, pos=(0, 0, 795, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 11.81%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        രാജ്യം<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=50, pos=(0, 0, 568, 0)<br>gid=64, pos=(0, 0, 0, 0)<br>gid=30, pos=(0, 0, 712, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=49, pos=(0, 0, 800, 0)<br>gid=6, pos=(0, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=50, pos=(0, 0, 568, 0)<br>gid=64, pos=(0, 0, 0, 0)<br>gid=30, pos=(0, 0, 712, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=49, pos=(0, 0, 800, 0)<br>gid=6, pos=(0, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 11.64%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        സദൂക്യര്‍<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=58, pos=(0, 0, 926, 0)<br>gid=40, pos=(0, 0, 495, 0)<br>gid=68, pos=(0, 0, 0, 0)<br>gid=23, pos=(0, 0, 795, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=49, pos=(0, 0, 800, 0)<br>gid=50, pos=(0, 0, 568, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=3, pos=(0, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=58, pos=(0, 0, 926, 0)<br>gid=40, pos=(0, 0, 495, 0)<br>gid=68, pos=(0, 0, 0, 0)<br>gid=23, pos=(0, 0, 795, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=49, pos=(0, 0, 800, 0)<br>gid=50, pos=(0, 0, 568, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=3, pos=(0, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 11.51%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        കൃപകൊണ്ട്<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=23, pos=(0, 0, 795, 0)<br>gid=69, pos=(0, 0, 0, 0)<br>gid=44, pos=(0, 0, 682, 0)<br>gid=23, pos=(0, 0, 795, 0)<br>gid=74, pos=(0, 0, 0, 0)<br>gid=37, pos=(0, 0, 1030, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=33, pos=(0, 0, 426, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=23, pos=(0, 0, 795, 0)<br>gid=69, pos=(0, 0, 0, 0)<br>gid=44, pos=(0, 0, 682, 0)<br>gid=23, pos=(0, 0, 795, 0)<br>gid=74, pos=(0, 0, 0, 0)<br>gid=37, pos=(0, 0, 1030, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=33, pos=(0, 0, 426, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 11.35%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ഞാനറിഞ്ഞു<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=32, pos=(0, 0, 1100, 0)<br>gid=64, pos=(0, 0, 0, 0)<br>gid=42, pos=(0, 0, 693, 0)<br>gid=51, pos=(0, 0, 519, 0)<br>gid=65, pos=(0, 0, 0, 0)<br>gid=32, pos=(0, 0, 1100, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=32, pos=(0, 0, 1100, 0)<br>gid=67, pos=(0, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=32, pos=(0, 0, 1100, 0)<br>gid=64, pos=(0, 0, 0, 0)<br>gid=42, pos=(0, 0, 693, 0)<br>gid=51, pos=(0, 0, 519, 0)<br>gid=65, pos=(0, 0, 0, 0)<br>gid=32, pos=(0, 0, 1100, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=32, pos=(0, 0, 1100, 0)<br>gid=67, pos=(0, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 11.33%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ആക്രോശിച്ചു<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=10, pos=(0, 0, 1239, 0)<br>gid=23, pos=(0, 0, 795, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=50, pos=(0, 0, 568, 0)<br>gid=75, pos=(0, 0, 0, 0)<br>gid=56, pos=(0, 0, 793, 0)<br>gid=65, pos=(0, 0, 0, 0)<br>gid=28, pos=(0, 0, 710, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=28, pos=(0, 0, 710, 0)<br>gid=67, pos=(0, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=10, pos=(0, 0, 1239, 0)<br>gid=23, pos=(0, 0, 795, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=50, pos=(0, 0, 568, 0)<br>gid=75, pos=(0, 0, 0, 0)<br>gid=56, pos=(0, 0, 793, 0)<br>gid=65, pos=(0, 0, 0, 0)<br>gid=28, pos=(0, 0, 710, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=28, pos=(0, 0, 710, 0)<br>gid=67, pos=(0, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 11.29%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        കുഴപ്പങ്ങള്‍<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=23, pos=(0, 0, 795, 0)<br>gid=67, pos=(0, 0, 0, 0)<br>gid=54, pos=(0, 0, 513, 0)<br>gid=44, pos=(0, 0, 682, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=44, pos=(0, 0, 682, 0)<br>gid=27, pos=(0, 0, 808, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=27, pos=(0, 0, 808, 0)<br>gid=53, pos=(0, 0, 557, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=3, pos=(0, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=23, pos=(0, 0, 795, 0)<br>gid=67, pos=(0, 0, 0, 0)<br>gid=54, pos=(0, 0, 513, 0)<br>gid=44, pos=(0, 0, 682, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=44, pos=(0, 0, 682, 0)<br>gid=27, pos=(0, 0, 808, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=27, pos=(0, 0, 808, 0)<br>gid=53, pos=(0, 0, 557, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=3, pos=(0, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 11.12%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        മനുഷ്യരോടു<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=48, pos=(0, 0, 561, 0)<br>gid=42, pos=(0, 0, 693, 0)<br>gid=67, pos=(0, 0, 0, 0)<br>gid=57, pos=(0, 0, 884, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=49, pos=(0, 0, 800, 0)<br>gid=50, pos=(0, 0, 568, 0)<br>gid=75, pos=(0, 0, 0, 0)<br>gid=33, pos=(0, 0, 426, 0)<br>gid=67, pos=(0, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=48, pos=(0, 0, 561, 0)<br>gid=42, pos=(0, 0, 693, 0)<br>gid=67, pos=(0, 0, 0, 0)<br>gid=57, pos=(0, 0, 884, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=49, pos=(0, 0, 800, 0)<br>gid=50, pos=(0, 0, 568, 0)<br>gid=75, pos=(0, 0, 0, 0)<br>gid=33, pos=(0, 0, 426, 0)<br>gid=67, pos=(0, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 11.12%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ഊന്നുവടി<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=14, pos=(0, 0, 1112, 0)<br>gid=42, pos=(0, 0, 693, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=42, pos=(0, 0, 693, 0)<br>gid=67, pos=(0, 0, 0, 0)<br>gid=55, pos=(0, 0, 733, 0)<br>gid=33, pos=(0, 0, 426, 0)<br>gid=65, pos=(0, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=14, pos=(0, 0, 1112, 0)<br>gid=42, pos=(0, 0, 693, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=42, pos=(0, 0, 693, 0)<br>gid=67, pos=(0, 0, 0, 0)<br>gid=55, pos=(0, 0, 733, 0)<br>gid=33, pos=(0, 0, 426, 0)<br>gid=65, pos=(0, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 11.08%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ഔദാര്യമായി<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=22, pos=(0, 0, 1173, 0)<br>gid=40, pos=(0, 0, 495, 0)<br>gid=64, pos=(0, 0, 0, 0)<br>gid=50, pos=(0, 0, 568, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=49, pos=(0, 0, 800, 0)<br>gid=48, pos=(0, 0, 561, 0)<br>gid=64, pos=(0, 0, 0, 0)<br>gid=49, pos=(0, 0, 800, 0)<br>gid=65, pos=(0, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=22, pos=(0, 0, 1173, 0)<br>gid=40, pos=(0, 0, 495, 0)<br>gid=64, pos=(0, 0, 0, 0)<br>gid=50, pos=(0, 0, 568, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=49, pos=(0, 0, 800, 0)<br>gid=48, pos=(0, 0, 561, 0)<br>gid=64, pos=(0, 0, 0, 0)<br>gid=49, pos=(0, 0, 800, 0)<br>gid=65, pos=(0, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 10.99%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ദൈനംദിനം<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=40, pos=(0, 0, 495, 0)<br>gid=73, pos=(0, 0, 0, 0)<br>gid=42, pos=(0, 0, 693, 0)<br>gid=6, pos=(0, 0, 0, 0)<br>gid=40, pos=(0, 0, 495, 0)<br>gid=65, pos=(0, 0, 0, 0)<br>gid=42, pos=(0, 0, 693, 0)<br>gid=6, pos=(0, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=40, pos=(0, 0, 495, 0)<br>gid=73, pos=(0, 0, 0, 0)<br>gid=42, pos=(0, 0, 693, 0)<br>gid=6, pos=(0, 0, 0, 0)<br>gid=40, pos=(0, 0, 495, 0)<br>gid=65, pos=(0, 0, 0, 0)<br>gid=42, pos=(0, 0, 693, 0)<br>gid=6, pos=(0, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 10.97%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ഫ്രുഗ്യ<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=45, pos=(0, 0, 860, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=50, pos=(0, 0, 568, 0)<br>gid=67, pos=(0, 0, 0, 0)<br>gid=25, pos=(0, 0, 682, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=49, pos=(0, 0, 800, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=45, pos=(0, 0, 860, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=50, pos=(0, 0, 568, 0)<br>gid=67, pos=(0, 0, 0, 0)<br>gid=25, pos=(0, 0, 682, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=49, pos=(0, 0, 800, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 10.84%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        അവരില്‍നിന്നും<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=9, pos=(0, 0, 1132, 0)<br>gid=55, pos=(0, 0, 733, 0)<br>gid=50, pos=(0, 0, 568, 0)<br>gid=65, pos=(0, 0, 0, 0)<br>gid=52, pos=(0, 0, 658, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=3, pos=(0, 0, 0, 0)<br>gid=42, pos=(0, 0, 693, 0)<br>gid=65, pos=(0, 0, 0, 0)<br>gid=42, pos=(0, 0, 693, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=42, pos=(0, 0, 693, 0)<br>gid=67, pos=(0, 0, 0, 0)<br>gid=6, pos=(0, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=9, pos=(0, 0, 1132, 0)<br>gid=55, pos=(0, 0, 733, 0)<br>gid=50, pos=(0, 0, 568, 0)<br>gid=65, pos=(0, 0, 0, 0)<br>gid=52, pos=(0, 0, 658, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=3, pos=(0, 0, 0, 0)<br>gid=42, pos=(0, 0, 693, 0)<br>gid=65, pos=(0, 0, 0, 0)<br>gid=42, pos=(0, 0, 693, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=42, pos=(0, 0, 693, 0)<br>gid=67, pos=(0, 0, 0, 0)<br>gid=6, pos=(0, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 10.78%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        യിസ്രായേലില്‍<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=49, pos=(0, 0, 800, 0)<br>gid=65, pos=(0, 0, 0, 0)<br>gid=58, pos=(0, 0, 926, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=50, pos=(0, 0, 568, 0)<br>gid=64, pos=(0, 0, 0, 0)<br>gid=49, pos=(0, 0, 800, 0)<br>gid=72, pos=(0, 0, 0, 0)<br>gid=52, pos=(0, 0, 658, 0)<br>gid=65, pos=(0, 0, 0, 0)<br>gid=52, pos=(0, 0, 658, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=3, pos=(0, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=49, pos=(0, 0, 800, 0)<br>gid=65, pos=(0, 0, 0, 0)<br>gid=58, pos=(0, 0, 926, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=50, pos=(0, 0, 568, 0)<br>gid=64, pos=(0, 0, 0, 0)<br>gid=49, pos=(0, 0, 800, 0)<br>gid=72, pos=(0, 0, 0, 0)<br>gid=52, pos=(0, 0, 658, 0)<br>gid=65, pos=(0, 0, 0, 0)<br>gid=52, pos=(0, 0, 658, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=3, pos=(0, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 10.63%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        പൌലൊസിനെയും<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=44, pos=(0, 0, 682, 0)<br>gid=76, pos=(0, 0, 0, 0)<br>gid=52, pos=(0, 0, 658, 0)<br>gid=74, pos=(0, 0, 0, 0)<br>gid=58, pos=(0, 0, 926, 0)<br>gid=65, pos=(0, 0, 0, 0)<br>gid=42, pos=(0, 0, 693, 0)<br>gid=71, pos=(0, 0, 0, 0)<br>gid=49, pos=(0, 0, 800, 0)<br>gid=67, pos=(0, 0, 0, 0)<br>gid=6, pos=(0, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=44, pos=(0, 0, 682, 0)<br>gid=76, pos=(0, 0, 0, 0)<br>gid=52, pos=(0, 0, 658, 0)<br>gid=74, pos=(0, 0, 0, 0)<br>gid=58, pos=(0, 0, 926, 0)<br>gid=65, pos=(0, 0, 0, 0)<br>gid=42, pos=(0, 0, 693, 0)<br>gid=71, pos=(0, 0, 0, 0)<br>gid=49, pos=(0, 0, 800, 0)<br>gid=67, pos=(0, 0, 0, 0)<br>gid=6, pos=(0, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 10.55%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        പ്രഭാതനക്ഷത്രം<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=44, pos=(0, 0, 682, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=50, pos=(0, 0, 568, 0)<br>gid=47, pos=(0, 0, 506, 0)<br>gid=64, pos=(0, 0, 0, 0)<br>gid=38, pos=(0, 0, 777, 0)<br>gid=42, pos=(0, 0, 693, 0)<br>gid=23, pos=(0, 0, 795, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=57, pos=(0, 0, 884, 0)<br>gid=38, pos=(0, 0, 777, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=50, pos=(0, 0, 568, 0)<br>gid=6, pos=(0, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=44, pos=(0, 0, 682, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=50, pos=(0, 0, 568, 0)<br>gid=47, pos=(0, 0, 506, 0)<br>gid=64, pos=(0, 0, 0, 0)<br>gid=38, pos=(0, 0, 777, 0)<br>gid=42, pos=(0, 0, 693, 0)<br>gid=23, pos=(0, 0, 795, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=57, pos=(0, 0, 884, 0)<br>gid=38, pos=(0, 0, 777, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=50, pos=(0, 0, 568, 0)<br>gid=6, pos=(0, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 10.53%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        എന്നിട്ടവര്‍<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=17, pos=(0, 0, 961, 0)<br>gid=42, pos=(0, 0, 693, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=42, pos=(0, 0, 693, 0)<br>gid=65, pos=(0, 0, 0, 0)<br>gid=33, pos=(0, 0, 426, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=33, pos=(0, 0, 426, 0)<br>gid=55, pos=(0, 0, 733, 0)<br>gid=50, pos=(0, 0, 568, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=3, pos=(0, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=17, pos=(0, 0, 961, 0)<br>gid=42, pos=(0, 0, 693, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=42, pos=(0, 0, 693, 0)<br>gid=65, pos=(0, 0, 0, 0)<br>gid=33, pos=(0, 0, 426, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=33, pos=(0, 0, 426, 0)<br>gid=55, pos=(0, 0, 733, 0)<br>gid=50, pos=(0, 0, 568, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=3, pos=(0, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 10.52%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        പരിച്ഛേദനയ്ക്കു<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=44, pos=(0, 0, 682, 0)<br>gid=50, pos=(0, 0, 568, 0)<br>gid=65, pos=(0, 0, 0, 0)<br>gid=28, pos=(0, 0, 710, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=29, pos=(0, 0, 1018, 0)<br>gid=72, pos=(0, 0, 0, 0)<br>gid=40, pos=(0, 0, 495, 0)<br>gid=42, pos=(0, 0, 693, 0)<br>gid=49, pos=(0, 0, 800, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=23, pos=(0, 0, 795, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=23, pos=(0, 0, 795, 0)<br>gid=67, pos=(0, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=44, pos=(0, 0, 682, 0)<br>gid=50, pos=(0, 0, 568, 0)<br>gid=65, pos=(0, 0, 0, 0)<br>gid=28, pos=(0, 0, 710, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=29, pos=(0, 0, 1018, 0)<br>gid=72, pos=(0, 0, 0, 0)<br>gid=40, pos=(0, 0, 495, 0)<br>gid=42, pos=(0, 0, 693, 0)<br>gid=49, pos=(0, 0, 800, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=23, pos=(0, 0, 795, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=23, pos=(0, 0, 795, 0)<br>gid=67, pos=(0, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 10.44%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ദൃഢമായി<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=40, pos=(0, 0, 495, 0)<br>gid=69, pos=(0, 0, 0, 0)<br>gid=36, pos=(0, 0, 1012, 0)<br>gid=48, pos=(0, 0, 561, 0)<br>gid=64, pos=(0, 0, 0, 0)<br>gid=49, pos=(0, 0, 800, 0)<br>gid=65, pos=(0, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=40, pos=(0, 0, 495, 0)<br>gid=69, pos=(0, 0, 0, 0)<br>gid=36, pos=(0, 0, 1012, 0)<br>gid=48, pos=(0, 0, 561, 0)<br>gid=64, pos=(0, 0, 0, 0)<br>gid=49, pos=(0, 0, 800, 0)<br>gid=65, pos=(0, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 10.37%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        മനോഹരമായ<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=48, pos=(0, 0, 561, 0)<br>gid=42, pos=(0, 0, 693, 0)<br>gid=75, pos=(0, 0, 0, 0)<br>gid=59, pos=(0, 0, 905, 0)<br>gid=50, pos=(0, 0, 568, 0)<br>gid=48, pos=(0, 0, 561, 0)<br>gid=64, pos=(0, 0, 0, 0)<br>gid=49, pos=(0, 0, 800, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=48, pos=(0, 0, 561, 0)<br>gid=42, pos=(0, 0, 693, 0)<br>gid=75, pos=(0, 0, 0, 0)<br>gid=59, pos=(0, 0, 905, 0)<br>gid=50, pos=(0, 0, 568, 0)<br>gid=48, pos=(0, 0, 561, 0)<br>gid=64, pos=(0, 0, 0, 0)<br>gid=49, pos=(0, 0, 800, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 10.22%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        അബ്രഹാമിന്‍റെ<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=9, pos=(0, 0, 1132, 0)<br>gid=46, pos=(0, 0, 993, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=50, pos=(0, 0, 568, 0)<br>gid=59, pos=(0, 0, 905, 0)<br>gid=64, pos=(0, 0, 0, 0)<br>gid=48, pos=(0, 0, 561, 0)<br>gid=65, pos=(0, 0, 0, 0)<br>gid=42, pos=(0, 0, 693, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=3, pos=(0, 0, 0, 0)<br>gid=51, pos=(0, 0, 519, 0)<br>gid=71, pos=(0, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=9, pos=(0, 0, 1132, 0)<br>gid=46, pos=(0, 0, 993, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=50, pos=(0, 0, 568, 0)<br>gid=59, pos=(0, 0, 905, 0)<br>gid=64, pos=(0, 0, 0, 0)<br>gid=48, pos=(0, 0, 561, 0)<br>gid=65, pos=(0, 0, 0, 0)<br>gid=42, pos=(0, 0, 693, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=3, pos=(0, 0, 0, 0)<br>gid=51, pos=(0, 0, 519, 0)<br>gid=71, pos=(0, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 10.20%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        സ്ഥാപിക്കും<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=58, pos=(0, 0, 926, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=39, pos=(0, 0, 688, 0)<br>gid=64, pos=(0, 0, 0, 0)<br>gid=44, pos=(0, 0, 682, 0)<br>gid=65, pos=(0, 0, 0, 0)<br>gid=23, pos=(0, 0, 795, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=23, pos=(0, 0, 795, 0)<br>gid=67, pos=(0, 0, 0, 0)<br>gid=6, pos=(0, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=58, pos=(0, 0, 926, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=39, pos=(0, 0, 688, 0)<br>gid=64, pos=(0, 0, 0, 0)<br>gid=44, pos=(0, 0, 682, 0)<br>gid=65, pos=(0, 0, 0, 0)<br>gid=23, pos=(0, 0, 795, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=23, pos=(0, 0, 795, 0)<br>gid=67, pos=(0, 0, 0, 0)<br>gid=6, pos=(0, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 10.14%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        അവന്‍റെമേല്‍<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=9, pos=(0, 0, 1132, 0)<br>gid=55, pos=(0, 0, 733, 0)<br>gid=42, pos=(0, 0, 693, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=3, pos=(0, 0, 0, 0)<br>gid=51, pos=(0, 0, 519, 0)<br>gid=71, pos=(0, 0, 0, 0)<br>gid=48, pos=(0, 0, 561, 0)<br>gid=72, pos=(0, 0, 0, 0)<br>gid=52, pos=(0, 0, 658, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=3, pos=(0, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=9, pos=(0, 0, 1132, 0)<br>gid=55, pos=(0, 0, 733, 0)<br>gid=42, pos=(0, 0, 693, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=3, pos=(0, 0, 0, 0)<br>gid=51, pos=(0, 0, 519, 0)<br>gid=71, pos=(0, 0, 0, 0)<br>gid=48, pos=(0, 0, 561, 0)<br>gid=72, pos=(0, 0, 0, 0)<br>gid=52, pos=(0, 0, 658, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=3, pos=(0, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 10.00%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ഐഹിക<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=19, pos=(0, 0, 1510, 0)<br>gid=59, pos=(0, 0, 905, 0)<br>gid=65, pos=(0, 0, 0, 0)<br>gid=23, pos=(0, 0, 795, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=19, pos=(0, 0, 1510, 0)<br>gid=59, pos=(0, 0, 905, 0)<br>gid=65, pos=(0, 0, 0, 0)<br>gid=23, pos=(0, 0, 795, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 9.96%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        സത്യസന്ധവും<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=58, pos=(0, 0, 926, 0)<br>gid=38, pos=(0, 0, 777, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=49, pos=(0, 0, 800, 0)<br>gid=58, pos=(0, 0, 926, 0)<br>gid=42, pos=(0, 0, 693, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=41, pos=(0, 0, 693, 0)<br>gid=55, pos=(0, 0, 733, 0)<br>gid=67, pos=(0, 0, 0, 0)<br>gid=6, pos=(0, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=58, pos=(0, 0, 926, 0)<br>gid=38, pos=(0, 0, 777, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=49, pos=(0, 0, 800, 0)<br>gid=58, pos=(0, 0, 926, 0)<br>gid=42, pos=(0, 0, 693, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=41, pos=(0, 0, 693, 0)<br>gid=55, pos=(0, 0, 733, 0)<br>gid=67, pos=(0, 0, 0, 0)<br>gid=6, pos=(0, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 9.70%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        ഏവനും<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=18, pos=(0, 0, 971, 0)<br>gid=55, pos=(0, 0, 733, 0)<br>gid=42, pos=(0, 0, 693, 0)<br>gid=67, pos=(0, 0, 0, 0)<br>gid=6, pos=(0, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=18, pos=(0, 0, 971, 0)<br>gid=55, pos=(0, 0, 733, 0)<br>gid=42, pos=(0, 0, 693, 0)<br>gid=67, pos=(0, 0, 0, 0)<br>gid=6, pos=(0, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 9.63%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        സംഖ്യ<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=58, pos=(0, 0, 926, 0)<br>gid=6, pos=(0, 0, 0, 0)<br>gid=24, pos=(0, 0, 765, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=49, pos=(0, 0, 800, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=58, pos=(0, 0, 926, 0)<br>gid=6, pos=(0, 0, 0, 0)<br>gid=24, pos=(0, 0, 765, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=49, pos=(0, 0, 800, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 9.58%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        പലൊസിനെ<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=44, pos=(0, 0, 682, 0)<br>gid=52, pos=(0, 0, 658, 0)<br>gid=74, pos=(0, 0, 0, 0)<br>gid=58, pos=(0, 0, 926, 0)<br>gid=65, pos=(0, 0, 0, 0)<br>gid=42, pos=(0, 0, 693, 0)<br>gid=71, pos=(0, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=44, pos=(0, 0, 682, 0)<br>gid=52, pos=(0, 0, 658, 0)<br>gid=74, pos=(0, 0, 0, 0)<br>gid=58, pos=(0, 0, 926, 0)<br>gid=65, pos=(0, 0, 0, 0)<br>gid=42, pos=(0, 0, 693, 0)<br>gid=71, pos=(0, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 9.54%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        മുണ്ഡനം<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=48, pos=(0, 0, 561, 0)<br>gid=67, pos=(0, 0, 0, 0)<br>gid=37, pos=(0, 0, 1030, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=35, pos=(0, 0, 926, 0)<br>gid=42, pos=(0, 0, 693, 0)<br>gid=6, pos=(0, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=48, pos=(0, 0, 561, 0)<br>gid=67, pos=(0, 0, 0, 0)<br>gid=37, pos=(0, 0, 1030, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=35, pos=(0, 0, 926, 0)<br>gid=42, pos=(0, 0, 693, 0)<br>gid=6, pos=(0, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 9.17%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        പായ<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=44, pos=(0, 0, 682, 0)<br>gid=64, pos=(0, 0, 0, 0)<br>gid=49, pos=(0, 0, 800, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=44, pos=(0, 0, 682, 0)<br>gid=64, pos=(0, 0, 0, 0)<br>gid=49, pos=(0, 0, 800, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 8.48%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        പഠിച്ചു<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=44, pos=(0, 0, 682, 0)<br>gid=34, pos=(0, 0, 508, 0)<br>gid=65, pos=(0, 0, 0, 0)<br>gid=28, pos=(0, 0, 710, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=28, pos=(0, 0, 710, 0)<br>gid=67, pos=(0, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=44, pos=(0, 0, 682, 0)<br>gid=34, pos=(0, 0, 508, 0)<br>gid=65, pos=(0, 0, 0, 0)<br>gid=28, pos=(0, 0, 710, 0)<br>gid=77, pos=(0, 0, 0, 0)<br>gid=28, pos=(0, 0, 710, 0)<br>gid=67, pos=(0, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 8.29%
+        </div>
+        </span>
+    </div>
+</div>
+          
+        </div>
+      </div>
+    
+    
+    <div class="box">
+      <div class="box-title">Misshapen user strings</div>
+      <div class="box-text old-wght-400" style="font-size: 32pt">
+        
+      </div>
+    </div>
+    
+
+    
+
+    </div>
+  
+<script>var fontdiff = {"hhea": {"caretSlopeRise": [1, 1000], "descent": [-383, -293], "ascent": [864, 1069]}, "name": {"3/3/1/1033": ["2.104;NONE;NotoSansMalayalam-ExtraCondensed", "2.104;GOOG;NotoSansMalayalamUI-ExtraCondensed"], "4/3/1/1033": ["Noto Sans Malayalam ExtraCondensed", "Noto Sans Malayalam UI ExtraCondensed"], "1/3/1/1033": ["Noto Sans Malayalam ExtraCondensed", "Noto Sans Malayalam UI ExtraCondensed"], "16/3/1/1033": ["Noto Sans Malayalam", "Noto Sans Malayalam UI"], "6/3/1/1033": ["NotoSansMalayalam-ExtraCondensed", "NotoSansMalayalamUI-ExtraCondensed"]}, "OS/2": {"usWinDescent": [383, 293], "usWinAscent": [864, 1069], "achVendID": ["NONE", "GOOG"], "sTypoAscender": [864, 1069], "sTypoDescender": [-383, -293]}, "cmap": {"0x0D63": ["llvocalicvowelsignmlym", "llvocalicvowelsignUImlym"]}, "head": {"checkSumAdjustment": [3366267884, 2356318374], "yMax": [864, 1195], "modified": [3762752865, 3791038713], "yMin": [-365, -299]}, "glyf": {"glyphs": {"error": ["There are 261 changes, check manually!", ""]}}, "GDEF": {"table": {"MarkGlyphSetsDef": {"MarkSetCount": [1, 2], "Coverage": {"0": {"glyphs": {"0": ["uni0D00", "ivowelsignmlym"], "1": ["candrabindumlym", "iivowelsignmlym"], "2": ["uni0D3B", null], "3": ["viramamlym", null], "4": ["rephmlym", null], "5": ["uni0951", null], "6": ["candrabindu_rephmlym", null]}}, "1": {"glyphs": {"0": [null, "uni0D00"], "1": [null, "candrabindumlym"], "2": [null, "uni0D3B"], "3": [null, "viramamlym"], "4": [null, "rephmlym"], "5": [null, "uni0951"], "6": [null, "candrabindu_rephmlym"]}}}}}}};</script>
+
+    </div>
+</body>
+	<script>
+
+	POSITION = "old"
+	fontToggle = document.getElementById("font-toggle")
+	function switchFonts() {
+	boxTitles = document.getElementsByClassName("box-title")
+	items = document.getElementsByClassName("box-text");
+	  
+	if (POSITION === "old") {
+	  POSITION = "new"
+	  for (item of boxTitles) {
+	    item.textContent = item.textContent.replace("old", "new")
+	    fontToggle.textContent = "new"
+	  }
+	  for (item of items) {
+		item.className = item.className.replace("old", "new")
+	  }
+
+	  } else {
+	  POSITION = "old"
+	  for (item of boxTitles) {
+	    item.textContent = item.textContent.replace("new", "old")
+	    fontToggle.textContent = "old"
+	  }
+	  for (item of items) {
+		item.className = item.className.replace("new", "old")
+	  }
+	}
+	}
+	if (fontToggle !== null) {
+		fontToggle.addEventListener("click", switchFonts);
+	}
+
+// apply optional ot feats
+
+function buildFeatureList() {
+	var features = [
+		'aalt', 'c2sc', 'calt', 'case', 'cpsp', 'dlig', 'dnom',
+		'fina', 'frac', 'init', 'kern', 'liga', 'lnum', 'numr', 'onum',
+		'ordn', 'pnum', 'salt', 'sinf', 'smcp', 'sups',
+		'swsh', 'titl', 'tnum', 'zero', 'ss01', 'ss02',
+		'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08',
+		'ss09', 'ss10', 'ss11', 'ss12', 'ss13', 'ss14',
+		'ss15', 'ss16', 'ss17', 'ss18', 'ss19', 'ss20'
+	]
+	
+	var otPanel = document.getElementById("ot-panel")
+	for (i=0; i<features.length; i++) {
+		var feat = features[i]
+		
+		var row = document.createElement("div");
+
+		var item = document.createElement("input");
+		item.type = "checkbox"
+		item.value = feat
+		item.classList.add("ot-checkbox")
+		var label = document.createElement("label")
+		label.textContent = feat
+
+		row.appendChild(item)
+		row.appendChild(label)
+
+		otPanel.appendChild(row)
+	}
+}
+
+buildFeatureList()
+
+
+function enableFeatures() {
+	var checkboxes = document.getElementsByClassName("ot-checkbox")
+	var res = []
+	var disableKerning = false
+	for (i=0; i<checkboxes.length; i++) {
+		if (checkboxes[i].checked === true) {
+			var checkbox = checkboxes[i]
+			res.push('"' + checkbox.value + '"')
+
+			if (checkbox.value === "kern") {
+				disableKerning = true
+			}
+		}
+	}	
+
+	var boxText = document.getElementsByClassName("box-text")
+	var otString = res.join(", ")
+	for (j=0; j<boxText.length; j++) {
+		boxText[j].style.fontFeatureSettings = otString
+		if (disableKerning === true) {
+			boxText[j].style.fontKerning = "none"
+		}
+	}
+}
+
+var otButton = document.getElementById("ot-button")
+otButton.addEventListener("click", function() {
+    otPanel = document.getElementById("ot-panel")
+    if (otPanel.style.display !== "block") {
+        otPanel.style.display = "block"
+    } else {
+        otPanel.style.display = "none"
+    }
+})
+var checkboxes = document.getElementsByClassName("ot-checkbox")
+for (i=0; i<checkboxes.length; i++) {
+	cb = checkboxes[i]
+	cb.addEventListener("click", enableFeatures)
+}	
+    
+  class Table {
+      constructor(data) {
+          this.data = {"root": data}
+          this.open("root")
+      }
+
+      createNode(key, label) {
+          let childElem = document.createElement("div")
+          let childKey = key
+          childElem.dataset.path = childKey
+          childElem.dataset.open = "0"
+          childElem.innerHTML = label
+          childElem.classList.add("node")
+          return childElem
+      }
+
+      close(key) {
+          let htmlParent = document.querySelector(`[data-path="${key}"]`)
+          let label = htmlParent.childNodes[0].nodeValue
+          htmlParent.replaceChildren()
+          htmlParent.textContent = label
+          htmlParent.dataset.open = "0"
+      }
+
+      open(key) {
+          let htmlParent = document.querySelector(`[data-path="${key}"]`)
+          htmlParent.dataset.open = "1"
+
+          // traverse to correct data level based on data-path
+          let path = key.split(".")
+          let data = this.data
+          for (var i=0; i<path.length; i++) {
+              data = data[path[i]];
+
+          }
+
+          // arrays containing two values are used as leaf nodes.
+          // The first item is the before value and the second
+          // is for after value.
+          if (Array.isArray(data)) {
+              let childElem = this.createNode("", "")
+              let before = document.createElement("span")
+              before.classList.add("attr-before")
+              before.textContent = String(data[0]) + " "
+              let after = document.createElement("span")
+              after.classList.add("attr-after")
+              after.textContent = String(data[1])
+              childElem.appendChild(before)
+              childElem.appendChild(after)
+              htmlParent.appendChild(childElem)
+              return
+          }
+          // Create next child nodes
+          for (var i in data) {
+              let childKey = key + "." + i
+              let childElem = this.createNode(childKey, i)
+              htmlParent.appendChild(childElem);
+              var that = this
+
+              // Toggle whether to open or close a node
+              childElem.addEventListener("click", function() {
+                  if (this.dataset.open === "0") {
+                      that.open(childKey)
+                      event.stopPropagation()
+                  } else {
+                      that.close(childKey)
+                      event.stopPropagation()
+                  }
+              })
+          }
+      }
+  }
+
+  let t = new Table(fontdiff, document.getElementById("difftable"))
+
+
+function wordBreaks() {
+  words = document.getElementsByClassName("cell-word")
+  res = []
+  prevTop = 0
+  for (i=0; i<words.length; i++) {
+      var word = words[i]
+      currentTop = word.getBoundingClientRect().top
+      if (currentTop > prevTop) {
+          res.push(i)
+      }
+      prevTop = currentTop
+  }
+  return res
+}
+
+async function insertBreaks() {
+  switchFonts()
+  await sleep(1)
+  breaksBefore = wordBreaks()
+  switchFonts()
+  await sleep(1)
+  breaksAfter = wordBreaks()
+
+
+  console.log(breaksBefore.length, breaksAfter.length)
+
+  if (breaksBefore.length >= breaksAfter.length) {
+    breaks = breaksBefore
+  } else {
+    breaks = breaksAfter
+  }
+
+  words = document.getElementsByClassName("cell-word")
+  breaks.forEach(function(i) {
+    if (i != 0) {
+      i = i
+    }
+    word = words[i]
+    spacer = document.createElement("div")
+    spacer.className = "spacer"
+    word.parentNode.insertBefore(spacer, word)
+  })
+}
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+  
+insertBreaks()
+
+
+    </script>
+</html>
