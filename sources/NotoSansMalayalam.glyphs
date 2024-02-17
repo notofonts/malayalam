@@ -6,7 +6,7 @@ DisplayStrings = (
 "॒",
 "ൎ",
 "഻",
-"ദ /rephivowelmlym  ൎ /candrabindu_rephmlym"
+"ദ /rephivowelmlym  ൎ /ivowelsignalt2mlym"
 );
 axes = (
 {
@@ -1471,14 +1471,16 @@ code = "# GSUB feature: Post-base Substitutions
 
   lookup psts_mlm2_mlym_27 {
   # GSUB lookup 31, type 16 (Chaining Context)
-    lookupflag 0;
     sub @psts15 [uvowelsignmlym uuvowelsignmlym rvocalicvowelsignmlym rrvocalicvowelsignmlym lvocalicvowelsignmlym llvocalicvowelsignmlym yapostmlym vapostmlym]' lookup psts_mlm2_mlym_1;
     sub narramlym [uvowelsignmlym uuvowelsignmlym rvocalicvowelsignmlym rrvocalicvowelsignmlym lvocalicvowelsignmlym llvocalicvowelsignmlym yapostmlym vapostmlym]' lookup psts_mlm2_mlym_1;
+  } psts_mlm2_mlym_27;
+
+lookup alternate_i {
+    lookupflag UseMarkFilteringSet [ivowelsignmlym iivowelsignmlym];
     sub [machillumlym nnachillumlym nachillumlym rrachillumlym lachillumlym llachillumlym kachillumlym] [ivowelsignmlym iivowelsignmlym]' lookup psts_mlm2_mlym_1;
     sub [ivowelsignmlym iivowelsignmlym yachillumlym ivowelsignaltmlym ivowelsignalt2mlym iivowelsignaltmlym iivowelsignalt2mlym] [ivowelsignmlym iivowelsignmlym]' lookup psts_mlm2_mlym_28;
     sub narramlym [ivowelsignmlym iivowelsignmlym]' lookup psts_mlm2_mlym_1;
-  } psts_mlm2_mlym_27;
-
+} alternate_i;
 
   lookup psts_mlm2_mlym_29 {
   # GSUB lookup 34, type 15 (Context)
@@ -1594,7 +1596,8 @@ code = "# GSUB feature: Post-base Substitutions
   lookup psts_mlm2_mlym_36;
   lookup psts_mlm2_mlym_38;
   lookup psts_rlig_1;
-    language MAL ; # Malayalam";
+    language MAL ; # Malayalam
+";
 tag = psts;
 },
 {
